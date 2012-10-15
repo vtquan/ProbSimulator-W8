@@ -19,9 +19,9 @@
     	<RadioButton x:Name="_4Check" Content="4-Sided Dice" VerticalAlignment="Top" Margin="140,159,0,0" HorizontalAlignment="Left" />
     	<RadioButton x:Name="_6Check" Content="6-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,187,0,0" IsChecked="True"/>
     	<RadioButton x:Name="_8Check" Content="8-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,216,0,0" />
-    	<RadioButton Content="10-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,245,0,0"/>
-    	<RadioButton Content="12-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,274,0,0"/>
-    	<RadioButton Content="20-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,307,0,0"/>
+    	<RadioButton x:Name="_10Check" Content="10-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,245,0,0"/>
+    	<RadioButton x:Name="_12Check" Content="12-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,274,0,0"/>
+    	<RadioButton x:Name="_20Check" Content="20-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,307,0,0"/>
     	<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Number of Dice" FontSize="24" Width="196" Margin="120,0,0,105" Height="32" VerticalAlignment="Bottom"/>
         <TextBox Name="numDiceBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" Margin="316,0,0,105" Width="164" TextAlignment="Center" FontSize="16" Height="32" VerticalAlignment="Bottom" InputScope="Number"/>
         <Button Content="Roll" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="120,0,0,40" Height="60" Width="360" FontSize="26.667" Click="DiceRoll_Click"/>

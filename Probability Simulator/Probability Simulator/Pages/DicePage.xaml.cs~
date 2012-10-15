@@ -44,27 +44,24 @@ namespace Probability_Simulator
             Int32.TryParse(numDiceBox.Text, out numRoll);
             if (Int32.TryParse(numDiceBox.Text, out numRoll) != false && numRoll <= 1000)   //if input is valid 
             {
-                int[] numberOfResult;   //store the number of times n was a result in n-1 index
                 if (_4Check.IsChecked == true)	
-                    numberOfResult = diceRoll(numRoll, 4);
+                    diceRoll(numRoll, 4);
 
-		        else if (_6Check.IsChecked == true)
-                     numberOfResult = diceRoll(numRoll, 6);
+		else if (_6Check.IsChecked == true)
+                    diceRoll(numRoll, 6);
 
-		        else if (_8Check.IsChecked == true)
-                      numberOfResult = diceRoll(numRoll, 8);
+		else if (_8Check.IsChecked == true)
+                    diceRoll(numRoll, 8);
 
-		        else if (_10Check.IsChecked == true)
-                     numberOfResult = diceRoll(numRoll, 10);
+		else if (_10Check.IsChecked == true)
+                    diceRoll(numRoll, 10);
 
-		        else if (_12Check.IsChecked == true)
-                     numberOfResult = diceRoll(numRoll, 12);
+		else if (_12Check.IsChecked == true)
+                    diceRoll(numRoll, 12);
 
-		        else
-                     numberOfResult = diceRoll(numRoll, 20);
-
-                updateResult(numberOfResult);   //update the result total and history list given a list of result
-	        }
+		else
+                    diceRoll(numRoll, 20);
+	    }
             
             else if (Int32.TryParse(numDiceBox.Text, out numRoll) != false && (numRoll > 1000 || numRoll < 0))  //if input is out of bound
             {
@@ -83,13 +80,13 @@ namespace Probability_Simulator
 
         }
 
-        public int[] diceRoll(int numRoll, int numFace)
+        public void diceRoll(int numRoll, int numFace)
         {
 
             Random random = new Random();
             int result = 0;
 
-            int[] numTotal = new int[20];   //store the number of times n was a result in n-1 index
+            int[] numTotal = new int[20];   //store the number of times n was a result in n-1 index\
 
             for (int i = 0; i < numRoll; i++)
             {
@@ -179,12 +176,6 @@ namespace Probability_Simulator
                         break;
                 }
             }
-            return numTotal;
-            
-        }
-
-        public void updateResult(int[] numTotal)
-        {
             _1Box.Text = (Int32.Parse(_1Box.Text) + numTotal[0]).ToString();
             _2Box.Text = (Int32.Parse(_2Box.Text) + numTotal[1]).ToString();
             _3Box.Text = (Int32.Parse(_3Box.Text) + numTotal[2]).ToString();
