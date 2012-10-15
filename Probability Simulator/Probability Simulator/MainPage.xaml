@@ -6,28 +6,30 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+	<Page.Resources>
+<!-- Application-specific resources -->
+
+		<x:String x:Key="AppName">Probability Simulator</x:String>
+	</Page.Resources>
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-    	<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Margin="120,70,0,0" Width="547" FontSize="53.333" FontFamily="Segoe UI Light" Height="50" VerticalAlignment="Top">
-    		<Run Text="Probability Simulator"/>
-    		<LineBreak/>
-    		<Run/>
-    	</TextBlock>
-    	<Button Content="Dice Roll" Margin="120,0,0,378" Width="310" VerticalAlignment="Bottom" Height="60"/>
+
+    	<Button Content="Dice Roll" Margin="120,0,0,378" Width="310" VerticalAlignment="Bottom" Height="60" Click="Button_Click_1"/>
     	<Button Content="Coins Flip" Margin="120,0,0,158" Width="310" VerticalAlignment="Bottom" Height="60"/>
-    	<Button Content="Cards Draw" Margin="450,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom"/>
-    	<Button Content="Bingo Spin&#xD;&#xA;" Margin="450,0,0,158" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="310"/>
+    	<Button Content="Cards Draw" Margin="450,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom" Click="CardButton_Click"/>
+    	<Button Content="Bingo Spin" Margin="450,0,0,158" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="310"/>
     	<Button Content="Spinner" Margin="780,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom"/>
-    	<Border HorizontalAlignment="Left" Margin="120,180,0,438" Width="310">
+    	<Border HorizontalAlignment="Left" Margin="120,180,0,438" Width="310" Height="150">
     		<Border.Background>
     			<ImageBrush ImageSource="Assets/six_sided_dice-View.png"/>
     		</Border.Background>
     	</Border>
-    	<Viewbox HorizontalAlignment="Left" Width="310" Margin="120,400,0,158"/>
-    	<Viewbox HorizontalAlignment="Left" Width="310" Margin="450,180,0,378"/>
-    	<Viewbox HorizontalAlignment="Left" Width="310" Margin="450,400,0,158"/>
-    	<Viewbox HorizontalAlignment="Left" Width="310" Margin="780,180,0,378"/>
+    	<Viewbox HorizontalAlignment="Left" Width="310" Margin="120,400,0,218"/>
+    	<Viewbox HorizontalAlignment="Left" Width="310" Margin="450,180,0,438"/>
+    	<Viewbox HorizontalAlignment="Left" Width="310" Margin="450,400,0,218"/>
+    	<Viewbox HorizontalAlignment="Left" Width="310" Margin="780,180,0,438"/>
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="780,400,0,158"/>
+    	<TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="120,0,30,668"/>
 
     </Grid>
 </Page>

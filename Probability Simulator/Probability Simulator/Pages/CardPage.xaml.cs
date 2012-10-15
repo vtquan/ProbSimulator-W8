@@ -19,9 +19,9 @@ namespace Probability_Simulator
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class CardPage : Page
     {
-        public MainPage()
+        public CardPage()
         {
             this.InitializeComponent();
         }
@@ -37,13 +37,7 @@ namespace Probability_Simulator
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(DicePage));
-        }
 
-        private void CardButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(CardPage));
         }
-
     }
 }
