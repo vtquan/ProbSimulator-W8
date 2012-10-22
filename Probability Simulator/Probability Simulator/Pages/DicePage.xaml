@@ -10,10 +10,11 @@
 	<Page.Resources>
 <!-- Application-specific resources -->
 
-		<x:String x:Key="AppName">App1</x:String>
+		<x:String x:Key="AppName">Dice Roll</x:String>
 	</Page.Resources>
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}" Margin="36,0,0,664"/>
     	<TextBlock x:Name="pageTitle" Text="Dice Roll" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="120,60,30,0" VerticalAlignment="Top"/>
     	<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Select Dice Type" VerticalAlignment="Top" FontSize="26.667" Width="196" Margin="120,127,0,0"/>
     	<RadioButton x:Name="_4Check" Content="4-Sided Dice" VerticalAlignment="Top" Margin="140,159,0,0" HorizontalAlignment="Left" />

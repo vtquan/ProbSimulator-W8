@@ -35,14 +35,24 @@ namespace Probability_Simulator
         {
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void DiceB_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(DicePage));
         }
 
-        private void CardButton_Click(object sender, RoutedEventArgs e)
+        private void CardB_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(CardPage));
+        }
+
+        private void CoinB_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CoinPage));
+        }
+
+        private void BingoB_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.BingoPage));
         }
 
     }

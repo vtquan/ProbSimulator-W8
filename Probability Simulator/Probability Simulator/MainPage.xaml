@@ -14,10 +14,10 @@
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
 
-    	<Button Content="Dice Roll" Margin="120,0,0,378" Width="310" VerticalAlignment="Bottom" Height="60" Click="Button_Click_1"/>
-    	<Button Content="Coins Flip" Margin="120,0,0,158" Width="310" VerticalAlignment="Bottom" Height="60"/>
-    	<Button Content="Cards Draw" Margin="450,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom" Click="CardButton_Click"/>
-    	<Button Content="Bingo Spin" Margin="450,0,0,158" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="310"/>
+    	<Button x:Name="DiceB" Content="Dice Roll" Margin="120,0,0,378" Width="310" VerticalAlignment="Bottom" Height="60" Click="DiceB_Click"/>
+        <Button x:Name="CoinB" Content="Coins Flip" Margin="120,0,0,158" Width="310" VerticalAlignment="Bottom" Height="60" Click="CoinB_Click"/>
+    	<Button Content="Cards Draw" Margin="450,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom" Click="CardB_Click"/>
+    	<Button x:Name="BingoB" Content="Bingo Spin" Margin="450,0,0,158" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="310" Click="BingoB_Click"/>
     	<Button Content="Spinner" Margin="780,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom"/>
     	<Border HorizontalAlignment="Left" Margin="120,180,0,438" Width="310" Height="150">
     		<Border.Background>
@@ -29,7 +29,7 @@
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="450,400,0,218"/>
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="780,180,0,438"/>
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="780,400,0,158"/>
-    	<TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="120,0,30,668"/>
+    	<TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="120,60,30,0" VerticalAlignment="Top" Height="40"/>
 
     </Grid>
 </Page>

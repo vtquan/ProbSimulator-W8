@@ -26,7 +26,6 @@ namespace Probability_Simulator
         public DicePage()
         {
             this.InitializeComponent();
-            
         }
 
         /// <summary>
@@ -36,6 +35,11 @@ namespace Probability_Simulator
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+        }
+
+        private void GoBack(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         private async void DiceRoll_Click(object sender, RoutedEventArgs e)
@@ -69,6 +73,7 @@ namespace Probability_Simulator
             else if (Int32.TryParse(numDiceBox.Text, out numRoll) != false && (numRoll > 1000 || numRoll < 0))  //if input is out of bound
             {
                 var messageDialog = new MessageDialog("Please enter a number between 0 and 1000.");
+                messageDialog.Title = "Invalid Input";
 
                 // Show the message dialog and wait
                 await messageDialog.ShowAsync();
@@ -76,6 +81,7 @@ namespace Probability_Simulator
             else
             {
                 var messageDialog = new MessageDialog("Please enter a real number.");   //if input is not an integer
+                messageDialog.Title = "Invalid Input";
 
                 // Show the message dialog and wait
                 await messageDialog.ShowAsync();

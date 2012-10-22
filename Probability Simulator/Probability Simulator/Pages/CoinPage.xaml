@@ -8,14 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}" Margin="36,0,0,664"/>
     	<TextBlock x:Name="pageTitle" Text="Coins Flip" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="120,60,30,0" VerticalAlignment="Top"/>
-    	<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Select Dice Type" VerticalAlignment="Top" FontSize="26.667" Width="196" Margin="120,127,0,0"/>
     	<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Number of Coins" FontSize="24" Width="196" Margin="120,0,0,105" Height="32" VerticalAlignment="Bottom"/>
-    	<TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" Margin="316,0,0,105" Width="164" TextAlignment="Center" FontSize="16" Height="32" VerticalAlignment="Bottom" InputScope="Number"/>
-    	<Button Content="Flip" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="120,0,0,40" Height="60" Width="360" FontSize="26.667"/>
+    	<TextBox x:Name="numCoinBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" Margin="316,0,0,105" Width="164" TextAlignment="Center" FontSize="16" Height="32" VerticalAlignment="Bottom" InputScope="Number"/>
+    	<Button x:Name="coinFlipB" Content="Flip" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="120,0,0,40" Height="60" Width="360" FontSize="26.667" Click="coinFlipB_Click"/>
     	<TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="Results List" VerticalAlignment="Top" Margin="0,127,667,0"/>
     	<TextBlock TextWrapping="Wrap" Text="History List" VerticalAlignment="Top" Margin="0,127,341,0" Height="14" HorizontalAlignment="Right" Width="79"/>
-    	<ScrollViewer Margin="0,141,120,40" HorizontalAlignment="Right" Width="300" BorderBrush="White" BorderThickness="1"/>
+        <ScrollViewer x:Name="historyScroll" Margin="0,141,120,40" HorizontalAlignment="Right" Width="300" BorderBrush="White" BorderThickness="1">
+            <StackPanel x:Name="historyList" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
+        </ScrollViewer>
 
     </Grid>
 </Page>
