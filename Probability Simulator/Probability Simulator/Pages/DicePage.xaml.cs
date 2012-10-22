@@ -20,7 +20,7 @@ namespace Probability_Simulator
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class DicePage : Page
+    public sealed partial class DicePage : Probability_Simulator.Common.LayoutAwarePage
     {
         int numHistory = 0; //number of items in history list
         public DicePage()

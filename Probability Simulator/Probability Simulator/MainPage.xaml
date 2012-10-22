@@ -17,8 +17,8 @@
     	<Button x:Name="DiceB" Content="Dice Roll" Margin="120,0,0,378" Width="310" VerticalAlignment="Bottom" Height="60" Click="DiceB_Click"/>
         <Button x:Name="CoinB" Content="Coins Flip" Margin="120,0,0,158" Width="310" VerticalAlignment="Bottom" Height="60" Click="CoinB_Click"/>
     	<Button Content="Cards Draw" Margin="450,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom" Click="CardB_Click"/>
-    	<Button x:Name="BingoB" Content="Bingo Spin" Margin="450,0,0,158" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="310" Click="BingoB_Click"/>
-    	<Button Content="Spinner" Margin="780,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom"/>
+    	<Button x:Name="BingoB" Content="Bingo Draw" Margin="450,0,0,158" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="310" Click="BingoB_Click"/>
+    	<Button x:Name="SpinnerB" Content="Spinner" Margin="780,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom" Click="SpinnerB_Click"/>
     	<Border HorizontalAlignment="Left" Margin="120,180,0,438" Width="310" Height="150">
     		<Border.Background>
     			<ImageBrush ImageSource="Assets/six_sided_dice-View.png"/>
