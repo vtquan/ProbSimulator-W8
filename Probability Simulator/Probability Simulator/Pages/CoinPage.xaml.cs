@@ -22,6 +22,9 @@ namespace Probability_Simulator
     /// </summary>
     public sealed partial class CoinPage : Probability_Simulator.Common.LayoutAwarePage
     {
+        float numHead = 0;
+        float numTail = 0;
+
         public CoinPage()
         {
             this.InitializeComponent();
@@ -85,17 +88,37 @@ namespace Probability_Simulator
                 result = random.Next(0, 2);
                 if (result == 1)
                 {
+                    numTail++;
                     historyList.Children.Add(new TextBlock() { Text = "Tail" });
                 }
                 else
                 {
+                    numHead++;
                     historyList.Children.Add(new TextBlock() { Text = "Head" });
                 }
             }
 
             historyList.Children.Add(new TextBlock() { Text = "  " });
-            historyScroll.UpdateLayout();
-            historyScroll.ScrollToVerticalOffset(historyList.ActualHeight);
+            historyScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
+            historyScroll.ScrollToVerticalOffset(historyList.ActualHeight);     //scroll to bottom
+
+            //Update graph
+            float numTotal = numHead + numTail;   //total number of result
+            if (numHead == 0)
+            {
+                headBar.Height = 0;
+                tailBar.Height = graphBox.ActualHeight; //actualHeight so that proportion stay the same across resolution
+            }
+            else if (numTail == 0)
+            {
+                headBar.Height = graphBox.ActualHeight;
+                tailBar.Height = 0;
+            }
+            else
+            {
+                headBar.Height = (graphBox.ActualHeight * (numHead / numTotal));
+                tailBar.Height = (graphBox.ActualHeight * (numTail / numTotal));
+            }
         }
     }
 }

@@ -19,17 +19,20 @@
     	<Button Content="Cards Draw" Margin="450,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom" Click="CardB_Click"/>
     	<Button x:Name="BingoB" Content="Bingo Draw" Margin="450,0,0,158" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="310" Click="BingoB_Click"/>
     	<Button x:Name="SpinnerB" Content="Spinner" Margin="780,0,0,378" Width="310" Height="60" VerticalAlignment="Bottom" Click="SpinnerB_Click"/>
-    	<Border HorizontalAlignment="Left" Margin="120,180,0,438" Width="310" Height="150">
+        <Border HorizontalAlignment="Left" Margin="120,180,0,438" Width="310" Height="150">
     		<Border.Background>
     			<ImageBrush ImageSource="Assets/six_sided_dice-View.png"/>
     		</Border.Background>
     	</Border>
-    	<Viewbox HorizontalAlignment="Left" Width="310" Margin="120,400,0,218"/>
+        <Viewbox HorizontalAlignment="Left" Width="310" Margin="120,400,0,218"/>
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="450,180,0,438"/>
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="450,400,0,218"/>
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="780,180,0,438"/>
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="780,400,0,158"/>
     	<TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="120,60,30,0" VerticalAlignment="Top" HorizontalAlignment="Left" LineHeight="64"/>
+    	<GridView HorizontalAlignment="Left" VerticalAlignment="Top" Width="1366" Height="588" Margin="0,180,0,0">
+    		<GridViewItem Content="GridViewItem" Margin="120,0,0,0" Width="310" Height="204" Foreground="White"/>
+    	</GridView>
 
     </Grid>
 </Page>
