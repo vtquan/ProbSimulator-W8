@@ -119,8 +119,12 @@ namespace Probability_Simulator.Pages
                     historyList.Children.Add(new TextBlock() { Text = "G-" + result });
                 else 
                     historyList.Children.Add(new TextBlock() { Text = "O-" + result });
+
+                if (i == numDraw - 1)   //add spacing at the end only when there are no problem
+                {
+                    historyList.Children.Add(new TextBlock() { Text = "  " });
+                }
             }
-            historyList.Children.Add(new TextBlock() { Text = "  " });
             historyScroll.UpdateLayout();
             historyScroll.ScrollToVerticalOffset(historyList.ActualHeight);
         }

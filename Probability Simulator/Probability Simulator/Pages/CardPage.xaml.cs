@@ -276,11 +276,16 @@ namespace Probability_Simulator
                     //}
                     cardString = value + " of " + suit;
                     historyList.Children.Add(new TextBlock() { Text = cardString });
+
+                    if (i == numCard - 1)   //add spacing at the end only when there are no problem
+                    {
+                        historyList.Children.Add(new TextBlock() { Text = "  " });
+                    }
                 }
+                historyScroll.UpdateLayout();
+                historyScroll.ScrollToVerticalOffset(historyList.ActualHeight);
             }
 
-                historyList.Children.Add(new TextBlock() { Text = "  " });
-                historyScroll.ScrollToVerticalOffset(historyList.ActualHeight);
         }
 
 

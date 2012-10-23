@@ -57,7 +57,7 @@ namespace Probability_Simulator
 
         private void SpinnerB_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.BasicPage1));
+            //this.Frame.Navigate(typeof(Pages.BasicPage1));
         }
 
     }
