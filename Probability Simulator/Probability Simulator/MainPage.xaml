@@ -29,7 +29,7 @@
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="450,400,0,218"/>
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="780,180,0,438"/>
     	<Viewbox HorizontalAlignment="Left" Width="310" Margin="780,400,0,158"/>
-    	<TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="120,60,30,0" VerticalAlignment="Top" Height="40"/>
+    	<TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}" Margin="120,60,30,0" VerticalAlignment="Top" HorizontalAlignment="Left" LineHeight="64"/>
 
     </Grid>
 </Page>

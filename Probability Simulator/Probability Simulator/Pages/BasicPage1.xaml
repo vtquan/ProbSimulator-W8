@@ -36,6 +36,16 @@
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}" Margin="0,70,18,40" VerticalAlignment="Stretch"/>
         </Grid>
+        <Grid HorizontalAlignment="Left" Height="628" Grid.Row="1" VerticalAlignment="Top" Width="1366">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Number of Coins" FontSize="24" Width="196" Margin="120,0,0,105" Height="32" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="numCoinBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" Margin="316,0,0,105" Width="164" TextAlignment="Center" FontSize="16" Height="32" VerticalAlignment="Bottom" InputScope="Number"/>
+            <Button x:Name="coinFlipB" Content="Flip" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="120,0,0,40" Height="60" Width="360" FontSize="26.667" Click="coinFlipB_Click"/>
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="Results List" VerticalAlignment="Top" Margin="0,0,667,0"/>
+            <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="History List" VerticalAlignment="Top" Margin="0,0,341,0" Height="14" HorizontalAlignment="Right" Width="79"/>
+            <ScrollViewer x:Name="historyScroll" Margin="0,14,120,40" HorizontalAlignment="Right" Width="300" BorderBrush="White" BorderThickness="1">
+                <StackPanel x:Name="historyList" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
+            </ScrollViewer>
+        </Grid>
 
         <VisualStateManager.VisualStateGroups>
 

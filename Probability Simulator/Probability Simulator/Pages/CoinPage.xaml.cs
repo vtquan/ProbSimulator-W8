@@ -20,19 +20,24 @@ namespace Probability_Simulator
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CoinPage : Page
+    public sealed partial class CoinPage : Probability_Simulator.Common.LayoutAwarePage
     {
         public CoinPage()
         {
             this.InitializeComponent();
         }
 
+        protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
+        {
+        }
+
         /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
+        /// Preserves state associated with this page in case the application is suspended or the
+        /// page is discarded from the navigation cache.  Values must conform to the serialization
+        /// requirements of <see cref="SuspensionManager.SessionState"/>.
         /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.  The Parameter
-        /// property is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
+        protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
 
