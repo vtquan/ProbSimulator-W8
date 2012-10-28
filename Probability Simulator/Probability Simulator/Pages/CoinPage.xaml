@@ -31,7 +31,7 @@
                 <TextBlock x:Name="graphHeader" TextWrapping="Wrap" Text="Percentage Graph" Margin="20,127,0,1225" HorizontalAlignment="Right"/>
                 <Rectangle x:Name="headBar" Fill="#FFF4F4F5" Margin="0,0,637,66" Stroke="Black" Height="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="54"/>
                 <Rectangle x:Name="tailBar" Fill="#FFF4F4F5" Height="0" Margin="0,0,540,66" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="54"/>
-                <Border x:Name="graphBox" BorderBrush="White" BorderThickness="1,0,0,1" HorizontalAlignment="Right" Margin="0,141,465,66" Width="300"/>
+                <Border x:Name="graphBox" BorderBrush="White" BorderThickness="1,0,0,1" HorizontalAlignment="Right" Margin="0,141,465,66" Width="300" SizeChanged="graphBox_SizeChanged"/>
                 <TextBlock x:Name="headHeading" HorizontalAlignment="Right" TextWrapping="Wrap" Margin="0,0,637,40" Width="54" TextAlignment="Center" Height="26" VerticalAlignment="Bottom">
                 	<Run Text="Head"/>
                 	<LineBreak/>

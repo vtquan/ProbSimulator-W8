@@ -24,6 +24,7 @@ namespace Probability_Simulator
     {
         float numHead = 0;
         float numTail = 0;
+        float numTotal = 0;
 
         public CoinPage()
         {
@@ -102,8 +103,12 @@ namespace Probability_Simulator
             historyScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             historyScroll.ScrollToVerticalOffset(historyList.ActualHeight);     //scroll to bottom
 
-            //Update graph
-            float numTotal = numHead + numTail;   //total number of result
+            updateGraph();
+        }
+
+        private void updateGraph()  //update the graph to match probability
+        {
+            numTotal = numHead + numTail;   //total number of result
             if (numHead == 0)
             {
                 headBar.Height = 0;
@@ -120,5 +125,14 @@ namespace Probability_Simulator
                 tailBar.Height = (graphBox.ActualHeight * (numTail / numTotal));
             }
         }
+
+        private void graphBox_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            headBar.Height = (graphBox.ActualHeight * (numHead / numTotal));
+            tailBar.Height = (graphBox.ActualHeight * (numTail / numTotal));
+        }
+
+
+    
     }
 }

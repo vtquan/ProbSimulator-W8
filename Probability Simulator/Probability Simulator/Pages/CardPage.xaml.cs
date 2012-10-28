@@ -302,5 +302,7 @@ namespace Probability_Simulator
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        
     }
 }
