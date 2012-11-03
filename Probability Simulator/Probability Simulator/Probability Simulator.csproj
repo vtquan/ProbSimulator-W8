@@ -138,6 +138,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\penny-head.jpg" />
+    <Content Include="Assets\penny-tail.jpg" />
     <Content Include="Assets\six_sided_dice-View.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
