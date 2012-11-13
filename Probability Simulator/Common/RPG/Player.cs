@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Probability_Simulator.Common
+namespace Probability_Simulator.Common.RPG
 {
     public class Player : Character
     {

@@ -14,6 +14,28 @@
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="PageName">Dire Diminutive Drawf: Axalf</x:String>
+        <Storyboard x:Name="IdleAnimation" RepeatBehavior="Forever">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="viewbox">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="20"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:3" Value="-20"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="FlinchAnimation">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="viewbox">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="15"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetY)" Storyboard.TargetName="viewbox">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-15"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        
     </Page.Resources>
 
     <!--
@@ -56,19 +78,19 @@
                 <Rectangle x:Name="yourHPBar" HorizontalAlignment="Left" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="63,37,0,0" Fill="Red"/>
                 <TextBlock x:Name="yourHPText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,37,0,0" Height="24" Width="177" Foreground="White" TextAlignment="Center" FontSize="20"/>
                 <TextBlock x:Name="yourMPLabel" TextWrapping="Wrap" Text="Mana" VerticalAlignment="Top" Margin="0,66,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
-                <TextBlock x:Name="yourMPText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,37,0,0" Height="24" Width="177" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                <TextBlock x:Name="yourMPText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,66,0,0" Height="24" Width="177" TextAlignment="Center" FontSize="20" Foreground="White"/>
                 <Rectangle x:Name="yourMPBar" HorizontalAlignment="Left" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="63,66,0,0" Fill="#FF2EFF00"/>
             </Grid>
             <Grid HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="250">
                 <TextBlock x:Name="monsterName" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Segoe UI" FontSize="24"/>
-                <TextBlock x:Name="monsterHPLabel" TextWrapping="Wrap" Text="Health" VerticalAlignment="Top" Margin="0,37,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
-                <Rectangle x:Name="monsterHPBar" HorizontalAlignment="Left" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="63,37,0,0" Fill="Red"/>
-                <TextBlock x:Name="monsterHPText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,37,0,0" Height="24" Width="177" TextAlignment="Center" FontSize="20" Foreground="White"/>
-                <TextBlock x:Name="monsterMPLabel" TextWrapping="Wrap" Text="Mana" VerticalAlignment="Top" Margin="0,66,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
-                <Rectangle x:Name="monsterMPBar" HorizontalAlignment="Left" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="63,66,0,0" Fill="#FF2EFF00"/>
-                <TextBlock x:Name="monsterMPText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,66,0,0" Height="24" Width="177" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                <TextBlock x:Name="monsterHPLabel" TextWrapping="Wrap" Text="Health" VerticalAlignment="Top" Margin="10,37,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
+                <Rectangle x:Name="monsterHPBar" HorizontalAlignment="Right" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="0,37,0,0" Fill="Red"/>
+                <TextBlock x:Name="monsterHPText" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,37,0,0" Height="24" Width="177" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                <TextBlock x:Name="monsterMPLabel" TextWrapping="Wrap" Text="Mana" VerticalAlignment="Top" Margin="10,66,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
+                <Rectangle x:Name="monsterMPBar" HorizontalAlignment="Right" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="0,66,0,0" Fill="#FF2EFF00"/>
+                <TextBlock x:Name="monsterMPText" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,66,0,0" Height="24" Width="177" TextAlignment="Center" FontSize="20" Foreground="White"/>
             </Grid>
-            <Grid HorizontalAlignment="Left" Height="237" VerticalAlignment="Bottom" Width="1366" Margin="0">
+            <Grid Height="237" VerticalAlignment="Bottom" Margin="0">
                 <TextBlock x:Name="ActionLogLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Action Log" VerticalAlignment="Top"/>
                 <ScrollViewer x:Name="ActionLogScroll" Margin="0,17,346,0" BorderThickness="1" BorderBrush="White">
                     <StackPanel x:Name="ActionLogList"/>
@@ -79,12 +101,11 @@
                 <Button x:Name="ItemB" Content="Item" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,45" Height="40" Width="346" Click="ItemB_Click"/>
                 <Button x:Name="FleeB" Content="Flee" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="350" Margin="0,0,-4,0" Click="FleeB_Click"/>
             </Grid>
-            <Viewbox Height="350" VerticalAlignment="Top" Width="350" Margin="0,10,0,0">
-                <Canvas Width="10" Height="10">
-                    <Canvas.Background>
-                        <ImageBrush ImageSource="ms-appx:///Assets/Monster.png"/>
-                    </Canvas.Background>
-                </Canvas>
+            <Viewbox x:Name="viewbox" Height="350" VerticalAlignment="Top" Width="350" Margin="0,10,0,0">
+            	<Viewbox.Projection>
+            		<PlaneProjection/>
+            	</Viewbox.Projection>
+                <Image x:Name="Axalf" Source="ms-appx:///Assets/Monster.png"/>
             </Viewbox>
             <MediaElement x:Name="BackgroundMusic" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="1266,149,0,0" Source="ms-appx:///Assets/Music/Chrono Trigger Music - Battle Theme.mp3" IsLooping="True"/>
         </Grid>

@@ -1,4 +1,6 @@
 Assets\CardB.png
+Assets\Cards\AceSpades.png
+Assets\Cards\CardBack.png
 Assets\CoinB.png
 Assets\DiceB.png
 Assets\Logo.png
@@ -16,8 +18,8 @@ Assets\StoreLogo.png
 App.xaml
 Common\StandardStyles.xaml
 MainPage.xaml
+Pages\AnimatePage.xaml
 Pages\BingoPage.xaml
-Pages\BingoPage2.xaml
 Pages\CardPage.xaml
 Pages\CoinPage.xaml
 Pages\DicePage.xaml

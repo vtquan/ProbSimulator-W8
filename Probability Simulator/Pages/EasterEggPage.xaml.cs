@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Popups;
@@ -50,11 +51,16 @@ namespace Probability_Simulator.Pages
         public EasterEggPage()
         {
             this.InitializeComponent();
+
+
+            //Idle Animation Begin
+            IdleAnimation.Begin();
+
+            //Load Enemy and You
             monsterName.Text = Enemy.getName();
             monsterHealthText.Text = Enemy.getHPStart().ToString();
             yourName.Text = You.getName();
             yourHealthText.Text = You.getHPStart().ToString();
-
             Enemy.getMoveList()[0] = new Attack("Fire", 1, 5, 13);
         }
 
@@ -117,6 +123,11 @@ namespace Probability_Simulator.Pages
             }
             double damage = 0;
             damage = random.Next(1, 15);
+
+            AttackedAnimation.Begin();
+            await Task.Delay(300);
+            IdleAnimation.Begin();
+
             Enemy.setHP(Enemy.getHP() - (int)damage);
             ActionLogList.Children.Add(new TextBlock() { Text = "You did " + (int)damage + " damage to Enemy" });
 

@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI.ApplicationSettings;
-using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,11 +20,12 @@ namespace Probability_Simulator.Pages
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class SelectionPage : Probability_Simulator.Common.LayoutAwarePage
+    public sealed partial class AnimatePage : Probability_Simulator.Common.LayoutAwarePage
     {
-        public SelectionPage()
+        public AnimatePage()
         {
             this.InitializeComponent();
+            IdleAnimation.Begin();
         }
 
         /// <summary>
@@ -51,54 +51,17 @@ namespace Probability_Simulator.Pages
         {
         }
 
-        private void DicePageB_Click(object sender, RoutedEventArgs e)
+        private void CardBack_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.DicePage));
+            VisualStateManager.GoToState(this, "CardFlip", true);
         }
 
-        private void CardPageB_Click(object sender, RoutedEventArgs e)
+        private async void drawCardB_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.CardPage));
-        }
-
-        private void CoinPageB_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.CoinPage));
-        }
-
-        private void BingoPageB_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.BingoPage));
-        }
-
-        private void SpinnerB_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void EasterEggB_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.RPG.AxalfFightPage));
-        }
-
-        private void DiceCanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.DicePage));
-        }
-
-        private void CardCanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.CardPage));
-        }
-
-        private void CoinCanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.CoinPage));
-        }
-
-        private void BingoCanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.AnimatePage));
+            //VisualStateManager.GoToState(this, "CardFlip", false);
+            AttackedAnimation.Begin();
+            await Task.Delay(400);
+            IdleAnimation.Begin();
         }
     }
 }

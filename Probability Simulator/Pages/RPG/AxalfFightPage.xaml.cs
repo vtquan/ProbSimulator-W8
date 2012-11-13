@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Popups;
@@ -13,9 +14,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-using Attack = Probability_Simulator.Common.Attack;
-using Monster = Probability_Simulator.Common.Monster;
-using Player = Probability_Simulator.Common.Player;
+using Attack = Probability_Simulator.Common.RPG.Attack;
+using Monster = Probability_Simulator.Common.RPG.Monster;
+using Player = Probability_Simulator.Common.RPG.Player;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -36,11 +37,17 @@ namespace Probability_Simulator.Pages.RPG
         {
             this.InitializeComponent();
             this.InitializeComponent();
+
+            //Idle Animation Begin
+            IdleAnimation.Begin();
+
+            //Create Monster and Player
             monsterName.Text = Enemy.getName();
             monsterHPText.Text = Enemy.getHPStart().ToString();
+            monsterMPText.Text = Enemy.getMPStart().ToString();
             yourName.Text = You.getName();
             yourHPText.Text = You.getHPStart().ToString();
-
+            yourMPText.Text = You.getMPStart().ToString();
             Enemy.getMoveList()[0] = new Attack("Fire", 1, 5, 13);
         }
 
@@ -67,9 +74,16 @@ namespace Probability_Simulator.Pages.RPG
         {
         }
 
-        private void AttackB_Click(object sender, RoutedEventArgs e)
+        private async void AttackB_Click(object sender, RoutedEventArgs e)
         {
-            if (Enemy.getHP() <= 0 || You.getHP() <= 0)
+
+            AttackB.IsEnabled = false;  //prevent user from pressing Attack Button too fast or other buttons while actions is occurring
+            SpellB.IsEnabled = false;  //prevent user from pressing Spell Button too fast or other buttons while actions is occurring
+            DefendB.IsEnabled = false;  //prevent user from pressing Defend Button too fast or other buttons while actions is occurring
+            ItemB.IsEnabled = false;  //prevent user from pressing Item Button too fast or other buttons while actions is occurring
+            FleeB.IsEnabled = false;  //prevent user from pressing Flee Button too fast or other buttons while actions is occurring
+
+            if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
                 callMessage();  //bring up notification if you win, lose, or fled
                 return;
@@ -78,6 +92,11 @@ namespace Probability_Simulator.Pages.RPG
             damage = random.Next(1, 15);
             Enemy.setHP(Enemy.getHP() - (int)damage);
             ActionLogList.Children.Add(new TextBlock() { Text = "You did " + (int)damage + " damage to " + Enemy.getName() });
+
+            //Flinch Animation for Monster 
+            FlinchAnimation.Begin();
+            await Task.Delay(300);
+            IdleAnimation.Begin();
 
             if (Enemy.getHP() <= 0)
             {
@@ -98,12 +117,31 @@ namespace Probability_Simulator.Pages.RPG
 
         private void SpellB_Click(object sender, RoutedEventArgs e)
         {
+            AttackB.IsEnabled = false;  //prevent user from pressing Attack Button too fast or other buttons while actions is occurring
+            SpellB.IsEnabled = false;  //prevent user from pressing Spell Button too fast or other buttons while actions is occurring
+            DefendB.IsEnabled = false;  //prevent user from pressing Defend Button too fast or other buttons while actions is occurring
+            ItemB.IsEnabled = false;  //prevent user from pressing Item Button too fast or other buttons while actions is occurring
+            FleeB.IsEnabled = false;  //prevent user from pressing Flee Button too fast or other buttons while actions is occurring
+
+            if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
+            {
+                callMessage();  //bring up notification if you win, lose, or fled
+                return;
+            }
+
+            monsterAttack();
 
         }
 
         private void DefendB_Click(object sender, RoutedEventArgs e)
         {
-            if (Enemy.getHP() <= 0 || You.getHP() <= 0)
+            AttackB.IsEnabled = false;  //prevent user from pressing Attack Button too fast or other buttons while actions is occurring
+            SpellB.IsEnabled = false;  //prevent user from pressing Spell Button too fast or other buttons while actions is occurring
+            DefendB.IsEnabled = false;  //prevent user from pressing Defend Button too fast or other buttons while actions is occurring
+            ItemB.IsEnabled = false;  //prevent user from pressing Item Button too fast or other buttons while actions is occurring
+            FleeB.IsEnabled = false;  //prevent user from pressing Flee Button too fast or other buttons while actions is occurring
+
+            if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
                 callMessage();  //bring up notification if you win, lose, or fled
                 return;
@@ -136,16 +174,33 @@ namespace Probability_Simulator.Pages.RPG
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
 
+            AttackB.IsEnabled = true;   //restore Attack Button functionality
+            SpellB.IsEnabled = true;   //restore Spell Button functionality
+            DefendB.IsEnabled = true;   //restore Defend Button functionality
+            ItemB.IsEnabled = true;   //restore Item Button functionality
+            FleeB.IsEnabled = true;   //restore Flee Button functionality
         }
 
         private void ItemB_Click(object sender, RoutedEventArgs e)
         {
+            AttackB.IsEnabled = false;  //prevent user from pressing Attack Button too fast or other buttons while actions is occurring
+            SpellB.IsEnabled = false;  //prevent user from pressing Spell Button too fast or other buttons while actions is occurring
+            DefendB.IsEnabled = false;  //prevent user from pressing Defend Button too fast or other buttons while actions is occurring
+            ItemB.IsEnabled = false;  //prevent user from pressing Item Button too fast or other buttons while actions is occurring
+            FleeB.IsEnabled = false;  //prevent user from pressing Flee Button too fast or other buttons while actions is occurring
 
+            if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
+            {
+                callMessage();  //bring up notification if you win, lose, or fled
+                return;
+            }
+
+            monsterAttack();
         }
         
         private void FleeB_Click(object sender, RoutedEventArgs e)
         {
-            if (Enemy.getHP() <= 0 || You.getHP() <= 0)
+            if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
                 callMessage();  //bring up notification if you win, lose, or fled
                 return;
@@ -154,12 +209,15 @@ namespace Probability_Simulator.Pages.RPG
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
             fled = true;
+
             BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Game Over.mp3");
+
+            callMessage();
         }
 
         private void monsterAttack()
         {
-            if (Enemy.getHP() <= 0 || You.getHP() <= 0)
+            if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
                 callMessage();  //bring up notification if you win, lose, or fled
                 return;
@@ -190,6 +248,12 @@ namespace Probability_Simulator.Pages.RPG
 
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
+
+            AttackB.IsEnabled = true;   //restore Attack Button functionality
+            SpellB.IsEnabled = true;   //restore Spell Button functionality
+            DefendB.IsEnabled = true;   //restore Defend Button functionality
+            ItemB.IsEnabled = true;   //restore Item Button functionality
+            FleeB.IsEnabled = true;   //restore Flee Button functionality
         }
 
         private void youLose()
@@ -197,7 +261,14 @@ namespace Probability_Simulator.Pages.RPG
             ActionLogList.Children.Add(new TextBlock() { Text = "You Lose!" });
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
+
             BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Game Over.mp3");
+
+            AttackB.IsEnabled = true;   //restore Attack Button functionality
+            SpellB.IsEnabled = true;   //restore Spell Button functionality
+            DefendB.IsEnabled = true;   //restore Defend Button functionality
+            ItemB.IsEnabled = true;   //restore Item Button functionality
+            FleeB.IsEnabled = true;   //restore Flee Button functionality
         }
 
         private void youWin()
@@ -207,6 +278,12 @@ namespace Probability_Simulator.Pages.RPG
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
 
             BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Lucca's Theme.mp3");
+
+            AttackB.IsEnabled = true;   //restore Attack Button functionality
+            SpellB.IsEnabled = true;   //restore Spell Button functionality
+            DefendB.IsEnabled = true;   //restore Defend Button functionality
+            ItemB.IsEnabled = true;   //restore Item Button functionality
+            FleeB.IsEnabled = true;   //restore Flee Button functionality
 
         }
 
@@ -246,6 +323,12 @@ namespace Probability_Simulator.Pages.RPG
 
             // Show the message dialog and wait
             await messageDialog.ShowAsync();
+
+            AttackB.IsEnabled = true;   //restore Attack Button functionality
+            SpellB.IsEnabled = true;   //restore Spell Button functionality
+            DefendB.IsEnabled = true;   //restore Defend Button functionality
+            ItemB.IsEnabled = true;   //restore Item Button functionality
+            FleeB.IsEnabled = true;   //restore Flee Button functionality
         }
         private void CommandInvokedHandler(IUICommand command)  //clear action log and reset hp, mp and music
         {
@@ -257,6 +340,12 @@ namespace Probability_Simulator.Pages.RPG
             yourHPText.Text = You.getHPStart().ToString();
             ActionLogList.Children.Clear();
             BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Battle Theme.mp3");
+
+            AttackB.IsEnabled = true;   //restore Attack Button functionality
+            SpellB.IsEnabled = true;   //restore Spell Button functionality
+            DefendB.IsEnabled = true;   //restore Defend Button functionality
+            ItemB.IsEnabled = true;   //restore Item Button functionality
+            FleeB.IsEnabled = true;   //restore Flee Button functionality
         }
 
         private void RestartB_Click(object sender, RoutedEventArgs e)   //clear action log and reset hp, mp and music
@@ -269,6 +358,12 @@ namespace Probability_Simulator.Pages.RPG
             yourHPText.Text = You.getHPStart().ToString();
             ActionLogList.Children.Clear();
             BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Battle Theme.mp3");
+
+            AttackB.IsEnabled = true;   //restore Attack Button functionality
+            SpellB.IsEnabled = true;   //restore Spell Button functionality
+            DefendB.IsEnabled = true;   //restore Defend Button functionality
+            ItemB.IsEnabled = true;   //restore Item Button functionality
+            FleeB.IsEnabled = true;   //restore Flee Button functionality
         }
 
         private void PauseB_Click(object sender, RoutedEventArgs e)
