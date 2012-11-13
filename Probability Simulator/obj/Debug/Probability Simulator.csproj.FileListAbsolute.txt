@@ -1,0 +1,59 @@
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Probability Simulator.exe
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Probability Simulator.pdb
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\resources.pri
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\AppxManifest.xml
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Probability Simulator.build.appxrecipe
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\App.g.i.cs
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\App.g.cs
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Common\StandardStyles.g.i.cs
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Common\StandardStyles.g.cs
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\MainPage.g.i.cs
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\MainPage.g.cs
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\SelectionPage.g.i.cs
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\SelectionPage.g.cs
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\XamlTypeInfo.g.cs
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\App.xaml
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Common\StandardStyles.xaml
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\MainPage.xaml
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\SelectionPage.xaml
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Probability Simulator.exe
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Probability Simulator.pdb
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\priconfig.xml
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\layout.resfiles
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\resources.resfiles
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\pri.resfiles
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\LanguageQualifiers.txt
+c:\users\quanvt\documents\visual studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\ProjectArchitectures.txt
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\DicePage.g.i.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\DicePage.g.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\DicePage.xaml
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\priconfig.xml.intermediate
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\layout.resfiles.intermediate
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\resources.resfiles.intermediate
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\pri.resfiles.intermediate
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\CardPage.g.i.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\CardPage.g.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\CardPage.xaml
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\CoinPage.g.i.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\CoinPage.g.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\CoinPage.xaml
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Assets\CardB.png
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Assets\CoinB.png
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Assets\DiceB.png
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\EasterEggPage.g.i.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\EasterEggPage.g.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Assets\Monster.png
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\EasterEggPage.xaml
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Assets\Music\Chrono Trigger Music - Battle Theme.mp3
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Assets\Music\Chrono Trigger Music - Game Over.mp3
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Assets\Music\Chrono Trigger Music - Lucca's Theme.mp3
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\RPG\AxalfFightPage.g.i.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\RPG\AxalfFightPage.g.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\RPG\AxalfFightPage.xaml
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\bin\Debug\Assets\Sound Effect\coin_flip.wav
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\BingoPage.g.i.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\BingoPage.g.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\BingoPage.xaml
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\BingoPage2.g.i.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\BingoPage2.g.cs
+C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\BingoPage2.xaml

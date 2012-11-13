@@ -1,0 +1,27 @@
+Assets\CardB.png
+Assets\CoinB.png
+Assets\DiceB.png
+Assets\Logo.png
+Assets\Monster.png
+Assets\Music\Chrono Trigger Music - Battle Theme.mp3
+Assets\Music\Chrono Trigger Music - Game Over.mp3
+Assets\Music\Chrono Trigger Music - Lucca's Theme.mp3
+Assets\penny-head-trans.png
+Assets\penny-tail-trans.png
+Assets\six_sided_dice-View.png
+Assets\SmallLogo.png
+Assets\Sound Effect\coin_flip.wav
+Assets\SplashScreen.png
+Assets\StoreLogo.png
+App.xaml
+Common\StandardStyles.xaml
+MainPage.xaml
+Pages\BingoPage.xaml
+Pages\BingoPage2.xaml
+Pages\CardPage.xaml
+Pages\CoinPage.xaml
+Pages\DicePage.xaml
+Pages\EasterEggPage.xaml
+Pages\RPG\AxalfFightPage.xaml
+Pages\SelectionPage.xaml
+Common\ReadMe.txt

@@ -1,0 +1,447 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+
+// The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
+
+namespace Probability_Simulator.Pages
+{
+    /// <summary>
+    /// A basic page that provides characteristics common to most applications.
+    /// </summary>
+    public class Attack 
+    {
+        private string name = "Attack";
+        private int critPercent; //value between 0-10
+        private int minDamage = 0;
+        private int maxDamage = 0;
+
+        public Attack()
+        {
+            name = "Attack";
+            critPercent = 0;
+            minDamage = 0;
+            maxDamage = 0;
+        }
+
+        public Attack(string name, int critPercent, int minDamage, int maxDamage)
+        {
+            this.name = name;
+            this.critPercent = critPercent;
+            this.minDamage = minDamage;
+            this.maxDamage = maxDamage;
+        }
+    }
+
+    public class Character
+    {
+        string name;    //character name
+        int hpStart;    //starting hp
+        int mpStart;    //starting mp
+        int hp;
+        int mp;
+        int poisonResist;   //value between 0-10, if character roll above resist, character is not poisoned
+        int paralyzeResist; //value between 0-10, if character roll above resist, character is not paralyzed
+
+        public Character()
+        {
+            hpStart = 1;
+            mpStart = 1;
+            hp = hpStart;
+            mp = mpStart;
+            poisonResist = 0;
+            paralyzeResist = 0;
+        }
+
+        public Character(int health, int mana)
+        {
+            hpStart = health;
+            mpStart = mana;
+            hp = hpStart;
+            mp = mpStart;
+            this.poisonResist = 0;
+            this.paralyzeResist = 0;
+        }
+
+        public Character(int health, int mana, int poisonResist, int paralyzeResist)
+        {
+            hpStart = health;
+            mpStart = mana;
+            hp = hpStart;
+            mp = mpStart;
+            this.poisonResist = poisonResist;
+            this.paralyzeResist = paralyzeResist;
+        }
+
+        //Get Methods
+        public string getName()
+        {
+            return name;
+        }
+
+        public int getHPStart()
+        {
+            return hpStart;
+        }
+
+        public int getMPStart()
+        {
+            return mpStart;
+        }
+
+        public int getHP()
+        {
+            return hp;
+        }
+
+        public int getMP()
+        {
+            return mp;
+        }
+
+        public int getPoisonResist()
+        {
+            return poisonResist;
+        }
+
+        public int getParalyzeResist()
+        {
+            return paralyzeResist;
+        }
+
+        //Set Methods
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+
+        public void setHPStart(int healthStart)
+        {
+            hpStart = healthStart;
+        }
+
+        public void setMPStart(int manaStart)
+        {
+            mpStart = manaStart;
+        }
+
+        public void setHP(int health)
+        {
+            hp = health;
+        }
+
+        public void setMP(int mana)
+        {
+            mp = mana;
+        }
+
+        public void setPoisonResist(int poisonResist)
+        {
+            this.poisonResist = poisonResist;
+        }
+
+        public void setParalyzeResist(int paralyzeResist)
+        {
+            this.paralyzeResist = paralyzeResist;
+        }
+
+    }
+    public class Monster : Character
+    {
+        private int hp;
+        private int mp;
+        private int numAttacks = 0;
+        private Attack[] moveList;
+
+        //Constructors
+        public Monster()
+        {
+            setHPStart(100);
+            setMPStart(100);
+            setHP(hpStar)t;
+            setMP(mpStart;
+            mpStart = 100;
+            numAttacks = 1;
+            moveList = new Attack[numAttacks];
+            for (int i = 0; i < numAttacks; i++)
+            {
+                moveList[i] = new Attack();
+            }
+            poisonResist = 0;
+            paralyzeResist = 0;
+        }
+
+        public Monster(int hp, int mp, int numAttacks)
+        {
+            this.hpStart = 100;
+            this.mpStart = 100;
+            this.hp = hpStart;
+            this.mp = mpStart;
+            this.numAttacks = numAttacks;
+            moveList = new Attack[numAttacks];
+            for (int i = 0; i < numAttacks; i++)
+            {
+                moveList[i] = new Attack();
+            }
+            poisonResist = 0;
+            paralyzeResist = 0;
+        }
+
+        public Monster(int hp, int mp, int numAttacks, int poisonResist, int paralyzeResist)
+        {
+            this.hpStart = 100;
+            this.mpStart = 100;
+            this.hp = hpStart;
+            this.mp = mpStart;
+            this.numAttacks = numAttacks;
+            moveList = new Attack[numAttacks];
+            for (int i = 0; i < numAttacks; i++)
+            {
+                moveList[i] = new Attack();
+            }
+            this.poisonResist = poisonResist;
+            this.paralyzeResist = paralyzeResist;
+        }
+
+        public int getNumAttacks()
+        {
+            return numAttacks;
+        }
+
+        public Attack[] getMoveList()
+        {
+            return moveList;
+        }
+    }
+
+    public class Player : Character
+    {
+        private int hpStart;    //starting hp
+        private int mpStart;    //starting mp
+        private int hp;
+        private int mp;
+        private int numSpells = 0;
+        private Attack[] spellList;
+        private int poisonResist;   //value between 0-10, if monster roll above resist, player is not poisoned
+        private int paralyzeResist; //value between 0-10, if monster roll above resist, player is not paralyzed
+
+        //Constructors
+        public Player()
+        {
+            hpStart = 100;
+            hp = hpStart;
+            mp = mpStart;
+            mpStart = 100;
+            numSpells = 1;
+            spellList = new Attack[numSpells];
+            for (int i = 0; i < numSpells; i++)
+            {
+                spellList[i] = new Attack();
+            }
+            poisonResist = 0;
+            paralyzeResist = 0;
+        }
+
+        public Player(int hp, int mp, int numAttacks)
+        {
+            this.hpStart = 100;
+            this.mpStart = 100;
+            this.hp = hpStart;
+            this.mp = mpStart;
+            this.numSpells = numAttacks;
+            spellList = new Attack[numAttacks];
+            for (int i = 0; i < numAttacks; i++)
+            {
+                spellList[i] = new Attack();
+            }
+            poisonResist = 0;
+            paralyzeResist = 0;
+        }
+
+        public Player(int hp, int mp, int numAttacks, int poisonResist, int paralyzeResist)
+        {
+            this.hpStart = 100;
+            this.mpStart = 100;
+            this.hp = hpStart;
+            this.mp = mpStart;
+            this.numSpells = numAttacks;
+            spellList = new Attack[numAttacks];
+            for (int i = 0; i < numAttacks; i++)
+            {
+                spellList[i] = new Attack();
+            }
+            this.poisonResist = poisonResist;
+            this.paralyzeResist = paralyzeResist;
+        }
+
+        //Get Methods
+        public int getHPStart()
+        {
+            return hpStart;
+        }
+
+        public int getMPStart()
+        {
+            return mpStart;
+        }
+
+        public int getHP()
+        {
+            return hp;
+        }
+
+        public int getMP()
+        {
+            return mp;
+        }
+
+        public int getNumAttacks()
+        {
+            return numSpells;
+        }
+
+        public Attack[] getMoveList()
+        {
+            return spellList;
+        }
+
+        public int getPoisonResist()
+        {
+            return poisonResist;
+        }
+
+        public int getParalyzeResist()
+        {
+            return paralyzeResist;
+        }
+    }
+
+    public sealed partial class EasterEggPage : Probability_Simulator.Common.LayoutAwarePage
+    {
+        Monster Axalf = new Monster(50, 10, 1);
+        Player You = new Player(100, 10, 2);
+        int crit;
+        int monsterStartHealth;
+        int yourStartHealth;
+
+        public EasterEggPage()
+        {
+            this.InitializeComponent();
+            Int32.TryParse(monsterHealthText.Text, out monsterStartHealth);
+            Int32.TryParse(yourHealthText.Text, out yourStartHealth);
+        }
+
+        /// <summary>
+        /// Populates the page with content passed during navigation.  Any saved state is also
+        /// provided when recreating a page from a prior session.
+        /// </summary>
+        /// <param name="navigationParameter">The parameter value passed to
+        /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested.
+        /// </param>
+        /// <param name="pageState">A dictionary of state preserved by this page during an earlier
+        /// session.  This will be null the first time a page is visited.</param>
+        protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
+        {
+        }
+
+        /// <summary>
+        /// Preserves state associated with this page in case the application is suspended or the
+        /// page is discarded from the navigation cache.  Values must conform to the serialization
+        /// requirements of <see cref="SuspensionManager.SessionState"/>.
+        /// </summary>
+        /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
+        protected override void SaveState(Dictionary<String, Object> pageState)
+        {
+        }
+
+        private void AttackB_Click(object sender, RoutedEventArgs e)
+        {
+            int monsterHealth;
+
+            Int32.TryParse(monsterHealthText.Text, out monsterHealth);
+            Random random = new Random();
+            int damage = 0;
+            damage = random.Next(1, 7);
+            monsterHealth -= damage;
+            if (monsterHealth <= 0)
+            {
+                youWin();
+                monsterHealthBar.Width = 0;
+            }
+            else
+                monsterHealthBar.Width = 177 * monsterHealth / monsterStartHealth;
+            monsterHealthText.Text = monsterHealth.ToString();
+            ActionLogList.Children.Add(new TextBlock() { Text = "You did " + damage + " damage to Axalf" });
+            ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
+            ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
+            monsterAttack();
+
+        }
+
+        private void DefendB_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FleeB_Click(object sender, RoutedEventArgs e)
+        {
+            ActionLogList.Children.Add(new TextBlock() { Text = "You run away!" });
+            ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
+            ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
+        }
+
+        private void monsterAttack()
+        {
+            int yourHealth;
+            Int32.TryParse(yourHealthText.Text, out yourHealth);
+            Random random = new Random();
+            int damage;
+
+            crit = random.Next(1, 21);  //if crit == 1, monster do a critical attack
+            if (crit == 1)
+            {
+                damage = random.Next(1, 20);
+            }
+            else
+                damage = random.Next(1, 11);
+            yourHealth -= damage;
+
+            if (yourHealth <= 0)
+            {
+                youLost();
+                yourHealthBar.Width = 0;
+            }
+            else
+                yourHealthBar.Width = 177 * yourHealth / yourStartHealth;
+            yourHealthText.Text = yourHealth.ToString();
+            ActionLogList.Children.Add(new TextBlock() { Text = "Axalf did "+damage+" damage to you" });
+            ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
+            ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
+        }
+
+        private void youLost()
+        {
+            ActionLogList.Children.Add(new TextBlock() { Text = "You Lose!" });
+            ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
+            ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
+        }
+
+        private void youWin()
+        {
+            ActionLogList.Children.Add(new TextBlock() { Text = "You Win!" });
+            ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
+            ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
+        }
+
+    }
+}
