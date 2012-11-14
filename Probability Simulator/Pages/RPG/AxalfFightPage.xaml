@@ -13,7 +13,7 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="PageName">Dire Diminutive Drawf: Axalf</x:String>
+        <x:String x:Key="PageName">Subtitle: Name</x:String>
         <Storyboard x:Name="IdleAnimation" RepeatBehavior="Forever">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="viewbox">
         		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
@@ -72,28 +72,28 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="250" Margin="0">
+            <Grid x:Name="grid" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="250" Margin="0">
                 <TextBlock x:Name="yourName" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Segoe UI" FontSize="24"/>
                 <TextBlock x:Name="yourHPLabel" TextWrapping="Wrap" Text="Health" VerticalAlignment="Top" Margin="0,37,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
-                <Rectangle x:Name="yourHPBar" HorizontalAlignment="Left" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="63,37,0,0" Fill="Red"/>
-                <TextBlock x:Name="yourHPText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,37,0,0" Height="24" Width="177" Foreground="White" TextAlignment="Center" FontSize="20"/>
-                <TextBlock x:Name="yourMPLabel" TextWrapping="Wrap" Text="Mana" VerticalAlignment="Top" Margin="0,66,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
-                <TextBlock x:Name="yourMPText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,66,0,0" Height="24" Width="177" TextAlignment="Center" FontSize="20" Foreground="White"/>
-                <Rectangle x:Name="yourMPBar" HorizontalAlignment="Left" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="63,66,0,0" Fill="#FF2EFF00"/>
+                <Rectangle x:Name="yourHPBar" Height="24" Stroke="Black" VerticalAlignment="Top" Margin="63,37,10,0" Fill="Red"/>
+                <TextBlock x:Name="yourHPText" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,37,10,0" Height="24" Foreground="White" TextAlignment="Center" FontSize="20"/>
+                <TextBlock x:Name="yourMPLabel" TextWrapping="Wrap" Text="Mana" VerticalAlignment="Top" Margin="0,66,0,0" FontSize="20" TextAlignment="Right" HorizontalAlignment="Left" Width="50"/>
+                <Rectangle x:Name="yourMPBar" Height="24" Stroke="Black" VerticalAlignment="Top" Margin="63,66,10,0" Fill="#FF2EFF00"/>
+                <TextBlock x:Name="yourMPText" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,66,10,0" Height="24" TextAlignment="Center" FontSize="20" Foreground="White"/>
             </Grid>
-            <Grid HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="250">
+            <Grid x:Name="grid1" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="250">
                 <TextBlock x:Name="monsterName" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Segoe UI" FontSize="24"/>
-                <TextBlock x:Name="monsterHPLabel" TextWrapping="Wrap" Text="Health" VerticalAlignment="Top" Margin="10,37,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
-                <Rectangle x:Name="monsterHPBar" HorizontalAlignment="Right" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="0,37,0,0" Fill="Red"/>
-                <TextBlock x:Name="monsterHPText" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,37,0,0" Height="24" Width="177" TextAlignment="Center" FontSize="20" Foreground="White"/>
-                <TextBlock x:Name="monsterMPLabel" TextWrapping="Wrap" Text="Mana" VerticalAlignment="Top" Margin="10,66,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
-                <Rectangle x:Name="monsterMPBar" HorizontalAlignment="Right" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="0,66,0,0" Fill="#FF2EFF00"/>
-                <TextBlock x:Name="monsterMPText" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,66,0,0" Height="24" Width="177" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                <TextBlock x:Name="monsterHPLabel" TextWrapping="Wrap" Text="Health" VerticalAlignment="Top" Margin="0,37,0,0" FontSize="20" TextAlignment="Right" HorizontalAlignment="Right" Width="58"/>
+                <Rectangle x:Name="monsterHPBar" Height="24" Stroke="Black" VerticalAlignment="Top" Margin="10,37,63,0" Fill="Red"/>
+                <TextBlock x:Name="monsterHPText" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,37,63,0" Height="24" TextAlignment="Center" FontSize="20" Foreground="White"/>
+                <TextBlock x:Name="monsterMPLabel" TextWrapping="Wrap" Text="Mana" VerticalAlignment="Top" Margin="0,66,0,0" FontSize="20" TextAlignment="Right" HorizontalAlignment="Right" Width="50"/>
+                <Rectangle x:Name="monsterMPBar" Height="24" Stroke="Black" VerticalAlignment="Top" Margin="10,66,63,0" Fill="#FF2EFF00"/>
+                <TextBlock x:Name="monsterMPText" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,66,63,0" Height="24" TextAlignment="Center" FontSize="20" Foreground="White"/>
             </Grid>
             <Grid Height="237" VerticalAlignment="Bottom" Margin="0">
                 <TextBlock x:Name="ActionLogLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Action Log" VerticalAlignment="Top"/>
-                <ScrollViewer x:Name="ActionLogScroll" Margin="0,17,346,0" BorderThickness="1" BorderBrush="White">
-                    <StackPanel x:Name="ActionLogList"/>
+                <ScrollViewer x:Name="ActionLogScroll" Margin="0,17,346,0" BorderThickness="1" BorderBrush="White" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="ActionLogList" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
                 </ScrollViewer>
                 <Button x:Name="AttackB" Content="Attack" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,180" Height="40" Width="346" Click="AttackB_Click"/>
                 <Button x:Name="SpellB" Content="Spell" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,135" Height="40" Width="346" Click="SpellB_Click"/>
@@ -123,6 +123,34 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PortraitBackButtonStyle}"/>
                         </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="viewbox">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<HorizontalAlignment>Center</HorizontalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="viewbox">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<VerticalAlignment>Center</VerticalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="viewbox">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>NaN</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="viewbox">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>209,10,209,237</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
 
@@ -134,6 +162,90 @@
                         </ObjectAnimationUsingKeyFrames>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="viewbox">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>NaN</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="viewbox">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>NaN</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="viewbox">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>20,100,20,0</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="grid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>155</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="grid1">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>155</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="AttackB">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>83</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="DefendB">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>83</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="SpellB">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>83</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="ItemB">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>83</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="FleeB">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>83</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="FleeB">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>0</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="ActionLogScroll">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>0,17,83,0</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>

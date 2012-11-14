@@ -14,9 +14,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-using Attack = Probability_Simulator.Common.Attack;
-using Monster = Probability_Simulator.Common.Monster;
-using Player = Probability_Simulator.Common.Player;
+using Attack = Probability_Simulator.Common.RPG.Attack;
+using Monster = Probability_Simulator.Common.RPG.Monster;
+using Player = Probability_Simulator.Common.RPG.Player;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 

@@ -27,21 +27,27 @@ namespace Probability_Simulator.Pages.RPG
     /// </summary>
     public sealed partial class AxalfFightPage : Probability_Simulator.Common.LayoutAwarePage
     {
-        Monster Enemy = new Monster("Axalf", 50, 10, 1);
+        Monster Enemy = new Monster("Axalf", "Dire Dimunitive Drawf", 50, 10, 1);
         Player You = new Player("You", 100, 10, 2);
 
         Random random = new Random();
         bool fled = false;  //check if the flee button has been pressed
 
+        //store HP and MP bar starting width
+        double monsterHPBarWidth;
+        double playerHPBarWidth;
+        double monsterMPBarWidth;
+        double playerMPBarWidth;
+
         public AxalfFightPage()
         {
-            this.InitializeComponent();
             this.InitializeComponent();
 
             //Idle Animation Begin
             IdleAnimation.Begin();
 
-            //Create Monster and Player
+            //Display Monster and Player value
+            pageTitle.Text = Enemy.getSubtitle() + ": " + Enemy.getName();
             monsterName.Text = Enemy.getName();
             monsterHPText.Text = Enemy.getHPStart().ToString();
             monsterMPText.Text = Enemy.getMPStart().ToString();
@@ -49,6 +55,12 @@ namespace Probability_Simulator.Pages.RPG
             yourHPText.Text = You.getHPStart().ToString();
             yourMPText.Text = You.getMPStart().ToString();
             Enemy.getMoveList()[0] = new Attack("Fire", 1, 5, 13);
+
+            //find HP and MP bar starting width
+            monsterHPBarWidth = monsterHPBar.Width;    
+            playerHPBarWidth = yourHPBar.Width;
+            monsterMPBarWidth = monsterMPBar.Width;
+            playerMPBarWidth = yourMPBar.Width;
         }
 
         /// <summary>
@@ -76,21 +88,14 @@ namespace Probability_Simulator.Pages.RPG
 
         private async void AttackB_Click(object sender, RoutedEventArgs e)
         {
-
-            AttackB.IsEnabled = false;  //prevent user from pressing Attack Button too fast or other buttons while actions is occurring
-            SpellB.IsEnabled = false;  //prevent user from pressing Spell Button too fast or other buttons while actions is occurring
-            DefendB.IsEnabled = false;  //prevent user from pressing Defend Button too fast or other buttons while actions is occurring
-            ItemB.IsEnabled = false;  //prevent user from pressing Item Button too fast or other buttons while actions is occurring
-            FleeB.IsEnabled = false;  //prevent user from pressing Flee Button too fast or other buttons while actions is occurring
+            disableButton();
 
             if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
                 callMessage();  //bring up notification if you win, lose, or fled
                 return;
             }
-            double damage = 0;
-            damage = random.Next(1, 15);
-            Enemy.setHP(Enemy.getHP() - (int)damage);
+            double damage = You.attack(ref Enemy);
             ActionLogList.Children.Add(new TextBlock() { Text = "You did " + (int)damage + " damage to " + Enemy.getName() });
 
             //Flinch Animation for Monster 
@@ -106,7 +111,7 @@ namespace Probability_Simulator.Pages.RPG
             }
             else
             {
-                monsterHPBar.Width = 177 * Enemy.getHP() / Enemy.getHPStart();
+                monsterHPBar.Width = monsterHPBarWidth * Enemy.getHP() / Enemy.getHPStart();
                 monsterHPText.Text = Enemy.getHP().ToString();
             }
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
@@ -117,11 +122,7 @@ namespace Probability_Simulator.Pages.RPG
 
         private void SpellB_Click(object sender, RoutedEventArgs e)
         {
-            AttackB.IsEnabled = false;  //prevent user from pressing Attack Button too fast or other buttons while actions is occurring
-            SpellB.IsEnabled = false;  //prevent user from pressing Spell Button too fast or other buttons while actions is occurring
-            DefendB.IsEnabled = false;  //prevent user from pressing Defend Button too fast or other buttons while actions is occurring
-            ItemB.IsEnabled = false;  //prevent user from pressing Item Button too fast or other buttons while actions is occurring
-            FleeB.IsEnabled = false;  //prevent user from pressing Flee Button too fast or other buttons while actions is occurring
+            disableButton();
 
             if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
@@ -135,30 +136,17 @@ namespace Probability_Simulator.Pages.RPG
 
         private void DefendB_Click(object sender, RoutedEventArgs e)
         {
-            AttackB.IsEnabled = false;  //prevent user from pressing Attack Button too fast or other buttons while actions is occurring
-            SpellB.IsEnabled = false;  //prevent user from pressing Spell Button too fast or other buttons while actions is occurring
-            DefendB.IsEnabled = false;  //prevent user from pressing Defend Button too fast or other buttons while actions is occurring
-            ItemB.IsEnabled = false;  //prevent user from pressing Item Button too fast or other buttons while actions is occurring
-            FleeB.IsEnabled = false;  //prevent user from pressing Flee Button too fast or other buttons while actions is occurring
+            disableButton();
 
             if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
                 callMessage();  //bring up notification if you win, lose, or fled
                 return;
             }
-            double damage;
-            int moveChosen = random.Next(0, Enemy.getNumAttacks()); //choose from one of the possible attacks
-            bool crit;
-            crit = (Enemy.getMoveList()[moveChosen].getCritPercent() == random.Next(1, 11));  //if crit == 1, monster do a critical attack
-            damage = random.Next((int)Enemy.getMoveList()[moveChosen].getMinDamage(), (int)Enemy.getMoveList()[moveChosen].getMaxDamage());
-            if (crit)
-            {
-                damage = damage * 1.5;
-            }
-            damage = damage / 2;
-            You.setHP(You.getHP() - (int)damage);
-            ActionLogList.Children.Add(new TextBlock() { Text = Enemy.getName() + " use " + Enemy.getMoveList()[moveChosen].getName() + " and did " + (int)damage + " damage to you" });
+            KeyValuePair<double, int> result = Enemy.attackDefended(ref You);
 
+            ActionLogList.Children.Add(new TextBlock() { Text = Enemy.getName() + " uses " + Enemy.getMoveList()[result.Value].getName() + " and did " + (int)result.Key + " damage to you" });
+           
             if (You.getHP() <= 0)
             {
                 youLose();
@@ -174,20 +162,12 @@ namespace Probability_Simulator.Pages.RPG
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
 
-            AttackB.IsEnabled = true;   //restore Attack Button functionality
-            SpellB.IsEnabled = true;   //restore Spell Button functionality
-            DefendB.IsEnabled = true;   //restore Defend Button functionality
-            ItemB.IsEnabled = true;   //restore Item Button functionality
-            FleeB.IsEnabled = true;   //restore Flee Button functionality
+            enableButton();
         }
 
         private void ItemB_Click(object sender, RoutedEventArgs e)
         {
-            AttackB.IsEnabled = false;  //prevent user from pressing Attack Button too fast or other buttons while actions is occurring
-            SpellB.IsEnabled = false;  //prevent user from pressing Spell Button too fast or other buttons while actions is occurring
-            DefendB.IsEnabled = false;  //prevent user from pressing Defend Button too fast or other buttons while actions is occurring
-            ItemB.IsEnabled = false;  //prevent user from pressing Item Button too fast or other buttons while actions is occurring
-            FleeB.IsEnabled = false;  //prevent user from pressing Flee Button too fast or other buttons while actions is occurring
+            disableButton();
 
             if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
@@ -222,18 +202,10 @@ namespace Probability_Simulator.Pages.RPG
                 callMessage();  //bring up notification if you win, lose, or fled
                 return;
             }
-            double damage;
-            int moveChosen = random.Next(0, Enemy.getNumAttacks()); //choose from one of the possible attacks
-            bool crit;
-            crit = (Enemy.getMoveList()[moveChosen].getCritPercent() == random.Next(1, 11));  //if crit == 1, monster do a critical attack
-            damage = random.Next((int)Enemy.getMoveList()[moveChosen].getMinDamage(), (int)Enemy.getMoveList()[moveChosen].getMaxDamage());
-            if (crit)
-            {
-                damage = damage * 1.5;
-            }
-            You.setHP(You.getHP() - (int)damage);
-            ActionLogList.Children.Add(new TextBlock() { Text = Enemy.getName() + " uses " + Enemy.getMoveList()[moveChosen].getName() + " and did " + (int)damage + " damage to you" });
+            KeyValuePair<double, int> result = Enemy.attack(ref You);
 
+            ActionLogList.Children.Add(new TextBlock() { Text = Enemy.getName() + " uses " + Enemy.getMoveList()[result.Value].getName() + " and did " + (int)result.Key + " damage to you" });
+           
             if (You.getHP() <= 0)
             {
                 youLose();
@@ -242,18 +214,14 @@ namespace Probability_Simulator.Pages.RPG
             }
             else
             {
-                yourHPBar.Width = 177 * You.getHP() / You.getHPStart();
+                yourHPBar.Width = playerHPBarWidth * You.getHP() / You.getHPStart();
                 yourHPText.Text = You.getHP().ToString();
             }
 
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
 
-            AttackB.IsEnabled = true;   //restore Attack Button functionality
-            SpellB.IsEnabled = true;   //restore Spell Button functionality
-            DefendB.IsEnabled = true;   //restore Defend Button functionality
-            ItemB.IsEnabled = true;   //restore Item Button functionality
-            FleeB.IsEnabled = true;   //restore Flee Button functionality
+            enableButton();
         }
 
         private void youLose()
@@ -330,43 +298,18 @@ namespace Probability_Simulator.Pages.RPG
             ItemB.IsEnabled = true;   //restore Item Button functionality
             FleeB.IsEnabled = true;   //restore Flee Button functionality
         }
+
         private void CommandInvokedHandler(IUICommand command)  //clear action log and reset hp, mp and music
         {
-            Enemy.setHP(Enemy.getHPStart());
-            monsterHPBar.Width = 177;
-            monsterHPText.Text = Enemy.getHPStart().ToString();
-            You.setHP(You.getHPStart());
-            yourHPBar.Width = 177;
-            yourHPText.Text = You.getHPStart().ToString();
-            ActionLogList.Children.Clear();
-            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Battle Theme.mp3");
-
-            AttackB.IsEnabled = true;   //restore Attack Button functionality
-            SpellB.IsEnabled = true;   //restore Spell Button functionality
-            DefendB.IsEnabled = true;   //restore Defend Button functionality
-            ItemB.IsEnabled = true;   //restore Item Button functionality
-            FleeB.IsEnabled = true;   //restore Flee Button functionality
+            restartGame();
         }
 
         private void RestartB_Click(object sender, RoutedEventArgs e)   //clear action log and reset hp, mp and music
         {
-            Enemy.setHP(Enemy.getHPStart());
-            monsterHPBar.Width = 177;
-            monsterHPText.Text = Enemy.getHPStart().ToString();
-            You.setHP(You.getHPStart());
-            yourHPBar.Width = 177;
-            yourHPText.Text = You.getHPStart().ToString();
-            ActionLogList.Children.Clear();
-            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Battle Theme.mp3");
-
-            AttackB.IsEnabled = true;   //restore Attack Button functionality
-            SpellB.IsEnabled = true;   //restore Spell Button functionality
-            DefendB.IsEnabled = true;   //restore Defend Button functionality
-            ItemB.IsEnabled = true;   //restore Item Button functionality
-            FleeB.IsEnabled = true;   //restore Flee Button functionality
+            restartGame();
         }
 
-        private void PauseB_Click(object sender, RoutedEventArgs e)
+        private void PauseB_Click(object sender, RoutedEventArgs e) //pause background music
         {
             if (BackgroundMusic.Volume == 0)
             {
@@ -376,6 +319,38 @@ namespace Probability_Simulator.Pages.RPG
             {
                 BackgroundMusic.Volume = 0;
             }
+        }
+
+        private void disableButton()    //disable button functionality to prevent rapid clicking
+        {
+            AttackB.IsEnabled = false;
+            SpellB.IsEnabled = false;
+            DefendB.IsEnabled = false;
+            ItemB.IsEnabled = false; 
+            FleeB.IsEnabled = false; 
+        }
+
+        private void enableButton() //enable button functionality
+        {
+            AttackB.IsEnabled = true;  
+            SpellB.IsEnabled = true; 
+            DefendB.IsEnabled = true; 
+            ItemB.IsEnabled = true; 
+            FleeB.IsEnabled = true;  
+        }
+
+        private void restartGame()  //clear action log and reset hp, mp and music
+        {
+            Enemy.setHP(Enemy.getHPStart());
+            monsterHPBar.Width = 177;
+            monsterHPText.Text = Enemy.getHPStart().ToString();
+            You.setHP(You.getHPStart());
+            yourHPBar.Width = 177;
+            yourHPText.Text = You.getHPStart().ToString();
+            ActionLogList.Children.Clear();
+            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Battle Theme.mp3");
+
+            enableButton();
         }
     }
 }

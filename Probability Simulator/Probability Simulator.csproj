@@ -110,6 +110,7 @@
     <Compile Include="Common\BooleanToVisibilityConverter.cs" />
     <Compile Include="Common\RPG\Character.cs" />
     <Compile Include="Common\LayoutAwarePage.cs" />
+    <Compile Include="Common\RPG\Item.cs" />
     <Compile Include="Common\RPG\Monster.cs" />
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\RPG\Player.cs" />

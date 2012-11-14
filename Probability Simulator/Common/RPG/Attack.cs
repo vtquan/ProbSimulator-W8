@@ -27,10 +27,20 @@ namespace Probability_Simulator.Common.RPG
             warningMessage = "";
         }
 
+        public Attack(int CritPercent, double MinDamage, double MaxDamage)
+        {
+            name = "Attack";
+            critPercent = CritPercent % 11; //% 11 keep critPercent at 10 or less
+            minDamage = MinDamage;
+            maxDamage = MaxDamage;
+            warning = false;
+            warningMessage = "";
+        }
+
         public Attack(string Name, int CritPercent, double MinDamage, double MaxDamage)
         {
             name = Name;
-            critPercent = CritPercent;
+            critPercent = CritPercent % 11; //% 11 keep critPercent at 10 or less
             minDamage = MinDamage;
             maxDamage = MaxDamage;
             warning = false;
@@ -40,7 +50,7 @@ namespace Probability_Simulator.Common.RPG
         public Attack(string Name, int CritPercent, double MinDamage, double MaxDamage, bool Warning)
         {
             name = Name;
-            critPercent = CritPercent;
+            critPercent = CritPercent % 11; //% 11 keep critPercent at 10 or less
             minDamage = MinDamage;
             maxDamage = MaxDamage;
             warning = Warning;
@@ -50,7 +60,7 @@ namespace Probability_Simulator.Common.RPG
         public Attack(string Name, int CritPercent, double MinDamage, double MaxDamage, bool Warning, string WarningMessage)
         {
             name = Name;
-            critPercent = CritPercent;
+            critPercent = CritPercent % 11; //% 11 keep critPercent at 10 or less
             minDamage = MinDamage;
             maxDamage = MaxDamage;
             warning = Warning;
@@ -96,7 +106,7 @@ namespace Probability_Simulator.Common.RPG
 
         public void setCritPercent(int CritPercent)
         {
-            critPercent = CritPercent;
+            critPercent = CritPercent % 11; //% 11 keep critPercent at 10 or less
         }
 
         public void setMinDamage(double MinDamage)

@@ -6,57 +6,137 @@ using System.Threading.Tasks;
 
 namespace Probability_Simulator.Common.RPG
 {
-    class Monster
+    public class Monster : Character
     {
-        public class Monster : Character
+        string subtitle;    //monster subtitle
+        private int numAttacks = 0; //number of attacks that the monster has
+        private Attack[] moveList;  //list of moves that the monster has
+
+        //Constructors
+        public Monster()
+            : base()
         {
-            private int numAttacks = 0;
-            private Attack[] moveList;
-
-            //Constructors
-            public Monster()
-                : base()
+            subtitle = "Boss";
+            numAttacks = 1;
+            moveList = new Attack[numAttacks];
+            for (int i = 0; i < numAttacks; i++)
             {
-                numAttacks = 1;
-                moveList = new Attack[numAttacks];
-                for (int i = 0; i < numAttacks; i++)
-                {
-                    moveList[i] = new Attack();
-                }
+                moveList[i] = new Attack();
+            }
+        }
+
+        public Monster(string Name, int HP, int MP, int NumAttacks)
+            : base(Name, HP, MP)
+        {
+            subtitle = "Boss";
+            numAttacks = NumAttacks;
+            moveList = new Attack[numAttacks];
+            for (int i = 0; i < numAttacks; i++)
+            {
+                moveList[i] = new Attack();
+            }
+        }
+
+        public Monster(string Name, string Subtitle, int HP, int MP, int NumAttacks)
+            : base(Name, HP, MP)
+        {
+            subtitle = Subtitle;
+            numAttacks = NumAttacks;
+            moveList = new Attack[numAttacks];
+            for (int i = 0; i < numAttacks; i++)
+            {
+                moveList[i] = new Attack();
+            }
+        }
+
+        public Monster(string Name, int HP, int MP, int NumAttacks, int PoisonResist, int ParalyzeResist)
+            : base(Name, HP, MP, PoisonResist, ParalyzeResist)
+        {
+            subtitle = "Boss";
+            numAttacks = NumAttacks;
+            moveList = new Attack[numAttacks];
+            for (int i = 0; i < numAttacks; i++)
+            {
+                moveList[i] = new Attack();
+            }
+        }
+
+        public Monster(string Name, string Subtitle, int HP, int MP, int NumAttacks, int PoisonResist, int ParalyzeResist)
+            : base(Name, HP, MP, PoisonResist, ParalyzeResist)
+        {
+            subtitle = Subtitle;
+            numAttacks = NumAttacks;
+            moveList = new Attack[numAttacks];
+            for (int i = 0; i < numAttacks; i++)
+            {
+                moveList[i] = new Attack();
+            }
+        }
+
+        //Get Methods
+        public string getSubtitle()
+        {
+            return subtitle;
+        }
+
+        public int getNumAttacks()
+        {
+            return numAttacks;
+        }
+
+        public Attack[] getMoveList()
+        {
+            return moveList;
+        }
+
+        //Action Methods
+        public KeyValuePair<double,int> attack(ref Player Target)
+        {
+            Random random = new Random();
+
+            //Calculate Initial Damage
+            int moveChosen = random.Next(0, numAttacks); //choose from one of the possible attacks
+            double damage = random.Next((int)moveList[moveChosen].getMinDamage(), (int)moveList[moveChosen].getMaxDamage() + 1);
+
+            //Crit or not
+            bool crit;
+            crit = (moveList[moveChosen].getCritPercent() >= random.Next(1, 11));
+
+            //Calculate final damage
+            if (crit)
+            {
+                damage = damage * 1.5;
             }
 
-            public Monster(string Name, int HP, int MP, int NumAttacks)
-                : base(Name, HP, MP)
-            {
-                numAttacks = NumAttacks;
-                moveList = new Attack[numAttacks];
-                for (int i = 0; i < numAttacks; i++)
-                {
-                    moveList[i] = new Attack();
-                }
-            }
+            Target.setHP(Target.getHP() - (int)damage);
 
-            public Monster(string Name, int HP, int MP, int NumAttacks, int PoisonResist, int ParalyzeResist)
-                : base(Name, HP, MP, PoisonResist, ParalyzeResist)
-            {
-                numAttacks = NumAttacks;
-                moveList = new Attack[numAttacks];
-                for (int i = 0; i < numAttacks; i++)
-                {
-                    moveList[i] = new Attack();
-                }
-            }
+            KeyValuePair<double,int> result = new KeyValuePair<double,int>(damage, moveChosen);
+            return result;
+        }
 
-            //Get Methods
-            public int getNumAttacks()
-            {
-                return numAttacks;
-            }
+        public KeyValuePair<double, int> attackDefended(ref Player Target)  //for when attacking a defended target
+        {
+            Random random = new Random();
 
-            public Attack[] getMoveList()
+            //Calculate Initial Damage
+            int moveChosen = random.Next(0, numAttacks); //choose from one of the possible attacks
+            double damage = random.Next((int)moveList[moveChosen].getMinDamage(), (int)moveList[moveChosen].getMaxDamage() + 1);
+
+            //Crit or not
+            bool crit;
+            crit = (moveList[moveChosen].getCritPercent() >= random.Next(1, 11));
+
+            //Calculate final damage
+            if (crit)
             {
-                return moveList;
+                damage = damage * 1.5;
             }
+            damage = damage / 2;
+
+            Target.setHP(Target.getHP() - (int)damage);
+
+            KeyValuePair<double, int> result = new KeyValuePair<double, int>(damage, moveChosen);
+            return result;
         }
     }
 }

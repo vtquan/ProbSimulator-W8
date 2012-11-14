@@ -11,10 +11,12 @@ namespace Probability_Simulator.Common.RPG
         string name;    //character name
         int hpStart;    //starting hp
         int mpStart;    //starting mp
-        int hp;
-        int mp;
+        int hp; //current hp
+        int mp; //current mp
         int poisonResist;   //value between 0-10, if character roll above resist, character is not poisoned
         int paralyzeResist; //value between 0-10, if character roll above resist, character is not paralyzed
+
+        private Item[,] itemList;    //[item object, item quantity]
 
         public Character()
         {
@@ -25,6 +27,8 @@ namespace Probability_Simulator.Common.RPG
             mp = mpStart;
             poisonResist = 0;
             paralyzeResist = 0;
+            itemList = new Item[0, 0];
+             
         }
 
         public Character(string Name)
@@ -36,6 +40,7 @@ namespace Probability_Simulator.Common.RPG
             mp = mpStart;
             poisonResist = 0;
             paralyzeResist = 0;
+            itemList = new Item[0, 0];
         }
 
         public Character(string Name, int Health, int Mana)
@@ -47,6 +52,7 @@ namespace Probability_Simulator.Common.RPG
             mp = mpStart;
             poisonResist = 0;
             paralyzeResist = 0;
+            itemList = new Item[0, 0];
         }
 
         public Character(string Name, int Health, int Mana, int PoisonResist, int ParalyzeResist)
@@ -56,8 +62,9 @@ namespace Probability_Simulator.Common.RPG
             mpStart = Mana;
             hp = hpStart;
             mp = mpStart;
-            poisonResist = PoisonResist;
-            paralyzeResist = ParalyzeResist;
+            poisonResist = PoisonResist % 11;      //% 11 makes sure that poisonResist is always 10 or less
+            paralyzeResist = ParalyzeResist % 11;   //% 11 makes sure that paralyzeResist is always 10 or less
+            itemList = new Item[0, 0];
         }
 
         //Get Methods
@@ -124,12 +131,12 @@ namespace Probability_Simulator.Common.RPG
 
         public void setPoisonResist(int PoisonResist)
         {
-            this.poisonResist = poisonResist;
+            poisonResist = PoisonResist % 11;      //% 11 makes sure that poisonResist is always 10 or less
         }
 
         public void setParalyzeResist(int ParalyzeResist)
         {
-            this.paralyzeResist = ParalyzeResist;
+            paralyzeResist = ParalyzeResist % 11;   //% 11 makes sure that paralyzeResist is always 10 or less
         }
     }
 }
