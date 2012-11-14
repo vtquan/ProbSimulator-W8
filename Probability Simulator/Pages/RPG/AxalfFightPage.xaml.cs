@@ -55,12 +55,6 @@ namespace Probability_Simulator.Pages.RPG
             yourHPText.Text = You.getHPStart().ToString();
             yourMPText.Text = You.getMPStart().ToString();
             Enemy.getMoveList()[0] = new Attack("Fire", 1, 5, 13);
-
-            //find HP and MP bar starting width
-            monsterHPBarWidth = monsterHPBar.Width;    
-            playerHPBarWidth = yourHPBar.Width;
-            monsterMPBarWidth = monsterMPBar.Width;
-            playerMPBarWidth = yourMPBar.Width;
         }
 
         /// <summary>
@@ -92,7 +86,7 @@ namespace Probability_Simulator.Pages.RPG
 
             if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
-                callMessage();  //bring up notification if you win, lose, or fled
+                battleEndMessage();  //bring up notification if you win, lose, or fled
                 return;
             }
             double damage = You.attack(ref Enemy);
@@ -106,8 +100,7 @@ namespace Probability_Simulator.Pages.RPG
             if (Enemy.getHP() <= 0)
             {
                 youWin();
-                monsterHPBar.Width = 0;
-                monsterHPText.Text = "0";
+                return;
             }
             else
             {
@@ -126,7 +119,13 @@ namespace Probability_Simulator.Pages.RPG
 
             if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
-                callMessage();  //bring up notification if you win, lose, or fled
+                battleEndMessage();  //bring up notification if you win, lose, or fled
+                return;
+            }
+
+            if (Enemy.getHP() <= 0)
+            {
+                youWin();
                 return;
             }
 
@@ -140,7 +139,7 @@ namespace Probability_Simulator.Pages.RPG
 
             if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
-                callMessage();  //bring up notification if you win, lose, or fled
+                battleEndMessage();  //bring up notification if you win, lose, or fled
                 return;
             }
             KeyValuePair<double, int> result = Enemy.attackDefended(ref You);
@@ -150,8 +149,7 @@ namespace Probability_Simulator.Pages.RPG
             if (You.getHP() <= 0)
             {
                 youLose();
-                yourHPBar.Width = 0;
-                yourHPText.Text = "0";
+                return;
             }
             else
             {
@@ -171,7 +169,19 @@ namespace Probability_Simulator.Pages.RPG
 
             if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
-                callMessage();  //bring up notification if you win, lose, or fled
+                battleEndMessage();  //bring up notification if you win, lose, or fled
+                return;
+            }
+
+            if (You.getHP() <= 0)
+            {
+                youLose();
+                return;
+            }
+
+            if (Enemy.getHP() <= 0)
+            {
+                youWin();
                 return;
             }
 
@@ -180,26 +190,30 @@ namespace Probability_Simulator.Pages.RPG
         
         private void FleeB_Click(object sender, RoutedEventArgs e)
         {
+            disableButton();
+
             if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
-                callMessage();  //bring up notification if you win, lose, or fled
+                battleEndMessage();  //bring up notification if you win, lose, or fled
                 return;
             }
-            ActionLogList.Children.Add(new TextBlock() { Text = "You run away!" });
-            ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
-            ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
-            fled = true;
 
-            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Game Over.mp3");
-
-            callMessage();
+            if (!fled)
+            {
+                youFlee();
+            }
+            else
+            {
+                fled = true;
+                battleEndMessage();
+            }
         }
 
         private void monsterAttack()
         {
             if (Enemy.getHP() <= 0 || You.getHP() <= 0 || fled)
             {
-                callMessage();  //bring up notification if you win, lose, or fled
+                battleEndMessage();  //bring up notification if you win, lose, or fled
                 return;
             }
             KeyValuePair<double, int> result = Enemy.attack(ref You);
@@ -208,9 +222,10 @@ namespace Probability_Simulator.Pages.RPG
            
             if (You.getHP() <= 0)
             {
-                youLose();
+                battleEndMessage();
                 yourHPBar.Width = 0;
                 yourHPText.Text = "0";
+                return;
             }
             else
             {
@@ -224,38 +239,40 @@ namespace Probability_Simulator.Pages.RPG
             enableButton();
         }
 
-        private void youLose()
-        {
-            ActionLogList.Children.Add(new TextBlock() { Text = "You Lose!" });
-            ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
-            ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
-
-            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Game Over.mp3");
-
-            AttackB.IsEnabled = true;   //restore Attack Button functionality
-            SpellB.IsEnabled = true;   //restore Spell Button functionality
-            DefendB.IsEnabled = true;   //restore Defend Button functionality
-            ItemB.IsEnabled = true;   //restore Item Button functionality
-            FleeB.IsEnabled = true;   //restore Flee Button functionality
-        }
-
         private void youWin()
         {
             ActionLogList.Children.Add(new TextBlock() { Text = "You Win!" });
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
-
             BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Lucca's Theme.mp3");
 
-            AttackB.IsEnabled = true;   //restore Attack Button functionality
-            SpellB.IsEnabled = true;   //restore Spell Button functionality
-            DefendB.IsEnabled = true;   //restore Defend Button functionality
-            ItemB.IsEnabled = true;   //restore Item Button functionality
-            FleeB.IsEnabled = true;   //restore Flee Button functionality
+            monsterHPBar.Width = 0;
+            monsterHPText.Text = "0";
 
+            battleEndMessage();
+        }   
+
+        private void youLose()
+        {
+            ActionLogList.Children.Add(new TextBlock() { Text = "You Lose!" });
+            ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
+            ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
+            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Game Over.mp3");
+
+            battleEndMessage();
         }
 
-        private async void callMessage()
+        private void youFlee()
+        {
+            ActionLogList.Children.Add(new TextBlock() { Text = "You run away!" });
+            ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
+            ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
+            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Game Over.mp3");
+
+            battleEndMessage();
+        }
+
+        private async void battleEndMessage()   //display message of battle outcome
         {
             var messageDialog = new MessageDialog("");
 
@@ -272,7 +289,7 @@ namespace Probability_Simulator.Pages.RPG
 
             if (You.getHP() <= 0)
             {
-                messageDialog = new MessageDialog("You lose!");
+                messageDialog = new MessageDialog("You lost!");
                 messageDialog.Title = "Game Over";
             }
 
@@ -292,11 +309,7 @@ namespace Probability_Simulator.Pages.RPG
             // Show the message dialog and wait
             await messageDialog.ShowAsync();
 
-            AttackB.IsEnabled = true;   //restore Attack Button functionality
-            SpellB.IsEnabled = true;   //restore Spell Button functionality
-            DefendB.IsEnabled = true;   //restore Defend Button functionality
-            ItemB.IsEnabled = true;   //restore Item Button functionality
-            FleeB.IsEnabled = true;   //restore Flee Button functionality
+            enableButton();
         }
 
         private void CommandInvokedHandler(IUICommand command)  //clear action log and reset hp, mp and music
@@ -351,6 +364,45 @@ namespace Probability_Simulator.Pages.RPG
             BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Battle Theme.mp3");
 
             enableButton();
+        }
+
+        private void MonsterInfoGrid_SizeChanged(object sender, SizeChangedEventArgs e) //update monster info bar size, will be call when page is loaded 
+        {
+            monsterHPBarWidth = monsterFullHPBar.ActualWidth;
+            monsterMPBarWidth = monsterFullMPBar.ActualWidth;
+
+            if (Enemy.getHP() <= 0)
+            {
+                monsterHPBar.Width = 0;
+                monsterHPText.Text = "0";
+            }
+            else
+            {
+                monsterHPBar.Width = monsterHPBarWidth * Enemy.getHP() / Enemy.getHPStart();
+                monsterHPText.Text = Enemy.getHP().ToString();
+                monsterMPBar.Width = monsterMPBarWidth * Enemy.getMP() / Enemy.getMPStart();
+                monsterMPText.Text = Enemy.getMP().ToString();
+            }
+            
+        }
+
+        private void PlayerInfoGrid_SizeChanged(object sender, SizeChangedEventArgs e)  //update player info bar size, will be call when page is loaded 
+        {
+            playerHPBarWidth = yourFullMPBar.ActualWidth;
+            playerMPBarWidth = yourFullMPBar.ActualWidth;
+
+            if (You.getHP() <= 0)
+            {
+                yourHPBar.Width = 0;
+                yourHPText.Text = "0";
+            }
+            else
+            {
+                yourHPBar.Width = playerHPBarWidth * You.getHP() / You.getHPStart();
+                yourHPText.Text = You.getHP().ToString();
+                yourMPBar.Width = playerMPBarWidth * You.getMP() / You.getMPStart();
+                yourMPText.Text = You.getMP().ToString();
+            }
         }
     }
 }

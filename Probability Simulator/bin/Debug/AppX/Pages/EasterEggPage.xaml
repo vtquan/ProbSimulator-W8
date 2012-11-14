@@ -14,38 +14,7 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="PageName">Bard Quest</x:String>
-        <Storyboard x:Name="IdleAnimation" RepeatBehavior="Forever">
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="canvas">
-        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-1"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
-        	</DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Name="AttackedAnimation">
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="canvas">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationZ)" Storyboard.TargetName="canvas">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="canvas">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="canvas">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetY)" Storyboard.TargetName="canvas">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-1"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
-        	</DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+        <x:String x:Key="PageName">Stand In</x:String>
 
     </Page.Resources>
 
@@ -66,44 +35,15 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='6' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='1' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource PageName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
         <Grid Grid.Row="1">
-        	<Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="250" Margin="0">
-        		<TextBlock x:Name="yourName" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Segoe UI" FontSize="24"/>
-        		<TextBlock x:Name="yourHealthLabel" TextWrapping="Wrap" Text="Health" VerticalAlignment="Top" Margin="0,37,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
-        		<Rectangle x:Name="yourHealthBar" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="63,37,0,0"/>
-        		<TextBlock x:Name="yourHealthText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,37,0,0" Height="24" Width="177" Foreground="#FFFF0909" TextAlignment="Center" FontSize="20"/>
-        	</Grid>
-        	<Grid HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="250">
-        		<TextBlock x:Name="monsterName" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Segoe UI" FontSize="24"/>
-        		<TextBlock x:Name="monsterHealthLabel" TextWrapping="Wrap" Text="Health" VerticalAlignment="Top" Margin="0,37,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
-        		<Rectangle x:Name="monsterHealthBar" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="24" Stroke="Black" VerticalAlignment="Top" Width="177" Margin="63,37,0,0"/>
-        		<TextBlock x:Name="monsterHealthText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,37,0,0" Height="24" Width="177" Foreground="#FFFF0909" TextAlignment="Center" FontSize="20"/>
-        	</Grid>
-        	<Grid HorizontalAlignment="Left" Height="237" VerticalAlignment="Bottom" Width="1366" Margin="0">
-        		<TextBlock x:Name="ActionLogLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Action Log" VerticalAlignment="Top"/>
-        		<ScrollViewer x:Name="ActionLogScroll" Margin="0,17,346,0" BorderThickness="1" BorderBrush="White">
-        			<StackPanel x:Name="ActionLogList"/>
-        		</ScrollViewer>
-        		<Button x:ConnectionId='1' x:Name="AttackB" Content="Attack" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,180" Height="40" Width="346"                      />
-        		<Button x:ConnectionId='2' x:Name="SpellB" Content="Spell" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,135" Height="40" Width="346"                      />
-        		<Button x:ConnectionId='3' x:Name="DefendB" Content="Defend" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,90" Height="40" Width="346"                      />
-        		<Button x:ConnectionId='4' x:Name="ItemB" Content="Item" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,45" Height="40" Width="346"                      />
-        		<Button x:ConnectionId='5' x:Name="FleeB" Content="Flee" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="350" Margin="0,0,-4,0"                    />
-        	</Grid>
-        	<Viewbox x:Name="viewbox" Height="350" VerticalAlignment="Top" Width="350" Margin="0,10,0,0">
-        		<Canvas x:Name="canvas" Width="10" Height="10">
-        			<Canvas.Projection>
-        				<PlaneProjection/>
-        			</Canvas.Projection>
-        			<Canvas.Background>
-        				<ImageBrush ImageSource="ms-appx:///Assets/Monster.png"/>
-        			</Canvas.Background>
-        		</Canvas>
-        	</Viewbox>
+        	
         	<MediaElement x:Name="BackgroundMusic" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="1266,149,0,0" Source="ms-appx:///Assets/Music/Chrono Trigger Music - Battle Theme.mp3" IsLooping="True"/>
+        	<Button Content="Option 1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" Margin="0,0,0,142" Foreground="White" Width="162"/>
+        	<Button Content="Option 2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" Margin="0"/>
+        	<Button Content="Option 3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" Margin="0,142,0,0"/>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>

@@ -98,7 +98,7 @@ namespace Probability_Simulator.Pages
 
         private void BingoCanvas_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.AnimatePage));
+            this.Frame.Navigate(typeof(Pages.BingoPage));
         }
     }
 }

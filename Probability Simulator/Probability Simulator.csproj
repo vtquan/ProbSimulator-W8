@@ -151,6 +151,7 @@
     <None Include="Probability Simulator_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\BingoB.png" />
     <Content Include="Assets\CardB.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

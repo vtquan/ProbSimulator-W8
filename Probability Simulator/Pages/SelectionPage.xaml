@@ -58,7 +58,7 @@
             </Canvas>
             <Canvas x:Name="BingoCanvas" Margin="450,260,606,158" Tapped="BingoCanvas_Tapped">
             	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/CardB.png"/>
+            		<ImageBrush ImageSource="ms-appx:///Assets/BingoB.png"/>
             	</Canvas.Background>
             	<Button x:Name="BingoPageB" Content="Bingo Call" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="BingoPageB_Click"/>
             </Canvas>

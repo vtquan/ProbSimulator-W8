@@ -22,12 +22,17 @@ namespace Probability_Simulator.Pages
     /// </summary>
     public sealed partial class BingoPage : Probability_Simulator.Common.LayoutAwarePage
     {
-        bool[] drawned = new bool[75];
-        int numDrawned = 0;
+        Random random = new Random();
+        bool[] called = new bool[75];
+        int numCalled = 0;
+        int[,] card = new int[5,5]; //store the values of the bingo card
+        TextBox[,] cardBox = new TextBox[5,5];
 
         public BingoPage()
         {
             this.InitializeComponent();
+            fillCardBox();  //link cardBox to proper textBox
+            generateCard(); //generate the Bingo Card
         }
 
         /// <summary>
@@ -82,13 +87,11 @@ namespace Probability_Simulator.Pages
 
         private async void DrawNumber(int numDraw)
         {
-            Random random = new Random();
-
             int result = 0;
             for (int i = 0; i < numDraw; i++)
             {
-                numDrawned++;
-                if (numDrawned > 75)
+                numCalled++;
+                if (numCalled > 75)
                 {
                     var messageDialog = new MessageDialog("All numbers have been drawned");
                     messageDialog.Title = "Out of Numbers";
@@ -113,9 +116,9 @@ namespace Probability_Simulator.Pages
                 do
                 {
                     result = random.Next(0, 75);
-                } while (drawned[result] == true);
+                } while (called[result] == true);
 
-                drawned[result] = true;
+                called[result] = true;
                 result++;
 
                 if(result <16)
@@ -142,10 +145,133 @@ namespace Probability_Simulator.Pages
         {
             for (int i = 0; i < 75; i++)
             {
-                    drawned[i] = false;
+                    called[i] = false;
             }
-            numDrawned = 0;
+            numCalled = 0;
             historyList.Children.Clear();
+        }
+
+        private void generateCard()
+        {
+            bool[] used = new bool[75]; //store whether each of the 75 possible number for the bingo card is used
+            int repeated = 0;
+            int generated = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    while (card[i, j] == 0)
+                    {
+                        if (j == 0)
+                        {
+                            generated = random.Next(1, 16);
+                        }
+                        else if (j == 1)
+                        {
+                            generated = random.Next(15, 31);
+                        }
+                        else if (j == 2)
+                        {
+                             generated = random.Next(30, 46);
+                        }
+                        else if (j == 3)
+                        {
+                            generated = random.Next(45, 61);
+                        }
+                        else
+                        {
+                            generated = random.Next(60, 76);
+                        }
+
+                        if (!used[generated - 1])
+                        {
+                            card[i, j] = generated;
+                            used[generated - 1] = true;
+                        }
+                    }
+                }
+            }
+            displayCard();
+        }
+
+        private void displayCard()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (j == 2)
+                    {
+                            if (i == 2) //don't need to display number for free space
+                            {
+                                j++;
+                            }
+                    }
+                    cardBox[i, j].Text = card[i, j].ToString();
+                }
+            }
+            //box1_0.Text = card[0, 0].ToString();
+            //box1_1.Text = card[0, 1].ToString();
+            //box1_2.Text = card[0, 2].ToString();
+            //box1_3.Text = card[0, 3].ToString();
+            //box1_4.Text = card[0, 4].ToString();
+            //box2_0.Text = card[1, 0].ToString();
+            //box2_1.Text = card[1, 1].ToString();
+            //box2_2.Text = card[1, 2].ToString();  
+            //box2_3.Text = card[1, 3].ToString();
+            //box2_4.Text = card[1, 4].ToString();
+            //box3_0.Text = card[2, 0].ToString();
+            //box3_1.Text = card[2, 1].ToString();
+            ////box3_2.Text = card[2, 2].ToString();  //Free Space; not needed
+            //box3_3.Text = card[2, 3].ToString();
+            //box3_4.Text = card[2, 4].ToString();
+            //box4_0.Text = card[3, 0].ToString();
+            //box4_1.Text = card[3, 1].ToString();
+            //box4_2.Text = card[3, 2].ToString();
+            //box4_3.Text = card[3, 3].ToString();
+            //box4_4.Text = card[3, 4].ToString();
+            //box5_0.Text = card[4, 0].ToString();
+            //box5_1.Text = card[4, 1].ToString();
+            //box5_2.Text = card[4, 2].ToString();
+            //box5_3.Text = card[4, 3].ToString();
+            //box5_4.Text = card[4, 4].ToString();
+        }
+
+        private void fillCardBox()  //link cardBox to its respective textBox
+        {
+            cardBox[0, 0] = box1_0;
+            cardBox[0, 1] = box1_1;
+            cardBox[0, 2] = box1_2;
+            cardBox[0, 3] = box1_3;
+            cardBox[0, 4] = box1_4;
+
+            cardBox[1, 0] = box2_0;
+            cardBox[1, 1] = box2_1;
+            cardBox[1, 2] = box2_2;
+            cardBox[1, 3] = box2_3;
+            cardBox[1, 4] = box2_4;
+
+            cardBox[2, 0] = box3_0;
+            cardBox[2, 1] = box3_1;
+            cardBox[2, 2] = box3_2;
+            cardBox[2, 3] = box3_3;
+            cardBox[2, 4] = box3_4;
+
+            cardBox[3, 0] = box4_0;
+            cardBox[3, 1] = box4_1;
+            cardBox[3, 2] = box4_2;
+            cardBox[3, 3] = box4_3;
+            cardBox[3, 4] = box4_4;
+
+            cardBox[4, 0] = box5_0;
+            cardBox[4, 1] = box5_1;
+            cardBox[4, 2] = box5_2;
+            cardBox[4, 3] = box5_3;
+            cardBox[4, 4] = box5_4;
+        }
+
+        private void updateCard()
+        {
         }
     }
 }

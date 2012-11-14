@@ -59,7 +59,10 @@
             </Grid>
             <Viewbox HorizontalAlignment="Left" Height="435" VerticalAlignment="Top" Width="360" Margin="120,5,0,0">
                 <Border BorderBrush="White" BorderThickness="1" Background="Black">
-                    <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0" Background="#FF4F4F4F">
+                    <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0">
+                    	<Grid.Background>
+                    		<ImageBrush/>
+                    	</Grid.Background>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50"/>
                             <ColumnDefinition Width="50"/>
@@ -78,33 +81,153 @@
                         </Grid.RowDefinitions>
                         <Border BorderBrush="White" BorderThickness="1" Background="Red">
                             <Viewbox Margin="0">
-                                <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="B" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="B" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                             </Viewbox>
                         </Border>
                         <Border BorderBrush="White" BorderThickness="1" Background="Red" Grid.Column="1">
                             <Viewbox x:Name="viewbox" Margin="0">
-                                <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="I" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="I" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                             </Viewbox>
                         </Border>
                         <Border BorderBrush="White" BorderThickness="1" Background="Red" Grid.Column="2">
                             <Viewbox Margin="0">
-                                <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="N" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="N" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                             </Viewbox>
                         </Border>
                         <Border BorderBrush="White" BorderThickness="1" Background="Red" Grid.Column="3">
                             <Viewbox Margin="0">
-                                <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="G" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="G" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                             </Viewbox>
                         </Border>
                         <Border BorderBrush="White" BorderThickness="1" Background="Red" Grid.Column="4">
                             <Viewbox Margin="0">
-                                <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="O" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="O" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                             </Viewbox>
                         </Border>
-                        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1">
-                            <Viewbox x:Name="viewbox1">
-                                <TextBox TextWrapping="Wrap" FontFamily="Segoe WP" Text="17" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10,3,8,5" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White"/>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="1">
+                            <Viewbox>
+                                <TextBox x:Name="box1_0" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
                             </Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="1">
+                        	<Viewbox>
+                        		<TextBox x:Name="box1_1" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="2">
+                        	<Viewbox>
+                        		<TextBox x:Name="box1_2" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="3">
+                        	<Viewbox>
+                        		<TextBox x:Name="box1_3" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="1" Grid.Column="4">
+                        	<Viewbox>
+                        		<TextBox x:Name="box1_4" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="2">
+                        	<Viewbox>
+                        		<TextBox x:Name="box2_0" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="1">
+                        	<Viewbox>
+                        		<TextBox x:Name="box2_1" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="2">
+                        	<Viewbox>
+                        		<TextBox x:Name="box2_2" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="3">
+                        	<Viewbox>
+                        		<TextBox x:Name="box2_3" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="4">
+                        	<Viewbox>
+                        		<TextBox x:Name="box2_4" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="3">
+                        	<Viewbox>
+                        		<TextBox x:Name="box3_0" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="3" Grid.Column="1">
+                        	<Viewbox>
+                        		<TextBox x:Name="box3_1" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="3" Grid.Column="2">
+                        	<Viewbox>
+                        		<TextBox x:Name="box3_2" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,18" MinHeight="0" InputScope="Number" FontSize="24" Width="72" BorderBrush="White" Background="White" Height="72" Text="Free" IsReadOnly="True" MinWidth="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="3" Grid.Column="3">
+                        	<Viewbox>
+                        		<TextBox x:Name="box3_3" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="3" Grid.Column="4">
+                        	<Viewbox>
+                        		<TextBox x:Name="box3_4" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="4">
+                        	<Viewbox>
+                        		<TextBox x:Name="box4_0" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="4" Grid.Column="1">
+                        	<Viewbox>
+                        		<TextBox x:Name="box4_1" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="4" Grid.Column="2">
+                        	<Viewbox>
+                        		<TextBox x:Name="box4_2" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="4" Grid.Column="3">
+                        	<Viewbox>
+                        		<TextBox x:Name="box4_3" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="4" Grid.Column="4">
+                        	<Viewbox>
+                        		<TextBox x:Name="box4_4" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="5">
+                        	<Viewbox>
+                        		<TextBox x:Name="box5_0" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="5" Grid.Column="1">
+                        	<Viewbox>
+                        		<TextBox x:Name="box5_1" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="5" Grid.Column="2">
+                        	<Viewbox>
+                        		<TextBox x:Name="box5_2" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="5" Grid.Column="3">
+                        	<Viewbox>
+                        		<TextBox x:Name="box5_3" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="1" Grid.Row="5" Grid.Column="4">
+                        	<Viewbox>
+                        		<TextBox x:Name="box5_4" TextWrapping="Wrap" FontFamily="Segoe WP" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" MinHeight="64" InputScope="Number" FontSize="48" Width="72" BorderBrush="White" Background="White" Height="72" IsReadOnly="True"/>
+                        	</Viewbox>
                         </Border>
                     </Grid>
                 </Border>
