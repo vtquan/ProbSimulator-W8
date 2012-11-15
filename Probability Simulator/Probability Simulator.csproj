@@ -157,9 +157,6 @@
     </Content>
     <Content Include="Assets\Cards\AceSpades.png" />
     <Content Include="Assets\Cards\CardBack.png" />
-    <Content Include="Assets\CoinB.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Assets\DiceB.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -167,18 +164,23 @@
     <Content Include="Assets\Monster.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Music\Chrono Trigger Music - Battle Theme.mp3">
+    <Content Include="Assets\Musics\Chrono Trigger Music - Battle Theme.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Music\Chrono Trigger Music - Game Over.mp3">
+    <Content Include="Assets\Musics\Chrono Trigger Music - Game Over.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Music\Chrono Trigger Music - Lucca%27s Theme.mp3">
+    <Content Include="Assets\Musics\Chrono Trigger Music - Lucca%27s Theme.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\penny-head-trans.png" />
     <Content Include="Assets\penny-tail-trans.png" />
-    <Content Include="Assets\six_sided_dice-View.png" />
+    <Content Include="Assets\Selection Images\BingoB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Selection Images\CoinB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\Sound Effect\coin_flip.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -232,6 +234,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Backup\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

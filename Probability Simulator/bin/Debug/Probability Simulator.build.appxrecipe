@@ -31,9 +31,6 @@
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Cards\CardBack.png">
       <PackagePath>Assets\Cards\CardBack.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\CoinB.png">
-      <PackagePath>Assets\CoinB.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\DiceB.png">
       <PackagePath>Assets\DiceB.png</PackagePath>
     </AppxPackagedFile>
@@ -50,8 +47,11 @@
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-tail-trans.png">
       <PackagePath>Assets\penny-tail-trans.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\six_sided_dice-View.png">
-      <PackagePath>Assets\six_sided_dice-View.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Selection Images\BingoB.png">
+      <PackagePath>Assets\Selection Images\BingoB.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Selection Images\CoinB.png">
+      <PackagePath>Assets\Selection Images\CoinB.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
@@ -65,14 +65,14 @@
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Music\Chrono Trigger Music - Battle Theme.mp3">
-      <PackagePath>Assets\Music\Chrono Trigger Music - Battle Theme.mp3</PackagePath>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Musics\Chrono Trigger Music - Battle Theme.mp3">
+      <PackagePath>Assets\Musics\Chrono Trigger Music - Battle Theme.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Music\Chrono Trigger Music - Game Over.mp3">
-      <PackagePath>Assets\Music\Chrono Trigger Music - Game Over.mp3</PackagePath>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Musics\Chrono Trigger Music - Game Over.mp3">
+      <PackagePath>Assets\Musics\Chrono Trigger Music - Game Over.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Music\Chrono Trigger Music - Lucca%27s Theme.mp3">
-      <PackagePath>Assets\Music\Chrono Trigger Music - Lucca%27s Theme.mp3</PackagePath>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Musics\Chrono Trigger Music - Lucca%27s Theme.mp3">
+      <PackagePath>Assets\Musics\Chrono Trigger Music - Lucca%27s Theme.mp3</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Sound Effect\coin_flip.wav">
       <PackagePath>Assets\Sound Effect\coin_flip.wav</PackagePath>

@@ -244,7 +244,7 @@ namespace Probability_Simulator.Pages.RPG
             ActionLogList.Children.Add(new TextBlock() { Text = "You Win!" });
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
-            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Lucca's Theme.mp3");
+            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Musics/Chrono Trigger Music - Lucca's Theme.mp3");
 
             monsterHPBar.Width = 0;
             monsterHPText.Text = "0";
@@ -257,7 +257,7 @@ namespace Probability_Simulator.Pages.RPG
             ActionLogList.Children.Add(new TextBlock() { Text = "You Lose!" });
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
-            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Game Over.mp3");
+            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Musics/Chrono Trigger Music - Game Over.mp3");
 
             battleEndMessage();
         }
@@ -267,7 +267,7 @@ namespace Probability_Simulator.Pages.RPG
             ActionLogList.Children.Add(new TextBlock() { Text = "You run away!" });
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
-            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Game Over.mp3");
+            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Musics/Chrono Trigger Music - Game Over.mp3");
 
             battleEndMessage();
         }

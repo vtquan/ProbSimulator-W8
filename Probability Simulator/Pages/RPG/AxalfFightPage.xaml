@@ -26,13 +26,13 @@
         <Storyboard x:Name="FlinchAnimation">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetX)" Storyboard.TargetName="viewbox">
         		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="15"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="20"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
         	</DoubleAnimationUsingKeyFrames>
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetY)" Storyboard.TargetName="viewbox">
         		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-15"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-20"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
         	</DoubleAnimationUsingKeyFrames>
         </Storyboard>
         
@@ -75,23 +75,23 @@
             <Grid x:Name="PlayerInfoGrid" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="250" Margin="0" SizeChanged="PlayerInfoGrid_SizeChanged">
                 <TextBlock x:Name="yourName" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Segoe UI" FontSize="24"/>
                 <TextBlock x:Name="yourHPLabel" TextWrapping="Wrap" Text="Health" VerticalAlignment="Top" Margin="0,37,0,0" FontSize="20" HorizontalAlignment="Left" TextAlignment="Right"/>
-                <Rectangle x:Name="yourFullHPBar" Height="24" VerticalAlignment="Top" Margin="63,37,10,0"/>
-                <Rectangle x:Name="yourHPBar" Height="24" Stroke="White" VerticalAlignment="Top" Margin="63,37,0,0" Fill="Red" HorizontalAlignment="Left" Width="177"/>
+                <Rectangle x:Name="yourHPBar" Height="24" VerticalAlignment="Top" Margin="63,37,0,0" HorizontalAlignment="Left" Width="177" Fill="Red" StrokeThickness="3"/>
+                <Rectangle x:Name="yourFullHPBar" Height="24" VerticalAlignment="Top" Margin="63,37,10,0" Stroke="White"/>
                 <TextBlock x:Name="yourHPText" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,37,10,0" Height="24" Foreground="White" TextAlignment="Center" FontSize="20"/>
                 <TextBlock x:Name="yourMPLabel" TextWrapping="Wrap" Text="Mana" VerticalAlignment="Top" Margin="0,66,0,0" FontSize="20" TextAlignment="Right" HorizontalAlignment="Left" Width="50"/>
-                <Rectangle x:Name="yourFullMPBar" Height="24" VerticalAlignment="Top" Margin="63,66,10,0"/>
-                <Rectangle x:Name="yourMPBar" Height="24" Stroke="White" VerticalAlignment="Top" Margin="63,66,0,0" Fill="#FF2EFF00" HorizontalAlignment="Left" Width="177"/>
+                <Rectangle x:Name="yourMPBar" Height="24" VerticalAlignment="Top" Margin="63,66,0,0" Fill="#FF2EFF00" HorizontalAlignment="Left" Width="177"/>
+                <Rectangle x:Name="yourFullMPBar" Height="24" VerticalAlignment="Top" Margin="63,66,10,0" Stroke="White"/>
                 <TextBlock x:Name="yourMPText" TextWrapping="Wrap" VerticalAlignment="Top" Margin="63,66,10,0" Height="24" TextAlignment="Center" FontSize="20" Foreground="White"/>
             </Grid>
             <Grid x:Name="MonsterInfoGrid" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="250" SizeChanged="MonsterInfoGrid_SizeChanged">
                 <TextBlock x:Name="monsterName" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Segoe UI" FontSize="24"/>
                 <TextBlock x:Name="monsterHPLabel" TextWrapping="Wrap" Text="Health" VerticalAlignment="Top" Margin="0,37,0,0" FontSize="20" TextAlignment="Right" HorizontalAlignment="Right" Width="58"/>
-                <Rectangle x:Name="monsterFullHPBar" Height="24" VerticalAlignment="Top" Margin="10,37,63,0"/>
-                <Rectangle x:Name="monsterHPBar" Height="24" Stroke="White" VerticalAlignment="Top" Margin="0,37,63,0" Fill="Red" HorizontalAlignment="Right" Width="177"/>
+                <Rectangle x:Name="monsterHPBar" Height="24" VerticalAlignment="Top" Margin="0,37,63,0" Fill="Red" HorizontalAlignment="Right" Width="177"/>
+                <Rectangle x:Name="monsterFullHPBar" Height="24" VerticalAlignment="Top" Margin="10,37,63,0" Stroke="White"/>
                 <TextBlock x:Name="monsterHPText" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,37,63,0" Height="24" TextAlignment="Center" FontSize="20" Foreground="White"/>
                 <TextBlock x:Name="monsterMPLabel" TextWrapping="Wrap" Text="Mana" VerticalAlignment="Top" Margin="0,66,0,0" FontSize="20" TextAlignment="Right" HorizontalAlignment="Right" Width="50"/>
-                <Rectangle x:Name="monsterFullMPBar" Height="24" VerticalAlignment="Top" Margin="10,66,63,0"/>
-                <Rectangle x:Name="monsterMPBar" Height="24" Stroke="White" VerticalAlignment="Top" Margin="0,66,63,0" Fill="#FF2EFF00" HorizontalAlignment="Right" Width="177"/>
+                <Rectangle x:Name="monsterMPBar" Height="24" VerticalAlignment="Top" Margin="0,66,63,0" Fill="#FF2EFF00" HorizontalAlignment="Right" Width="177"/>
+                <Rectangle x:Name="monsterFullMPBar" Height="24" VerticalAlignment="Top" Margin="10,66,63,0" Stroke="White"/>
                 <TextBlock x:Name="monsterMPText" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,66,63,0" Height="24" TextAlignment="Center" FontSize="20" Foreground="White"/>
             </Grid>
             <Grid Height="237" VerticalAlignment="Bottom" Margin="0">
@@ -111,7 +111,7 @@
             	</Viewbox.Projection>
                 <Image x:Name="Axalf" Source="ms-appx:///Assets/Monster.png"/>
             </Viewbox>
-            <MediaElement x:Name="BackgroundMusic" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="1266,149,0,0" Source="ms-appx:///Assets/Music/Chrono Trigger Music - Battle Theme.mp3" IsLooping="True"/>
+            <MediaElement x:Name="BackgroundMusic" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="1266,149,0,0" Source="ms-appx:///Assets/Musics/Chrono Trigger Music - Battle Theme.mp3" IsLooping="True"/>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>

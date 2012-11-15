@@ -52,13 +52,13 @@
             </Canvas>
             <Canvas x:ConnectionId='3' x:Name="CoinCanvas" Margin="120,260,936,158"                           >
             	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/CoinB.png"/>
+            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/CoinB.png"/>
             	</Canvas.Background>
             	<Button x:ConnectionId='6' x:Name="CoinPageB" Content="Coins Flip" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
             </Canvas>
             <Canvas x:ConnectionId='4' x:Name="BingoCanvas" Margin="450,260,606,158"                            >
             	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/BingoB.png"/>
+            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/BingoB.png"/>
             	</Canvas.Background>
             	<Button x:ConnectionId='5' x:Name="BingoPageB" Content="Bingo Call" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                         />
             </Canvas>

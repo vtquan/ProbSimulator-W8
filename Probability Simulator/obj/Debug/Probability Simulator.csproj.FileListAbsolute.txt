@@ -58,12 +58,8 @@ C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Prob
 C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\BingoPage2.g.cs
 C:\Users\quanvt\Documents\Visual Studio 2012\Projects\Probability Simulator\Probability Simulator\obj\Debug\Pages\BingoPage2.xaml
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\CardB.png
-C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\CoinB.png
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\DiceB.png
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Monster.png
-C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Music\Chrono Trigger Music - Battle Theme.mp3
-C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Music\Chrono Trigger Music - Game Over.mp3
-C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Music\Chrono Trigger Music - Lucca's Theme.mp3
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Sound Effect\coin_flip.wav
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb
@@ -116,3 +112,8 @@ C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debu
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\AnimatePage.g.i.cs
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\AnimatePage.g.cs
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\AnimatePage.xaml
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Musics\Chrono Trigger Music - Battle Theme.mp3
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Musics\Chrono Trigger Music - Game Over.mp3
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Musics\Chrono Trigger Music - Lucca's Theme.mp3
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Selection Images\CoinB.png
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Selection Images\BingoB.png
