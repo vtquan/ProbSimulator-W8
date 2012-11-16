@@ -10,67 +10,53 @@ namespace Probability_Simulator.Common.RPG
     {
         string subtitle;    //monster subtitle
         private int numAttacks = 0; //number of attacks that the monster has
-        private Attack[] moveList;  //list of moves that the monster has
+        private Attack[] moveList = new Attack[10];  //list of moves that the monster has
 
         //Constructors
         public Monster()
             : base()
         {
             subtitle = "Boss";
-            numAttacks = 1;
-            moveList = new Attack[numAttacks];
-            for (int i = 0; i < numAttacks; i++)
-            {
-                moveList[i] = new Attack();
-            }
+            numAttacks = 0;
         }
 
-        public Monster(string Name, int HP, int MP, int NumAttacks)
+        public Monster(string Name, string Subtitle, int HP, int MP)
+            : base(Name, HP, MP)
+        {
+            subtitle = Subtitle;
+            numAttacks = 0;
+        }
+
+        public Monster(string Name, int HP, int MP, int NumAttacks, Attack[] MoveList)
             : base(Name, HP, MP)
         {
             subtitle = "Boss";
             numAttacks = NumAttacks;
-            moveList = new Attack[numAttacks];
-            for (int i = 0; i < numAttacks; i++)
-            {
-                moveList[i] = new Attack();
-            }
+            moveList = MoveList;
         }
 
-        public Monster(string Name, string Subtitle, int HP, int MP, int NumAttacks)
+        public Monster(string Name, string Subtitle, int HP, int MP, int NumAttacks, Attack[] MoveList)
             : base(Name, HP, MP)
         {
             subtitle = Subtitle;
             numAttacks = NumAttacks;
-            moveList = new Attack[numAttacks];
-            for (int i = 0; i < numAttacks; i++)
-            {
-                moveList[i] = new Attack();
-            }
+            moveList = MoveList;
         }
 
-        public Monster(string Name, int HP, int MP, int NumAttacks, int PoisonResist, int ParalyzeResist)
+        public Monster(string Name, int HP, int MP, int NumAttacks, Attack[] MoveList, int PoisonResist, int ParalyzeResist)
             : base(Name, HP, MP, PoisonResist, ParalyzeResist)
         {
             subtitle = "Boss";
             numAttacks = NumAttacks;
-            moveList = new Attack[numAttacks];
-            for (int i = 0; i < numAttacks; i++)
-            {
-                moveList[i] = new Attack();
-            }
+            moveList = MoveList;
         }
 
-        public Monster(string Name, string Subtitle, int HP, int MP, int NumAttacks, int PoisonResist, int ParalyzeResist)
+        public Monster(string Name, string Subtitle, int HP, int MP, int NumAttacks, Attack[] MoveList, int PoisonResist, int ParalyzeResist)
             : base(Name, HP, MP, PoisonResist, ParalyzeResist)
         {
             subtitle = Subtitle;
             numAttacks = NumAttacks;
-            moveList = new Attack[numAttacks];
-            for (int i = 0; i < numAttacks; i++)
-            {
-                moveList[i] = new Attack();
-            }
+            moveList = MoveList;
         }
 
         //Get Methods
@@ -90,6 +76,24 @@ namespace Probability_Simulator.Common.RPG
         }
 
         //Action Methods
+
+        public void addAttack(Attack attack)
+        {
+            for (int i = 0; i < moveList.Length; i++)
+            {
+                if (attack == moveList[i])
+                {
+                    break;
+                }
+                else if (moveList[i] == null)
+                {
+
+                    moveList[i] = attack;
+                    numAttacks++;
+                    break;
+                }
+            }
+        }
         public KeyValuePair<double,int> attack(ref Player Target)
         {
             Random random = new Random();

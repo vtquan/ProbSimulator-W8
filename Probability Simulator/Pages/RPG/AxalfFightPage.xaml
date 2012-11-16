@@ -95,6 +95,7 @@
                 <TextBlock x:Name="monsterMPText" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,66,63,0" Height="24" TextAlignment="Center" FontSize="20" Foreground="White"/>
             </Grid>
             <Grid Height="237" VerticalAlignment="Bottom" Margin="0">
+                <Border BorderBrush="White" BorderThickness="1" Margin="0,17,0,0"/>
                 <TextBlock x:Name="ActionLogLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Action Log" VerticalAlignment="Top"/>
                 <ScrollViewer x:Name="ActionLogScroll" Margin="0,17,346,0" BorderThickness="1" BorderBrush="White" HorizontalScrollBarVisibility="Auto">
                     <StackPanel x:Name="ActionLogList" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
@@ -104,6 +105,14 @@
                 <Button x:Name="DefendB" Content="Defend" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,90" Height="40" Width="346" Click="DefendB_Click"/>
                 <Button x:Name="ItemB" Content="Item" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,45" Height="40" Width="346" Click="ItemB_Click"/>
                 <Button x:Name="FleeB" Content="Flee" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="350" Margin="0,0,-4,0" Click="FleeB_Click"/>
+                <TextBlock x:Name="ItemListLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Item List" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <ScrollViewer x:Name="ItemListScroll" Margin="0,17,346,0" BorderThickness="1" BorderBrush="White" HorizontalScrollBarVisibility="Auto" Visibility="Collapsed">
+                	<StackPanel x:Name="ItemList" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+                </ScrollViewer>
+                <TextBlock x:Name="SpellListLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Spell List" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <ScrollViewer x:Name="SpellListScroll" Margin="0,17,346,0" BorderThickness="1" BorderBrush="White" HorizontalScrollBarVisibility="Auto" Visibility="Collapsed">
+                	<StackPanel x:Name="SpellList" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+                </ScrollViewer>
             </Grid>
             <Viewbox x:Name="viewbox" Height="350" VerticalAlignment="Top" Width="350" Margin="0,10,0,0">
             	<Viewbox.Projection>

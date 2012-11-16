@@ -117,3 +117,7 @@ C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debu
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Musics\Chrono Trigger Music - Lucca's Theme.mp3
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Selection Images\CoinB.png
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Selection Images\BingoB.png
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RandomNumPage.g.i.cs
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RandomNumPage.g.cs
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RandomNumPage.xaml
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Selection Images\RandomB.png

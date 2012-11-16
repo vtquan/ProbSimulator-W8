@@ -1,6 +1,6 @@
 ﻿<common:LayoutAwarePage
     x:Name="pageRoot"
-    x:Class="Probability_Simulator.Pages.SelectionPage"
+    x:Class="Probability_Simulator.Pages.RandomNumPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -13,7 +13,7 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">Probability Simulator</x:String>
+        <x:String x:Key="PageName">Generate Random Number</x:String>
     </Page.Resources>
 
     <!--
@@ -34,40 +34,29 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
-            <Button x:Name="EasterEggB" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Margin="0" BorderThickness="0" Width="100" Height="100" Click="EasterEggB_Click"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource PageName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="628" VerticalAlignment="Top" Width="1366" Margin="10,113,-10,0" Grid.RowSpan="2">
-            <Canvas x:Name="DiceCanvas" Margin="120,40,936,378" Tapped="DiceCanvas_Tapped">
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/DiceB.png"/>
-            	</Canvas.Background>
-            	<Button x:Name="DicePageB" Content="Dice Roll" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="DicePageB_Click"/>
-            </Canvas>
-            <Canvas x:Name="CardCanvas" Margin="450,40,606,378" Tapped="CardCanvas_Tapped">
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/CardB.png"/>
-            	</Canvas.Background>
-            	<Button x:Name="CardPageB" Content="Cards Draw" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="CardPageB_Click"/>
-            </Canvas>
-            <Canvas x:Name="CoinCanvas" Margin="120,260,936,158" Tapped="CoinCanvas_Tapped">
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/CoinB.png"/>
-            	</Canvas.Background>
-            	<Button x:Name="CoinPageB" Content="Coins Flip" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="CoinPageB_Click"/>
-            </Canvas>
-            <Canvas x:Name="BingoCanvas" Margin="450,260,606,158" Tapped="BingoCanvas_Tapped">
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/BingoB.png"/>
-            	</Canvas.Background>
-            	<Button x:Name="BingoPageB" Content="Bingo Call" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="BingoPageB_Click"/>
-            </Canvas>
-            <Canvas x:Name="RandomCanvas" Margin="780,40,276,378" Tapped="BingoCanvas_Tapped">
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/RandomB.png"/>
-            	</Canvas.Background>
-            	<Button x:Name="RandomPageB" Content="Number Generate" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="RandomPageB_Click"/>
-            </Canvas>
+        <Grid Grid.Row="1">
+        	<TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Enter a Number Range" VerticalAlignment="Top" FontSize="32" Width="360" Margin="120,0,0,0"/>
+        	<Grid x:Name="MinInputGrid" Margin="140,43,0,0" VerticalAlignment="Top" Width="372" HorizontalAlignment="Left">
+        		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Minimum Number" FontSize="24" Height="32" VerticalAlignment="Bottom" FontFamily="Segoe UI Mono"/>
+        		<TextBox x:Name="MinNumBox" HorizontalAlignment="Right" TextWrapping="Wrap" Text="0" Width="164" TextAlignment="Center" FontSize="16" Height="32" VerticalAlignment="Bottom" InputScope="Number"/>
+        	</Grid>
+        	<Grid x:Name="MaxInputGrid" Margin="140,80,0,0" Height="32" VerticalAlignment="Top" Width="372" HorizontalAlignment="Left">
+        		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Maximum Number" FontSize="24" Height="32" VerticalAlignment="Bottom" FontFamily="Segoe UI Mono"/>
+        		<TextBox x:Name="MaxNumBox" HorizontalAlignment="Right" TextWrapping="Wrap" Text="0" Width="164" TextAlignment="Center" FontSize="16" Height="32" VerticalAlignment="Bottom" InputScope="Number"/>
+        	</Grid>
+        	<Grid x:Name="inputGrid" Margin="120,0,0,100" VerticalAlignment="Bottom" Width="{Binding ActualWidth, ElementName=generateNumB}" HorizontalAlignment="Left">
+        		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Amount of Number" FontSize="24" Height="32" VerticalAlignment="Bottom"/>
+        		<TextBox x:Name="numNumberBox" TextWrapping="Wrap" Text="1" Margin="0" TextAlignment="Center" FontSize="16" Height="32" VerticalAlignment="Bottom" InputScope="Number" HorizontalAlignment="Right" Width="164"/>
+        	</Grid>
+        	<Button x:Name="generateNumB" Content="Generate" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="120,0,0,40" Height="60" Width="392" FontSize="26.667" Click="generateNumB_Click"/>
+        	<Grid x:Name="historyGrid" Margin="0,0,120,40" HorizontalAlignment="Right" Width="300">
+        		<TextBlock x:Name="historyListLabel" TextWrapping="Wrap" Text="History List" Margin="0" Height="14" Width="79" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        		<ScrollViewer x:Name="historyScroll" Margin="0,19,0,0" BorderBrush="White" BorderThickness="1">
+        			<StackPanel x:Name="historyList" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
+        		</ScrollViewer>
+        	</Grid>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>

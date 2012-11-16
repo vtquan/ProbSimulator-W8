@@ -128,9 +128,11 @@ namespace Probability_Simulator.Probability_Simulator_XamlTypeInfo
 
         private object Activate_7_EasterEggPage() { return new global::Probability_Simulator.Pages.EasterEggPage(); }
 
-        private object Activate_8_AxalfFightPage() { return new global::Probability_Simulator.Pages.RPG.AxalfFightPage(); }
+        private object Activate_8_RandomNumPage() { return new global::Probability_Simulator.Pages.RandomNumPage(); }
 
-        private object Activate_9_SelectionPage() { return new global::Probability_Simulator.Pages.SelectionPage(); }
+        private object Activate_9_AxalfFightPage() { return new global::Probability_Simulator.Pages.RPG.AxalfFightPage(); }
+
+        private object Activate_10_SelectionPage() { return new global::Probability_Simulator.Pages.SelectionPage(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -196,15 +198,21 @@ namespace Probability_Simulator.Probability_Simulator_XamlTypeInfo
                 xamlType = userType;
                 break;
 
+            case "Probability_Simulator.Pages.RandomNumPage":
+                userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.RandomNumPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
+                userType.Activator = Activate_8_RandomNumPage;
+                xamlType = userType;
+                break;
+
             case "Probability_Simulator.Pages.RPG.AxalfFightPage":
                 userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.RPG.AxalfFightPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
-                userType.Activator = Activate_8_AxalfFightPage;
+                userType.Activator = Activate_9_AxalfFightPage;
                 xamlType = userType;
                 break;
 
             case "Probability_Simulator.Pages.SelectionPage":
                 userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.SelectionPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
-                userType.Activator = Activate_9_SelectionPage;
+                userType.Activator = Activate_10_SelectionPage;
                 xamlType = userType;
                 break;
 

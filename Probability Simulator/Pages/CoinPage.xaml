@@ -48,11 +48,7 @@
         	</Grid>
             <Button x:Name="coinFlipB" Content="Flip" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="120,0,0,40" Height="60" Width="360" FontSize="26.667" Click="coinFlipB_Click"/>
             <Viewbox x:Name="viewbox" HorizontalAlignment="Left" Height="360" VerticalAlignment="Top" Width="360" Margin="120,0,0,0">
-                <Canvas x:Name="coinImage" Height="100" Width="100" Tapped="coinImage_Tapped">
-                    <Canvas.Background>
-                        <ImageBrush ImageSource="ms-appx:///Assets/penny-head-trans.png"/>
-                    </Canvas.Background>
-                </Canvas>
+            	<Image x:Name="CoinImage" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="ms-appx:///Assets/penny-head-trans.png" Tapped="CoinImage_Tapped"/>
             </Viewbox>
             <Grid x:Name="historyGrid" Margin="448,319,20,142" Width="556">
             
@@ -351,13 +347,6 @@
                         	<DiscreteObjectKeyFrame KeyTime="0">
                         		<DiscreteObjectKeyFrame.Value>
                         			<x:Double>300</x:Double>
-                        		</DiscreteObjectKeyFrame.Value>
-                        	</DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="coinImage">
-                        	<DiscreteObjectKeyFrame KeyTime="0">
-                        		<DiscreteObjectKeyFrame.Value>
-                        			<HorizontalAlignment>Stretch</HorizontalAlignment>
                         		</DiscreteObjectKeyFrame.Value>
                         	</DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>

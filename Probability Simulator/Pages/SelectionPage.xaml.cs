@@ -100,5 +100,10 @@ namespace Probability_Simulator.Pages
         {
             this.Frame.Navigate(typeof(Pages.BingoPage));
         }
+
+        private void RandomPageB_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.RandomNumPage));
+        }
     }
 }

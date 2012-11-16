@@ -17,6 +17,8 @@ using Windows.UI.Xaml.Navigation;
 using Attack = Probability_Simulator.Common.RPG.Attack;
 using Monster = Probability_Simulator.Common.RPG.Monster;
 using Player = Probability_Simulator.Common.RPG.Player;
+using Spell = Probability_Simulator.Common.RPG.Spell;
+using Item = Probability_Simulator.Common.RPG.Item;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -27,8 +29,11 @@ namespace Probability_Simulator.Pages.RPG
     /// </summary>
     public sealed partial class AxalfFightPage : Probability_Simulator.Common.LayoutAwarePage
     {
-        Monster Enemy = new Monster("Axalf", "Dire Dimunitive Drawf", 50, 10, 1);
-        Player You = new Player("You", 100, 10, 2);
+        Monster Enemy;
+        Player You;
+
+        Button[] itemButton;
+        Button[] spellButton;
 
         Random random = new Random();
         bool fled = false;  //check if the flee button has been pressed
@@ -43,18 +48,7 @@ namespace Probability_Simulator.Pages.RPG
         {
             this.InitializeComponent();
 
-            //Idle Animation Begin
-            IdleAnimation.Begin();
-
-            //Display Monster and Player value
-            pageTitle.Text = Enemy.getSubtitle() + ": " + Enemy.getName();
-            monsterName.Text = Enemy.getName();
-            monsterHPText.Text = Enemy.getHPStart().ToString();
-            monsterMPText.Text = Enemy.getMPStart().ToString();
-            yourName.Text = You.getName();
-            yourHPText.Text = You.getHPStart().ToString();
-            yourMPText.Text = You.getMPStart().ToString();
-            Enemy.getMoveList()[0] = new Attack("Fire", 1, 5, 13);
+            setUpPage();    //initialyze the page with proper information
         }
 
         /// <summary>
@@ -78,6 +72,131 @@ namespace Probability_Simulator.Pages.RPG
         /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
+        }
+
+        private void setUpPage()
+        {
+            //Idle Animation Begin
+            IdleAnimation.Begin();
+
+            //Create Monster and Player value
+            Enemy = new Monster("Axalf", "Dire Dimunitive Drawf", 50, 20);
+            You = new Player("You", 100, 50);
+
+            //Creating and adding attacks to monster
+            Attack Bite = new Attack("Bite", 1, 5, 13);
+            Attack Stomp = new Attack("Stomp", 2, 10, 15);
+            
+            Enemy.addAttack(Bite);
+            Enemy.addAttack(Stomp);
+
+            //Creating and adding items  to player
+            Item Potion = new Item("Potion", 20);
+            Item MegaPotion = new Item("Mega Potion", 50);
+
+            You.addItem(Potion);
+            You.addItem(MegaPotion);
+
+            //Creating and adding spells  to player
+            Spell Fire = new Spell("Fire", 2, 7, 20, 10);
+            Spell Thunder = new Spell("Thunder", 3, 10, 18, 15);
+
+            You.addSpell(Fire);
+            You.addSpell(Thunder);
+
+            //Display Monster and Player value
+            pageTitle.Text = Enemy.getSubtitle() + ": " + Enemy.getName();
+            monsterName.Text = Enemy.getName();
+            monsterHPText.Text = Enemy.getHPStart().ToString();
+            monsterMPText.Text = Enemy.getMPStart().ToString();
+            yourName.Text = You.getName();
+            yourHPText.Text = You.getHPStart().ToString();
+            yourMPText.Text = You.getMPStart().ToString();
+        }
+
+        void spellClick(object sender, RoutedEventArgs e)
+        {
+            //Display Action Log list
+            ActionLogLabel.Visibility = Visibility.Visible;
+            ActionLogScroll.Visibility = Visibility.Visible;
+            SpellListLabel.Visibility = Visibility.Collapsed;
+            SpellListScroll.Visibility = Visibility.Collapsed;
+
+            //Find item and store item values for easy display
+            int spellIndex = You.findSpell(((Button)sender).Content.ToString().Substring(0, ((Button)sender).Content.ToString().Length - 7));    //get "Spell" instead of "Spell - 10mp"
+            string spellName = You.getSpellList()[spellIndex].getName();
+            int spellDamage;
+
+            //Use selected item
+            KeyValuePair<bool, int[]> result = You.useSpell(spellName, ref Enemy);
+            spellDamage = result.Value[0]; 
+            if (!result.Key)
+            {
+                ActionLogList.Children.Add(new TextBlock() { Text = "You do not have enough mp" });
+            }
+            else
+            {
+                ActionLogList.Children.Add(new TextBlock() { Text = "You use " + spellName + " and did " + spellDamage + " damage" });
+
+                if (You.getHP() <= 0)
+                {
+                    youLose();
+                    return;
+                }
+
+                if (Enemy.getHP() <= 0)
+                {
+                    youWin();
+                    return;
+                }
+
+
+                monsterHPBar.Width = monsterHPBarWidth * Enemy.getHP() / Enemy.getHPStart();
+                monsterHPText.Text = Enemy.getHP().ToString();
+                monsterMPBar.Width = monsterMPBarWidth * Enemy.getMP() / Enemy.getMPStart();
+                monsterMPText.Text = Enemy.getMP().ToString();
+
+                monsterAttack();
+            }
+        }
+
+        void itemClick(object sender, RoutedEventArgs e)
+        {       
+            //Display Action Log list
+            ActionLogLabel.Visibility = Visibility.Visible;
+            ActionLogScroll.Visibility = Visibility.Visible;
+            ItemListLabel.Visibility = Visibility.Collapsed;
+            ItemListScroll.Visibility = Visibility.Collapsed;
+
+            //Find item and store item values for easy display
+            int itemIndex = You.findItem(((Button)sender).Content.ToString().Substring(0, ((Button)sender).Content.ToString().Length - 3));
+            string itemName = You.getItemList()[itemIndex].getName();   //get "Item" instead of "Item xNumItem"
+            int itemHeal = You.getItemList()[itemIndex].getHeal();
+
+            //Use selected item
+            bool used = You.useItem(itemName);    
+            if (!used)
+            {
+                ActionLogList.Children.Add(new TextBlock() { Text = "You don't have that item!" });
+            }
+            else
+            {
+                ActionLogList.Children.Add(new TextBlock() { Text = "You use " + itemName + " and recover " + itemHeal.ToString() + "hp" }); 
+
+                if (You.getHP() <= 0)
+                {
+                    youLose();
+                    return;
+                }
+
+                if (Enemy.getHP() <= 0)
+                {
+                    youWin();
+                    return;
+                }
+
+                monsterAttack();
+            }
         }
 
         private async void AttackB_Click(object sender, RoutedEventArgs e)
@@ -106,6 +225,8 @@ namespace Probability_Simulator.Pages.RPG
             {
                 monsterHPBar.Width = monsterHPBarWidth * Enemy.getHP() / Enemy.getHPStart();
                 monsterHPText.Text = Enemy.getHP().ToString();
+                monsterMPBar.Width = monsterMPBarWidth * Enemy.getMP() / Enemy.getMPStart();
+                monsterMPText.Text = Enemy.getMP().ToString();
             }
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
@@ -123,13 +244,38 @@ namespace Probability_Simulator.Pages.RPG
                 return;
             }
 
+            //Set up spell list
+            SpellList.Children.Clear();
+            spellButton = new Button[You.getSpellList().Length];
+            for (int i = 0; i < You.getNumSpells(); i++)
+            {
+                if (You.getItemList()[i] == null)
+                {
+                    break;
+                }
+                spellButton[i] = new Button() { Content = You.getSpellList()[i].getName() + " - " +You.getSpellList()[i].getMPCost()+"mp" };     //new button with content = "Spell - MPCostmp";
+                spellButton[i].Click += spellClick;
+                SpellList.Children.Add(spellButton[i]);
+            }
+
+            //Display item list
+            ActionLogLabel.Visibility = Visibility.Collapsed;
+            ActionLogScroll.Visibility = Visibility.Collapsed;
+
+            SpellListLabel.Visibility = Visibility.Visible;
+            SpellListScroll.Visibility = Visibility.Visible;
+
+            if (You.getHP() <= 0)
+            {
+                youLose();
+                return;
+            }
+
             if (Enemy.getHP() <= 0)
             {
                 youWin();
                 return;
             }
-
-            monsterAttack();
 
         }
 
@@ -153,8 +299,10 @@ namespace Probability_Simulator.Pages.RPG
             }
             else
             {
-                yourHPBar.Width = 177 * You.getHP() / You.getHPStart();
+                yourHPBar.Width = playerHPBarWidth * You.getHP() / You.getHPStart();
                 yourHPText.Text = You.getHP().ToString();
+                yourMPBar.Width = playerHPBarWidth * You.getMP() / You.getMPStart();
+                yourMPText.Text = You.getMP().ToString();
             }
 
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
@@ -173,19 +321,26 @@ namespace Probability_Simulator.Pages.RPG
                 return;
             }
 
-            if (You.getHP() <= 0)
+            //Set up item list
+            ItemList.Children.Clear();
+            itemButton = new Button[You.getItemList().Length];
+            for (int i = 0; i < You.getItemList().Length; i++)
             {
-                youLose();
-                return;
+                if (You.getItemList()[i] == null)
+                {
+                    break;
+                }
+                itemButton[i] = new Button() { Content = You.getItemList()[i].getName() + " x" + You.getNumItemList()[i] };     //new button with content = "Item xNumItem";
+                itemButton[i].Click += itemClick;
+                ItemList.Children.Add(itemButton[i]);
             }
 
-            if (Enemy.getHP() <= 0)
-            {
-                youWin();
-                return;
-            }
+            //Display item list
+            ActionLogLabel.Visibility = Visibility.Collapsed;
+            ActionLogScroll.Visibility = Visibility.Collapsed;
 
-            monsterAttack();
+            ItemListLabel.Visibility = Visibility.Visible;
+            ItemListScroll.Visibility = Visibility.Visible;
         }
         
         private void FleeB_Click(object sender, RoutedEventArgs e)
@@ -231,6 +386,8 @@ namespace Probability_Simulator.Pages.RPG
             {
                 yourHPBar.Width = playerHPBarWidth * You.getHP() / You.getHPStart();
                 yourHPText.Text = You.getHP().ToString();
+                yourMPBar.Width = playerHPBarWidth * You.getMP() / You.getMPStart();
+                yourMPText.Text = You.getMP().ToString();
             }
 
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
@@ -361,7 +518,7 @@ namespace Probability_Simulator.Pages.RPG
             yourHPBar.Width = 177;
             yourHPText.Text = You.getHPStart().ToString();
             ActionLogList.Children.Clear();
-            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Music/Chrono Trigger Music - Battle Theme.mp3");
+            BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Musics/Chrono Trigger Music - Battle Theme.mp3");
 
             enableButton();
         }

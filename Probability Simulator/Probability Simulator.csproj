@@ -114,6 +114,7 @@
     <Compile Include="Common\RPG\Monster.cs" />
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\RPG\Player.cs" />
+    <Compile Include="Common\RPG\Spell.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -135,6 +136,9 @@
     </Compile>
     <Compile Include="Pages\EasterEggPage.xaml.cs">
       <DependentUpon>EasterEggPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RandomNumPage.xaml.cs">
+      <DependentUpon>RandomNumPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RPG\AxalfFightPage.xaml.cs">
       <DependentUpon>AxalfFightPage.xaml</DependentUpon>
@@ -181,6 +185,9 @@
     <Content Include="Assets\Selection Images\CoinB.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Selection Images\RandomB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\Sound Effect\coin_flip.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -223,6 +230,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\EasterEggPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RandomNumPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -33,34 +33,40 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='9' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='11' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
-            <Button x:ConnectionId='10' x:Name="EasterEggB" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Margin="0" BorderThickness="0" Width="100" Height="100"                         />
+            <Button x:ConnectionId='12' x:Name="EasterEggB" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Margin="0" BorderThickness="0" Width="100" Height="100"                         />
         </Grid>
         <Grid HorizontalAlignment="Left" Height="628" VerticalAlignment="Top" Width="1366" Margin="10,113,-10,0" Grid.RowSpan="2">
             <Canvas x:ConnectionId='1' x:Name="DiceCanvas" Margin="120,40,936,378"                           >
             	<Canvas.Background>
             		<ImageBrush ImageSource="ms-appx:///Assets/DiceB.png"/>
             	</Canvas.Background>
-            	<Button x:ConnectionId='8' x:Name="DicePageB" Content="Dice Roll" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
+            	<Button x:ConnectionId='10' x:Name="DicePageB" Content="Dice Roll" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
             </Canvas>
             <Canvas x:ConnectionId='2' x:Name="CardCanvas" Margin="450,40,606,378"                           >
             	<Canvas.Background>
             		<ImageBrush ImageSource="ms-appx:///Assets/CardB.png"/>
             	</Canvas.Background>
-            	<Button x:ConnectionId='7' x:Name="CardPageB" Content="Cards Draw" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
+            	<Button x:ConnectionId='9' x:Name="CardPageB" Content="Cards Draw" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
             </Canvas>
             <Canvas x:ConnectionId='3' x:Name="CoinCanvas" Margin="120,260,936,158"                           >
             	<Canvas.Background>
             		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/CoinB.png"/>
             	</Canvas.Background>
-            	<Button x:ConnectionId='6' x:Name="CoinPageB" Content="Coins Flip" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
+            	<Button x:ConnectionId='8' x:Name="CoinPageB" Content="Coins Flip" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
             </Canvas>
             <Canvas x:ConnectionId='4' x:Name="BingoCanvas" Margin="450,260,606,158"                            >
             	<Canvas.Background>
             		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/BingoB.png"/>
             	</Canvas.Background>
-            	<Button x:ConnectionId='5' x:Name="BingoPageB" Content="Bingo Call" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                         />
+            	<Button x:ConnectionId='7' x:Name="BingoPageB" Content="Bingo Call" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                         />
+            </Canvas>
+            <Canvas x:ConnectionId='5' x:Name="RandomCanvas" Margin="780,40,276,378"                            >
+            	<Canvas.Background>
+            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/RandomB.png"/>
+            	</Canvas.Background>
+            	<Button x:ConnectionId='6' x:Name="RandomPageB" Content="Number Generate" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                          />
             </Canvas>
         </Grid>
 

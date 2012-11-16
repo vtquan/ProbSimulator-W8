@@ -112,19 +112,27 @@ namespace Probability_Simulator.Pages
             }
 
             //update image
+
+            //how to change canvas background
+            //BitmapImage coinHeadBrush = new BitmapImage(new Uri("ms-appx:///Assets/penny-head-trans.png", UriKind.RelativeOrAbsolute));
+            //BitmapImage coinTailBrush = new BitmapImage(new Uri("ms-appx:///Assets/penny-tail-trans.png", UriKind.RelativeOrAbsolute));
+            //ImageBrush headBrush = new ImageBrush();
+            //headBrush.ImageSource = coinHeadBrush;
+            //ImageBrush tailBrush = new ImageBrush();
+            //tailBrush.ImageSource = coinTailBrush;
+            //coinImage.Background = headBrush;
+            //coinImage.Background = tailBrush;
+
             BitmapImage coinHeadBrush = new BitmapImage(new Uri("ms-appx:///Assets/penny-head-trans.png", UriKind.RelativeOrAbsolute));
             BitmapImage coinTailBrush = new BitmapImage(new Uri("ms-appx:///Assets/penny-tail-trans.png", UriKind.RelativeOrAbsolute));
-            ImageBrush headBrush = new ImageBrush();
-            headBrush.ImageSource = coinHeadBrush;
-            ImageBrush tailBrush = new ImageBrush();
-            tailBrush.ImageSource = coinTailBrush;
+
             if (result == 1)    //tail
             {
-                coinImage.Background = tailBrush;
+                CoinImage.Source = coinTailBrush;
             }
             else     //head
             {
-                coinImage.Background = headBrush;
+                CoinImage.Source = coinHeadBrush;
             }
 
             //update history list
@@ -166,7 +174,7 @@ namespace Probability_Simulator.Pages
             updateGraph();
         }
 
-        private void coinImage_Tapped(object sender, TappedRoutedEventArgs e)
+        private void CoinImage_Tapped(object sender, TappedRoutedEventArgs e)
         {
             testInput();
         }

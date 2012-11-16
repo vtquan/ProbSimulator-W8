@@ -12,6 +12,7 @@ Assets\penny-head-trans.png
 Assets\penny-tail-trans.png
 Assets\Selection Images\BingoB.png
 Assets\Selection Images\CoinB.png
+Assets\Selection Images\RandomB.png
 Assets\SmallLogo.png
 Assets\Sound Effect\coin_flip.wav
 Assets\SplashScreen.png
@@ -25,6 +26,7 @@ Pages\CardPage.xaml
 Pages\CoinPage.xaml
 Pages\DicePage.xaml
 Pages\EasterEggPage.xaml
+Pages\RandomNumPage.xaml
 Pages\RPG\AxalfFightPage.xaml
 Pages\SelectionPage.xaml
 Common\ReadMe.txt

@@ -8,13 +8,31 @@ namespace Probability_Simulator.Common.RPG
 {
     public class Item 
     {
+        string name;
         private int heal;   //how much hp the item heal
-        private Attack damage; //does attack on the enemy
 
-        private int poisonStrength; //0-10  how likely to cause poison
-        private int paralyzeStrength;   //0-10 how likely to cause paralyze
+        //Constructors
+        public Item()
+        {
+            name = "Item";
+            heal = 0;
+        }
 
-        private int poisonSelf; //0-10  how likely to be poisoned
-        private int paralyzeSelf;   //0-10 how likely to be paralyzed
+        public Item(string Name, int Heal)
+        {
+            name = Name;
+            heal = Heal;
+        }
+
+        //Get Methods
+        public string getName()
+        {
+            return name;
+        }
+
+        public int getHeal()
+        {
+            return heal;
+        }
     }
 }
