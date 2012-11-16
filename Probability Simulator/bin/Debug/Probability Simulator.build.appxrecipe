@@ -47,6 +47,12 @@
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-tail-trans.png">
       <PackagePath>Assets\penny-tail-trans.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\RPG\Bosses\Alondite.png">
+      <PackagePath>Assets\RPG\Bosses\Alondite.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\RPG\Bosses\Axalf.png">
+      <PackagePath>Assets\RPG\Bosses\Axalf.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Selection Images\BingoB.png">
       <PackagePath>Assets\Selection Images\BingoB.png</PackagePath>
     </AppxPackagedFile>

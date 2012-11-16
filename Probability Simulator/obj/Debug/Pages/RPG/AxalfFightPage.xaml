@@ -118,7 +118,7 @@
             	<Viewbox.Projection>
             		<PlaneProjection/>
             	</Viewbox.Projection>
-                <Image x:Name="Axalf" Source="ms-appx:///Assets/Monster.png"/>
+                <Image x:Name="Axalf" Source="ms-appx:///Assets/RPG/Bosses/Axalf.png"/>
             </Viewbox>
             <MediaElement x:Name="BackgroundMusic" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="1266,149,0,0" Source="ms-appx:///Assets/Musics/Chrono Trigger Music - Battle Theme.mp3" IsLooping="True"/>
         </Grid>

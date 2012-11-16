@@ -179,6 +179,12 @@
     </Content>
     <Content Include="Assets\penny-head-trans.png" />
     <Content Include="Assets\penny-tail-trans.png" />
+    <Content Include="Assets\RPG\Bosses\Alondite.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\RPG\Bosses\Axalf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Selection Images\BingoB.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

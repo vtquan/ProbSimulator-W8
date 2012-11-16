@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-11-16T02:00:42.639</Modified>
+      <Modified>2012-11-16T05:14:56.864</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe">
       <PackagePath>Probability Simulator.exe</PackagePath>
-      <Modified>2012-11-16T02:00:42.143</Modified>
+      <Modified>2012-11-16T05:14:56.207</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb">
       <PackagePath>Probability Simulator.pdb</PackagePath>
-      <Modified>2012-11-16T02:00:42.090</Modified>
+      <Modified>2012-11-16T05:14:56.125</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\BingoB.png">
       <PackagePath>Assets\BingoB.png</PackagePath>
@@ -64,6 +64,14 @@
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-tail-trans.png">
       <PackagePath>Assets\penny-tail-trans.png</PackagePath>
       <Modified>2012-11-11T18:07:44.319</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\RPG\Bosses\Alondite.png">
+      <PackagePath>Assets\RPG\Bosses\Alondite.png</PackagePath>
+      <Modified>2012-11-16T05:12:31.500</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\RPG\Bosses\Axalf.png">
+      <PackagePath>Assets\RPG\Bosses\Axalf.png</PackagePath>
+      <Modified>2012-11-16T05:10:35.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Selection Images\BingoB.png">
       <PackagePath>Assets\Selection Images\BingoB.png</PackagePath>
@@ -154,7 +162,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\AxalfFightPage.xaml">
       <PackagePath>Pages\RPG\AxalfFightPage.xaml</PackagePath>
-      <Modified>2012-11-15T17:31:59.697</Modified>
+      <Modified>2012-11-16T05:13:47.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\SelectionPage.xaml">
       <PackagePath>Pages\SelectionPage.xaml</PackagePath>
@@ -162,7 +170,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-11-16T02:00:42.392</Modified>
+      <Modified>2012-11-16T05:14:56.559</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
