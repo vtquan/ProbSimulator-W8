@@ -37,20 +37,28 @@
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource PageName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
         <Grid x:Name="grid" Grid.Row="1">
+        	<Grid.ColumnDefinitions>
+        		<ColumnDefinition/>
+        		<ColumnDefinition/>
+        	</Grid.ColumnDefinitions>
+        	<Grid.RowDefinitions>
+        		<RowDefinition/>
+        		<RowDefinition/>
+        	</Grid.RowDefinitions>
             <MediaElement x:Name="coinSound" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" AudioCategory="SoundEffects" RealTimePlayback="True" Source="ms-appx:///Assets/Sound Effect/coin_flip.wav" AutoPlay="False"/>
 
-            <Grid x:Name="inputGrid" Margin="120,1089,288,105" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="360">
+            <Grid x:Name="inputGrid" Margin="120,1089,288,105" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="360" Grid.Row="1">
             	<Grid.RenderTransform>
             		<CompositeTransform/>
             	</Grid.RenderTransform>
         		<TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Number of Coins" FontSize="24" Width="196" Height="32" VerticalAlignment="Bottom"/>
         		<TextBox x:Name="numCoinBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" Margin="196,0,0,0" Width="164" TextAlignment="Center" FontSize="16" Height="32" VerticalAlignment="Bottom" InputScope="Number"/>
         	</Grid>
-            <Button x:Name="coinFlipB" Content="Flip" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="120,0,0,40" Height="60" Width="360" FontSize="26.667" Click="coinFlipB_Click"/>
-            <Viewbox x:Name="viewbox" HorizontalAlignment="Left" Height="360" VerticalAlignment="Top" Width="360" Margin="120,0,0,0">
-            	<Image x:Name="CoinImage" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="ms-appx:///Assets/penny-head-trans.png" Tapped="CoinImage_Tapped"/>
+            <Button x:Name="coinFlipB" Content="Flip" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="120,0,0,40" Height="60" Width="360" FontSize="26.667" Click="coinFlipB_Click" Grid.Row="1"/>
+            <Viewbox x:Name="viewbox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,0,0,0">
+            	<Image x:Name="CoinImage" Height="100" Width="100" Source="ms-appx:///Assets/penny-head-trans.png" Tapped="CoinImage_Tapped"/>
             </Viewbox>
-            <Grid x:Name="historyGrid" Margin="448,319,20,142" Width="556">
+            <Grid x:Name="historyGrid" Margin="448,319,20,142" Width="556" Grid.Column="1" Grid.RowSpan="2">
             
             	<TextBlock x:Name="historyListLabel" TextWrapping="Wrap" Text="History List" VerticalAlignment="Top" Margin="0,0,221,0" Height="14" HorizontalAlignment="Right" Width="79"/>
             	<ScrollViewer x:Name="historyScroll" Margin="0,19,0,0" HorizontalAlignment="Right" Width="300" BorderBrush="White" BorderThickness="1" RenderTransformOrigin="0.5,0.5">
@@ -60,7 +68,7 @@
             		<StackPanel x:Name="historyList" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
             	</ScrollViewer>
             </Grid>
-            <Grid x:Name="graphGrid" HorizontalAlignment="Right" Width="300" Margin="0,0,460,40">
+            <Grid x:Name="graphGrid" HorizontalAlignment="Right" Width="300" Margin="0,0,460,40" Grid.Column="1" Grid.RowSpan="2">
             	<TextBlock x:Name="graphHeader" TextWrapping="Wrap" Text="Percentage Graph" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             	<Rectangle x:Name="headBar" Fill="#FFF4F4F5" Margin="60,0,0,18" Stroke="Black" Height="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="54"/>
             	<Rectangle x:Name="tailBar" Fill="#FFF4F4F5" Height="0" Margin="0,0,60,18" Stroke="Black" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="54"/>
@@ -146,7 +154,7 @@
                 		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="grid">
                 			<DiscreteObjectKeyFrame KeyTime="0">
                 				<DiscreteObjectKeyFrame.Value>
-                					<x:Double>1024</x:Double>
+                					<x:Double>NaN</x:Double>
                 				</DiscreteObjectKeyFrame.Value>
                 			</DiscreteObjectKeyFrame>
                 		</ObjectAnimationUsingKeyFrames>
@@ -175,28 +183,28 @@
                 		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="graphGrid">
                 			<DiscreteObjectKeyFrame KeyTime="0">
                 				<DiscreteObjectKeyFrame.Value>
-                					<Thickness>0,0,120,342</Thickness>
+                					<Thickness>120,0</Thickness>
                 				</DiscreteObjectKeyFrame.Value>
                 			</DiscreteObjectKeyFrame>
                 		</ObjectAnimationUsingKeyFrames>
                 		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="historyGrid">
                 			<DiscreteObjectKeyFrame KeyTime="0">
                 				<DiscreteObjectKeyFrame.Value>
-                					<x:Double>300</x:Double>
+                					<x:Double>NaN</x:Double>
                 				</DiscreteObjectKeyFrame.Value>
                 			</DiscreteObjectKeyFrame>
                 		</ObjectAnimationUsingKeyFrames>
                 		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="historyGrid">
                 			<DiscreteObjectKeyFrame KeyTime="0">
                 				<DiscreteObjectKeyFrame.Value>
-                					<HorizontalAlignment>Right</HorizontalAlignment>
+                					<HorizontalAlignment>Stretch</HorizontalAlignment>
                 				</DiscreteObjectKeyFrame.Value>
                 			</DiscreteObjectKeyFrame>
                 		</ObjectAnimationUsingKeyFrames>
                 		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="historyGrid">
                 			<DiscreteObjectKeyFrame KeyTime="0">
                 				<DiscreteObjectKeyFrame.Value>
-                					<Thickness>0,291,120,40</Thickness>
+                					<Thickness>120,0,120,40</Thickness>
                 				</DiscreteObjectKeyFrame.Value>
                 			</DiscreteObjectKeyFrame>
                 		</ObjectAnimationUsingKeyFrames>
@@ -238,11 +246,116 @@
                 		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="inputGrid">
                 			<DiscreteObjectKeyFrame KeyTime="0">
                 				<DiscreteObjectKeyFrame.Value>
-                					<Thickness>120,488,544,100</Thickness>
+                					<Thickness>120,0,0,105</Thickness>
                 				</DiscreteObjectKeyFrame.Value>
                 			</DiscreteObjectKeyFrame>
                 		</ObjectAnimationUsingKeyFrames>
                 		<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="inputGrid" d:IsOptimized="True"/>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Row)" Storyboard.TargetName="inputGrid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Int32>1</x:Int32>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Column)" Storyboard.TargetName="coinFlipB">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Int32>0</x:Int32>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Row)" Storyboard.TargetName="coinFlipB">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Int32>1</x:Int32>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="inputGrid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<VerticalAlignment>Bottom</VerticalAlignment>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="viewbox">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Double>NaN</x:Double>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="viewbox">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Double>NaN</x:Double>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Row)" Storyboard.TargetName="historyGrid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Int32>1</x:Int32>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Column)" Storyboard.TargetName="graphGrid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Int32>1</x:Int32>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Column)" Storyboard.TargetName="historyGrid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Int32>1</x:Int32>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="historyList">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<HorizontalAlignment>Stretch</HorizontalAlignment>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="historyList">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Double>NaN</x:Double>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="historyScroll">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Double>NaN</x:Double>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="graphGrid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Double>NaN</x:Double>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="graphGrid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<HorizontalAlignment>Stretch</HorizontalAlignment>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.RowSpan)" Storyboard.TargetName="graphGrid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<x:Int32>1</x:Int32>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
                 	</Storyboard>
                 </VisualState>
 
@@ -381,7 +494,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="inputGrid">
                         	<DiscreteObjectKeyFrame KeyTime="0">
                         		<DiscreteObjectKeyFrame.Value>
-                        			<Thickness>120,1089,120,105</Thickness>
+                        			<Thickness>0,0,0,105</Thickness>
                         		</DiscreteObjectKeyFrame.Value>
                         	</DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
@@ -424,6 +537,55 @@
                         	<DiscreteObjectKeyFrame KeyTime="0">
                         		<DiscreteObjectKeyFrame.Value>
                         			<HorizontalAlignment>Right</HorizontalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="viewbox">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>2</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Column)" Storyboard.TargetName="graphGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>0</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="coinFlipB">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>2</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="inputGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<VerticalAlignment>Bottom</VerticalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="inputGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>2</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="inputGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>NaN</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="inputGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<HorizontalAlignment>Center</HorizontalAlignment>
                         		</DiscreteObjectKeyFrame.Value>
                         	</DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
@@ -547,7 +709,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="graphGrid">
                         	<DiscreteObjectKeyFrame KeyTime="0">
                         		<DiscreteObjectKeyFrame.Value>
-                        			<Visibility>Collapsed</Visibility>
+                        			<Visibility>Visible</Visibility>
                         		</DiscreteObjectKeyFrame.Value>
                         	</DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
@@ -632,7 +794,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="historyGrid">
                         	<DiscreteObjectKeyFrame KeyTime="0">
                         		<DiscreteObjectKeyFrame.Value>
-                        			<Thickness>20,285,20,122</Thickness>
+                        			<Thickness>20,0,20,122</Thickness>
                         		</DiscreteObjectKeyFrame.Value>
                         	</DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
@@ -668,6 +830,83 @@
                         	<DiscreteObjectKeyFrame KeyTime="0">
                         		<DiscreteObjectKeyFrame.Value>
                         			<VerticalAlignment>Top</VerticalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="coinFlipB">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>2</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="inputGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>2</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="inputGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<HorizontalAlignment>Stretch</HorizontalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="graphGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>0,0,20,122</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Column)" Storyboard.TargetName="graphGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>0</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="graphGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>NaN</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="viewbox">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>2</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Row)" Storyboard.TargetName="historyGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>1</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.RowSpan)" Storyboard.TargetName="historyGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>1</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Row)" Storyboard.TargetName="graphGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>1</x:Int32>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.RowSpan)" Storyboard.TargetName="graphGrid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Int32>1</x:Int32>
                         		</DiscreteObjectKeyFrame.Value>
                         	</DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>

@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe">
       <PackagePath>Probability Simulator.exe</PackagePath>
-      <Modified>2012-11-17T09:08:08.419</Modified>
+      <Modified>2012-11-17T10:17:33.886</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb">
       <PackagePath>Probability Simulator.pdb</PackagePath>
-      <Modified>2012-11-17T09:08:08.345</Modified>
+      <Modified>2012-11-17T10:17:33.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Bingo Chip.png">
       <PackagePath>Assets\Bingo Chip.png</PackagePath>
@@ -154,7 +154,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\CoinPage.xaml">
       <PackagePath>Pages\CoinPage.xaml</PackagePath>
-      <Modified>2012-11-17T07:51:44.724</Modified>
+      <Modified>2012-11-17T10:16:51.379</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\DicePage.xaml">
       <PackagePath>Pages\DicePage.xaml</PackagePath>
