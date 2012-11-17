@@ -64,6 +64,142 @@ namespace Probability_Simulator.Pages
         {
         }
 
+        private void generateCard()
+        {
+            bool[] used = new bool[75]; //store whether each of the 75 possible number for the bingo card is used
+            int generated = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    while (card[i, j] == 0)
+                    {
+                        if (j == 0)
+                        {
+                            generated = random.Next(1, 16);
+                        }
+                        else if (j == 1)
+                        {
+                            generated = random.Next(16, 31);
+                        }
+                        else if (j == 2)
+                        {
+                            if (i == 2)
+                            {
+                                generated = random.Next(46, 61);
+                                j++;
+                            }
+                            else
+                            {
+                                generated = random.Next(31, 46);
+                            }
+                        }
+                        else if (j == 3)
+                        {
+                            generated = random.Next(46, 61);
+                        }
+                        else
+                        {
+                            generated = random.Next(61, 76);
+                        }
+
+                        if (!used[generated - 1])
+                        {
+                            card[i, j] = generated;
+                            used[generated - 1] = true;
+                        }
+                    }
+                }
+            }
+            displayCard();
+        }
+
+        private void displayCard()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (j == 2)
+                    {
+                        if (i == 2) //don't need to display number for free space
+                        {
+                            j++;
+                        }
+                    }
+                    cardText[i, j].Text = card[i, j].ToString();
+                }
+            }
+        }
+
+        private void fillCardText()  //link cardBox to its respective textBox
+        {
+            cardText[0, 0] = text0_0;
+            cardText[0, 1] = text0_1;
+            cardText[0, 2] = text0_2;
+            cardText[0, 3] = text0_3;
+            cardText[0, 4] = text0_4;
+
+            cardText[1, 0] = text1_0;
+            cardText[1, 1] = text1_1;
+            cardText[1, 2] = text1_2;
+            cardText[1, 3] = text1_3;
+            cardText[1, 4] = text1_4;
+
+            cardText[2, 0] = text2_0;
+            cardText[2, 1] = text2_1;
+            //cardText[2, 2] = text2_2; //Free space, no value
+            cardText[2, 3] = text2_3;
+            cardText[2, 4] = text2_4;
+
+            cardText[3, 0] = text3_0;
+            cardText[3, 1] = text3_1;
+            cardText[3, 2] = text3_2;
+            cardText[3, 3] = text3_3;
+            cardText[3, 4] = text3_4;
+
+            cardText[4, 0] = text4_0;
+            cardText[4, 1] = text4_1;
+            cardText[4, 2] = text4_2;
+            cardText[4, 3] = text4_3;
+            cardText[4, 4] = text4_4;
+
+            linkChip(); //link the chip image to the proper row and column of chipArray[,]
+        }
+
+        private void linkChip()
+        {
+            chipArray[0, 0] = Chip0_0;
+            chipArray[0, 1] = Chip0_1;
+            chipArray[0, 2] = Chip0_2;
+            chipArray[0, 3] = Chip0_3;
+            chipArray[0, 4] = Chip0_4;
+
+            chipArray[1, 0] = Chip1_0;
+            chipArray[1, 1] = Chip1_1;
+            chipArray[1, 2] = Chip1_2;
+            chipArray[1, 3] = Chip1_3;
+            chipArray[1, 4] = Chip1_4;
+
+            chipArray[2, 0] = Chip2_0;
+            chipArray[2, 1] = Chip2_1;
+            chipArray[2, 2] = Chip2_2;
+            chipArray[2, 3] = Chip2_3;
+            chipArray[2, 4] = Chip2_4;
+
+            chipArray[3, 0] = Chip3_0;
+            chipArray[3, 1] = Chip3_1;
+            chipArray[3, 2] = Chip3_2;
+            chipArray[3, 3] = Chip3_3;
+            chipArray[3, 4] = Chip3_4;
+
+            chipArray[4, 0] = Chip4_0;
+            chipArray[4, 1] = Chip4_1;
+            chipArray[4, 2] = Chip4_2;
+            chipArray[4, 3] = Chip4_3;
+            chipArray[4, 4] = Chip4_4;
+        }
+
         private async void callB_Click(object sender, RoutedEventArgs e)
         {
             int numCall = 0;
@@ -157,155 +293,6 @@ namespace Probability_Simulator.Pages
             {
                 updateCard(resultList);
             }
-        }
-
-        private void CommandInvokedHandler(IUICommand command)  //clear history list and reset number list
-        {
-            if (command.Label.Equals("Reset List"))
-            {
-                for (int i = 0; i < 75; i++)
-                {
-                    called[i] = false;
-                }
-                numCalled = 0;
-                historyList.Children.Clear();
-            }
-        }
-
-        private void generateCard()
-        {
-            bool[] used = new bool[75]; //store whether each of the 75 possible number for the bingo card is used
-            int generated = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 5; j++)
-                {
-                    while (card[i, j] == 0)
-                    {
-                        if (j == 0)
-                        {
-                            generated = random.Next(1, 16);
-                        }
-                        else if (j == 1)
-                        {
-                            generated = random.Next(16, 31);
-                        }
-                        else if (j == 2)
-                        {
-                            if (i == 2)
-                            {
-                                generated = random.Next(46, 61);
-                                j++;
-                            }
-                            else
-                            {
-                                generated = random.Next(31, 46);
-                            }
-                        }
-                        else if (j == 3)
-                        {
-                            generated = random.Next(46, 61);
-                        }
-                        else
-                        {
-                            generated = random.Next(61, 76);
-                        }
-
-                        if (!used[generated - 1])
-                        {
-                            card[i, j] = generated;
-                            used[generated - 1] = true;
-                        }
-                    }
-                }
-            }
-            displayCard();
-        }
-
-        private void displayCard()
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 5; j++)
-                {
-                    if (j == 2)
-                    {
-                            if (i == 2) //don't need to display number for free space
-                            {
-                                j++;
-                            }
-                    }
-                    cardText[i, j].Text = card[i, j].ToString();
-                }
-            }
-        }
-
-        private void fillCardText()  //link cardBox to its respective textBox
-        {
-            cardText[0, 0] = text0_0;
-            cardText[0, 1] = text0_1;
-            cardText[0, 2] = text0_2;
-            cardText[0, 3] = text0_3;
-            cardText[0, 4] = text0_4;
-
-            cardText[1, 0] = text1_0;
-            cardText[1, 1] = text1_1;
-            cardText[1, 2] = text1_2;
-            cardText[1, 3] = text1_3;
-            cardText[1, 4] = text1_4;
-
-            cardText[2, 0] = text2_0;
-            cardText[2, 1] = text2_1;
-            //cardText[2, 2] = text2_2; //Free space, no value
-            cardText[2, 3] = text2_3;
-            cardText[2, 4] = text2_4;
-
-            cardText[3, 0] = text3_0;
-            cardText[3, 1] = text3_1;
-            cardText[3, 2] = text3_2;
-            cardText[3, 3] = text3_3;
-            cardText[3, 4] = text3_4;
-
-            cardText[4, 0] = text4_0;
-            cardText[4, 1] = text4_1;
-            cardText[4, 2] = text4_2;
-            cardText[4, 3] = text4_3;
-            cardText[4, 4] = text4_4;
-
-            linkChip(); //link the chip image to the proper row and column of chipArray[,]
-        }
-
-        private void linkChip()
-        {
-            chipArray[0, 0] = Chip0_0;
-            chipArray[0, 1] = Chip0_1;
-            chipArray[0, 2] = Chip0_2;
-            chipArray[0, 3] = Chip0_3;
-            chipArray[0, 4] = Chip0_4;
-
-            chipArray[1, 0] = Chip1_0;
-            chipArray[1, 1] = Chip1_1;
-            chipArray[1, 2] = Chip1_2;
-            chipArray[1, 3] = Chip1_3;
-            chipArray[1, 4] = Chip1_4;
-
-            chipArray[2, 0] = Chip2_0;
-            chipArray[2, 1] = Chip2_1;
-            chipArray[2, 2] = Chip2_2;
-            chipArray[2, 3] = Chip2_3;
-            chipArray[2, 4] = Chip2_4;
-
-            chipArray[3, 0] = Chip3_0;
-            chipArray[3, 1] = Chip3_1;
-            chipArray[3, 2] = Chip3_2;
-            chipArray[3, 3] = Chip3_3;
-            chipArray[3, 4] = Chip3_4;
-
-            chipArray[4, 0] = Chip4_0;
-            chipArray[4, 1] = Chip4_1;
-            chipArray[4, 2] = Chip4_2;
-            chipArray[4, 3] = Chip4_3;
-            chipArray[4, 4] = Chip4_4;
         }
 
         private void updateCard(int[] resultList)   //get a list of result and update cardCalled and display the card accordingly
@@ -452,6 +439,16 @@ namespace Probability_Simulator.Pages
 
             // Show the message dialog and wait
             await messageDialog.ShowAsync();
+        }
+
+        private void CommandInvokedHandler(IUICommand command)  //clear history list and reset number list
+        {
+            for (int i = 0; i < 75; i++)
+            {
+                called[i] = false;
+            }
+            numCalled = 0;
+            historyList.Children.Clear();
         }
     }
 }
