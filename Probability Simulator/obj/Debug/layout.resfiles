@@ -23,8 +23,10 @@ App.xaml
 Common\StandardStyles.xaml
 MainPage.xaml
 Pages\AnimatePage.xaml
+Pages\BingoCustomPage.xaml
 Pages\BingoPage.xaml
 Pages\CardPage.xaml
+Pages\CoinNew.xaml
 Pages\CoinPage.xaml
 Pages\DicePage.xaml
 Pages\EasterEggPage.xaml

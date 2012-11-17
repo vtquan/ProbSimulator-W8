@@ -35,6 +35,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
         	</DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Name="DeadAnimation">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="viewbox">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
         
     </Page.Resources>
 

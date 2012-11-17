@@ -62,7 +62,7 @@
             	</Canvas.Background>
             	<Button x:ConnectionId='7' x:Name="BingoPageB" Content="Bingo Call" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                         />
             </Canvas>
-            <Canvas x:ConnectionId='5' x:Name="RandomCanvas" Margin="780,40,276,378"                            >
+            <Canvas x:ConnectionId='5' x:Name="RandomCanvas" Margin="780,40,276,378"                             >
             	<Canvas.Background>
             		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/RandomB.png"/>
             	</Canvas.Background>

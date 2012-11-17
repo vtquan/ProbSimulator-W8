@@ -122,11 +122,17 @@
     <Compile Include="Pages\AnimatePage.xaml.cs">
       <DependentUpon>AnimatePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\BingoCustomPage.xaml.cs">
+      <DependentUpon>BingoCustomPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\BingoPage.xaml.cs">
       <DependentUpon>BingoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CardPage.xaml.cs">
       <DependentUpon>CardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CoinNew.xaml.cs">
+      <DependentUpon>CoinNew.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CoinPage.xaml.cs">
       <DependentUpon>CoinPage.xaml</DependentUpon>
@@ -219,11 +225,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\BingoCustomPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\BingoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CardPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CoinNew.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

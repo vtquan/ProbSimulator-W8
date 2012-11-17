@@ -114,7 +114,7 @@ namespace Probability_Simulator.Pages.RPG
             yourMPText.Text = You.getMPStart().ToString();
         }
 
-        void spellClick(object sender, RoutedEventArgs e)
+        private async void spellClick(object sender, RoutedEventArgs e)
         {
             //Display Action Log list
             ActionLogLabel.Visibility = Visibility.Visible;
@@ -133,9 +133,15 @@ namespace Probability_Simulator.Pages.RPG
             if (!result.Key)
             {
                 ActionLogList.Children.Add(new TextBlock() { Text = "You do not have enough mp" });
+                enableButton();
             }
             else
             {
+                //Flinch Animation for Monster 
+                FlinchAnimation.Begin();
+                await Task.Delay(300);
+                IdleAnimation.Begin();
+
                 ActionLogList.Children.Add(new TextBlock() { Text = "You use " + spellName + " and did " + spellDamage + " damage" });
 
                 if (You.getHP() <= 0)
@@ -178,6 +184,7 @@ namespace Probability_Simulator.Pages.RPG
             if (!used)
             {
                 ActionLogList.Children.Add(new TextBlock() { Text = "You don't have that item!" });
+                enableButton();
             }
             else
             {
@@ -406,6 +413,9 @@ namespace Probability_Simulator.Pages.RPG
             monsterHPBar.Width = 0;
             monsterHPText.Text = "0";
 
+            //Dying animation for Enemy
+            DeadAnimation.Begin();
+
             battleEndMessage();
         }   
 
@@ -511,6 +521,7 @@ namespace Probability_Simulator.Pages.RPG
 
         private void restartGame()  //clear action log and reset hp, mp and music
         {
+            viewbox.Opacity = 100;
             Enemy.setHP(Enemy.getHPStart());
             monsterHPBar.Width = 177;
             monsterHPText.Text = Enemy.getHPStart().ToString();

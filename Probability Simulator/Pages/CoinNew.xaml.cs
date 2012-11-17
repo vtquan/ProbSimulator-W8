@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI.ApplicationSettings;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -12,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
@@ -21,9 +21,10 @@ namespace Probability_Simulator.Pages
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class SelectionPage : Probability_Simulator.Common.LayoutAwarePage
+    public sealed partial class CoinNew : Probability_Simulator.Common.LayoutAwarePage
     {
-        public SelectionPage()
+
+        public CoinNew()
         {
             this.InitializeComponent();
         }
@@ -51,64 +52,11 @@ namespace Probability_Simulator.Pages
         {
         }
 
-        private void DicePageB_Click(object sender, RoutedEventArgs e)
+        private void coinFlipB_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.DicePage));
+           
         }
 
-        private void CardPageB_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.CardPage));
-        }
-
-        private void CoinPageB_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.CoinPage));
-        }
-
-        private void BingoPageB_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.BingoPage));
-        }
-
-        private void RandomPageB_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.RandomNumPage));
-        }
-
-        private void SpinnerB_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void EasterEggB_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.RPG.AxalfFightPage));
-        }
-
-        private void DiceCanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.DicePage));
-        }
-
-        private void CardCanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.CardPage));
-        }
-
-        private void CoinCanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.CoinPage));
-        }
-
-        private void BingoCanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.BingoPage));
-        }
-
-        private void RandomCanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Pages.CoinNew));
-        }
+        
     }
 }

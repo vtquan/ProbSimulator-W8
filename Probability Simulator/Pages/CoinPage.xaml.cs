@@ -90,7 +90,6 @@ namespace Probability_Simulator.Pages
 
         private void coinFlip(int numFlip)
         {
-            coinSound.Play();
             Random random = new Random();
 
             int result = 0;

@@ -35,6 +35,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
         	</DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Name="DeadAnimation">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="viewbox">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
         
     </Page.Resources>
 
@@ -193,7 +199,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="viewbox">
                         	<DiscreteObjectKeyFrame KeyTime="0">
                         		<DiscreteObjectKeyFrame.Value>
-                        			<Thickness>20,100,20,0</Thickness>
+                        			<Thickness>20,150,20,0</Thickness>
                         		</DiscreteObjectKeyFrame.Value>
                         	</DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>

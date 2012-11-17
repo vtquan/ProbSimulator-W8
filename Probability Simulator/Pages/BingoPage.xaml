@@ -37,7 +37,6 @@
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource PageName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
         <Grid x:Name="grid" Grid.Row="1">
-            <MediaElement x:Name="coinSound" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="1266,0,0,0" AudioCategory="SoundEffects" RealTimePlayback="True" Source="ms-appx:///Assets/Sound Effect/coin_flip.wav" AutoPlay="False"/>
 
             <Grid x:Name="inputGrid" Margin="120,482,0,105" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="360" VerticalAlignment="Bottom">
                 <Grid.RenderTransform>
@@ -80,29 +79,19 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Border BorderBrush="White" BorderThickness="1" Background="Red">
-                            <Viewbox Margin="0">
-                                <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="B" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
-                            </Viewbox>
+                            <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="B" TextAlignment="Center" FontFamily="Segoe UI Mono" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0" FontSize="48"/>
                         </Border>
                         <Border BorderBrush="White" BorderThickness="1" Background="Red" Grid.Column="1">
-                            <Viewbox x:Name="viewbox" Margin="0">
-                                <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="I" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
-                            </Viewbox>
+                            <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="I" TextAlignment="Center" FontFamily="Segoe UI Mono" FontWeight="Bold" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0" FontSize="48" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </Border>
                         <Border BorderBrush="White" BorderThickness="1" Background="Red" Grid.Column="2">
-                            <Viewbox Margin="0">
-                                <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="N" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
-                            </Viewbox>
+                            <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="N" TextAlignment="Center" FontFamily="Segoe UI Mono" FontWeight="Bold" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" FontSize="48"/>
                         </Border>
                         <Border BorderBrush="White" BorderThickness="1" Background="Red" Grid.Column="3">
-                            <Viewbox Margin="0">
-                                <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="G" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
-                            </Viewbox>
+                            <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="G" TextAlignment="Center" FontFamily="Segoe UI Mono" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" FontSize="48" Margin="0"/>
                         </Border>
                         <Border BorderBrush="White" BorderThickness="1" Background="Red" Grid.Column="4">
-                            <Viewbox Margin="0">
-                                <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="O" TextAlignment="Center" FontFamily="Segoe WP Black" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
-                            </Viewbox>
+                            <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="O" TextAlignment="Center" FontFamily="Segoe UI Mono" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0" FontSize="48"/>
                         </Border>
                         <Border BorderBrush="White" BorderThickness="1" Grid.Row="1">
                             <Viewbox>
