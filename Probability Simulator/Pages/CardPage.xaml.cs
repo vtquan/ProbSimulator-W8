@@ -65,7 +65,12 @@ namespace Probability_Simulator.Pages
             if (Int32.TryParse(numCardBox.Text, out numCard) != false && numCard <= 1000)   //if input is valid 
             {
                 if (CardReturn.IsChecked == true)
+                {
+                    //reset all drawned card list
+                    drawned = new bool[4, 13];
+                    numDrawned = 0;
                     cardDrawReturn(numCard);
+                }
                 else
                     cardDrawNoReturn(numCard);
             }
@@ -159,16 +164,6 @@ namespace Probability_Simulator.Pages
                         value = "King";
                         break;
                 }
-                //if (value.Equals("Ace") || value.Equals("8"))
-                //{
-                //    cardString = "An " + value + " of " + suit;
-                //    //lastDrawBox.Text = cardString;
-                //}
-                //else
-                //{
-                //    cardString = "A " + value + " of " + suit;
-                //    //lastDrawBox.Text = cardString;
-                //}
                 cardString = value + " of " + suit;
                 historyList.Children.Add(new TextBlock() { Text = cardString });
             }

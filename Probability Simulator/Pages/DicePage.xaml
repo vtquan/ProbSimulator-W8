@@ -13,7 +13,7 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="PageName">Dice Roll</x:String>
+        <x:String x:Key="PageName">Roll Dice</x:String>
     </Page.Resources>
 
     <!--
