@@ -25,11 +25,10 @@ namespace Probability_Simulator.Pages
         Random random = new Random();
         bool[] called = new bool[75];   //store whether each of the possible 75 numbers was called
         int numCalled = 0;
-        int[,] card = new int[5,5]; //store the values of the bingo card; [row, column]
-        TextBlock[,] cardText = new TextBlock[5, 5]; //store the textBox [row, column]
-        bool[,] cardCalled = new bool[5, 5];   //bingo card represented by whether or not the number has been called; [row, column]
-        Image[,] chipArray = new Image[5, 5]; //link to each of the bingo chip image in the bingo card; [row, column]
-        bool gameEnd;   //if game has ended
+        int[,] card = new int[5,5]; //store the values of the bingo card
+        TextBlock[,] cardText = new TextBlock[5,5];
+        bool[,] cardCalled = new bool[5, 5];   //bingo card represented by whether or not the number has been called
+        Image[,] chipArray = new Image[5, 5]; //link to each of the bingo chip image in the bingo card
 
         public BingoPage()
         {
@@ -153,23 +152,17 @@ namespace Probability_Simulator.Pages
             historyScroll.UpdateLayout();
             historyScroll.ScrollToVerticalOffset(historyList.ActualHeight);
 
-            if (!gameEnd)
-            {
-                updateCard(resultList);
-            }
+            updateCard(resultList);
         }
 
         private void CommandInvokedHandler(IUICommand command)  //clear history list and reset number list
         {
-            if (command.Label.Equals("Reset List"))
+            for (int i = 0; i < 75; i++)
             {
-                for (int i = 0; i < 75; i++)
-                {
                     called[i] = false;
-                }
-                numCalled = 0;
-                historyList.Children.Clear();
             }
+            numCalled = 0;
+            historyList.Children.Clear();
         }
 
         private void generateCard()
@@ -188,27 +181,27 @@ namespace Probability_Simulator.Pages
                         }
                         else if (j == 1)
                         {
-                            generated = random.Next(16, 31);
+                            generated = random.Next(15, 31);
                         }
                         else if (j == 2)
                         {
                             if (i == 2)
                             {
-                                generated = random.Next(46, 61);
+                                generated = random.Next(45, 61);
                                 j++;
                             }
                             else
                             {
-                                generated = random.Next(31, 46);
+                                generated = random.Next(30, 46);
                             }
                         }
                         else if (j == 3)
                         {
-                            generated = random.Next(46, 61);
+                            generated = random.Next(45, 61);
                         }
                         else
                         {
-                            generated = random.Next(61, 76);
+                            generated = random.Next(60, 76);
                         }
 
                         if (!used[generated - 1])
@@ -238,6 +231,31 @@ namespace Probability_Simulator.Pages
                     cardText[i, j].Text = card[i, j].ToString();
                 }
             }
+            //text0_0.Text = card[0, 0].ToString();
+            //text0_1.Text = card[0, 1].ToString();
+            //text0_2.Text = card[0, 2].ToString();
+            //text0_3.Text = card[0, 3].ToString();
+            //text0_4.Text = card[0, 4].ToString();
+            //text1_0.Text = card[1, 0].ToString();
+            //text1_1.Text = card[1, 1].ToString();
+            //text1_2.Text = card[1, 2].ToString();  
+            //text1_3.Text = card[1, 3].ToString();
+            //text1_4.Text = card[1, 4].ToString();
+            //text2_0.Text = card[2, 0].ToString();
+            //text2_1.Text = card[2, 1].ToString();
+            ////text2_2.Text = card[2, 2].ToString();  //Free Space; not needed
+            //text2_3.Text = card[2, 3].ToString();
+            //text2_4.Text = card[2, 4].ToString();
+            //text2_0.Text = card[3, 0].ToString();
+            //text2_1.Text = card[3, 1].ToString();
+            //text2_2.Text = card[3, 2].ToString();
+            //text2_3.Text = card[3, 3].ToString();
+            //text2_4.Text = card[3, 4].ToString();
+            //text4_0.Text = card[4, 0].ToString();
+            //text4_1.Text = card[4, 1].ToString();
+            //text4_2.Text = card[4, 2].ToString();
+            //text4_3.Text = card[4, 3].ToString();
+            //text4_4.Text = card[4, 4].ToString();
         }
 
         private void fillCardText()  //link cardBox to its respective textBox
@@ -283,175 +301,44 @@ namespace Probability_Simulator.Pages
             chipArray[0, 3] = Chip0_3;
             chipArray[0, 4] = Chip0_4;
 
-            chipArray[1, 0] = Chip1_0;
-            chipArray[1, 1] = Chip1_1;
-            chipArray[1, 2] = Chip1_2;
-            chipArray[1, 3] = Chip1_3;
-            chipArray[1, 4] = Chip1_4;
+            chipArray[0, 0] = Chip0_0;
+            chipArray[0, 1] = Chip0_1;
+            chipArray[0, 2] = Chip0_2;
+            chipArray[0, 3] = Chip0_3;
+            chipArray[0, 4] = Chip0_4;
 
-            chipArray[2, 0] = Chip2_0;
-            chipArray[2, 1] = Chip2_1;
-            chipArray[2, 2] = Chip2_2;
-            chipArray[2, 3] = Chip2_3;
-            chipArray[2, 4] = Chip2_4;
+            chipArray[0, 0] = Chip0_0;
+            chipArray[0, 1] = Chip0_1;
+            chipArray[0, 2] = Chip0_2;
+            chipArray[0, 3] = Chip0_3;
+            chipArray[0, 4] = Chip0_4;
 
-            chipArray[3, 0] = Chip3_0;
-            chipArray[3, 1] = Chip3_1;
-            chipArray[3, 2] = Chip3_2;
-            chipArray[3, 3] = Chip3_3;
-            chipArray[3, 4] = Chip3_4;
+            chipArray[0, 0] = Chip0_0;
+            chipArray[0, 1] = Chip0_1;
+            chipArray[0, 2] = Chip0_2;
+            chipArray[0, 3] = Chip0_3;
+            chipArray[0, 4] = Chip0_4;
 
-            chipArray[4, 0] = Chip4_0;
-            chipArray[4, 1] = Chip4_1;
-            chipArray[4, 2] = Chip4_2;
-            chipArray[4, 3] = Chip4_3;
-            chipArray[4, 4] = Chip4_4;
+            chipArray[0, 0] = Chip0_0;
+            chipArray[0, 1] = Chip0_1;
+            chipArray[0, 2] = Chip0_2;
+            chipArray[0, 3] = Chip0_3;
+            chipArray[0, 4] = Chip0_4;
         }
 
         private void updateCard(int[] resultList)   //get a list of result and update cardCalled and display the card accordingly
         {
             for (int i = 0; i < resultList.Length; i++) //compare against resultList[] instead of called[] because only need to check the changes and thus faster
             {
-                int checkColumn = (resultList[i] - 1) / 15; //set checkColumn to one of the value {0, 1, 2, 3, 4}, checkColumn being the column to check
+                int checkColumn = resultList[i] / 15; //set checkColumn to one of the value {0, 1, 2, 3, 3}, checkColumn being the column to check
                 for (int j = 0; j < 5; j++)
                 {
                     if (card[j, checkColumn] == resultList[i])
                     {
                         cardCalled[j, checkColumn] = true;
-                        chipArray[j, checkColumn].Visibility = Visibility.Visible;
-
-                        bool win = checkWin(); //check if you have won
-                        
-                        //exit all loop if won
-                        if (win)    
-                        {
-                            i = resultList.Length;
-                            j = 5;
-                        }
                     }
                 }
             }
-        }
-
-        private bool checkWin()
-        {
-            bool win = false;
-            bool rowClear;
-            bool columnClear;
-            bool diagClear;
-
-            //check for clear by row
-            for (int r = 0; r < 5; r++)
-            {
-                rowClear = true;
-                for (int c = 0; c < 5; c++)
-                {
-                    if (!cardCalled[r, c])
-                    {
-                        rowClear = false;
-                        break;
-                    }
-                }
-                if (rowClear)
-                {
-                    win = true;
-                    gameEnd = true;
-                    youWin();
-                    break;
-                }
-            }
-
-            if (!win)
-            {
-                //check for clear by column
-                for (int c = 0; c < 5; c++)
-                {
-                    columnClear = true;
-                    for (int r = 0; r < 5; r++)
-                    {
-                        if (!cardCalled[r, c])
-                        {
-                            columnClear = false;
-                            break;
-                        }
-                    }
-                    if (columnClear)
-                    {
-                        win = true;
-                        gameEnd = true;
-                        youWin();
-                        break;
-                    }
-                }
-            }
-
-            if (!win)
-            {
-                //check for top left to bottom right diagonal
-                diagClear = true;
-                
-                for (int c = 0; c < 5; c++)
-                {
-                    if (!cardCalled[c, c])
-                    {
-                        diagClear = false;
-                        break;
-                    }
-                }
-                if (diagClear)
-                {
-                    win = true;
-                    gameEnd = true;
-                    youWin();
-                }
-            }
-            
-            if(!win)    
-            {
-                //check for bottom left to top right diagonal
-                diagClear = true;
-
-                for (int c = 0; c < 5; c++)
-                {
-                    if (!cardCalled[4 - c, c])
-                    {
-                        diagClear = false;
-                        break;
-                    }
-                }
-                if (diagClear)
-                {
-                    win = true;
-                    gameEnd = true;
-                    youWin();
-                }
-            }
-            return win;
-        }
-
-        private async void youWin()
-        {
-            var messageDialog = new MessageDialog("You Win!");
-            messageDialog.Title = "Winner";
-
-            messageDialog.Commands.Add(new UICommand(
-            "Continue Calling"));
-
-            messageDialog.Commands.Add(new UICommand(
-            "Reset List",
-            new UICommandInvokedHandler(this.CommandInvokedHandler)));
-
-            messageDialog.Commands.Add(new UICommand(
-            "Close"));
-
-            // Set the command that will be invoked by default
-            messageDialog.DefaultCommandIndex = 2;
-
-            // Set the command to be invoked when escape is pressed
-            messageDialog.CancelCommandIndex = 2;
-
-            // Show the message dialog and wait
-            await messageDialog.ShowAsync();
         }
     }
 }
