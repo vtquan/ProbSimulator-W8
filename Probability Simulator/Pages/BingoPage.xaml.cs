@@ -23,10 +23,10 @@ namespace Probability_Simulator.Pages
     public sealed partial class BingoPage : Probability_Simulator.Common.LayoutAwarePage
     {
         Random random = new Random();
-        bool[] called = new bool[75];
+        bool[] called = new bool[75];   //store whether each of the possible 75 numbers was called
         int numCalled = 0;
         int[,] card = new int[5,5]; //store the values of the bingo card
-        TextBox[,] cardBox = new TextBox[5,5];
+        TextBlock[,] cardText = new TextBlock[5,5];
 
         public BingoPage()
         {
@@ -154,7 +154,6 @@ namespace Probability_Simulator.Pages
         private void generateCard()
         {
             bool[] used = new bool[75]; //store whether each of the 75 possible number for the bingo card is used
-            int repeated = 0;
             int generated = 0;
             for (int i = 0; i < 5; i++)
             {
@@ -172,7 +171,15 @@ namespace Probability_Simulator.Pages
                         }
                         else if (j == 2)
                         {
-                             generated = random.Next(30, 46);
+                            if (i == 2)
+                            {
+                                generated = random.Next(45, 61);
+                                j++;
+                            }
+                            else
+                            {
+                                generated = random.Next(30, 46);
+                            }
                         }
                         else if (j == 3)
                         {
@@ -207,67 +214,67 @@ namespace Probability_Simulator.Pages
                                 j++;
                             }
                     }
-                    cardBox[i, j].Text = card[i, j].ToString();
+                    cardText[i, j].Text = card[i, j].ToString();
                 }
             }
-            //box1_0.Text = card[0, 0].ToString();
-            //box1_1.Text = card[0, 1].ToString();
-            //box1_2.Text = card[0, 2].ToString();
-            //box1_3.Text = card[0, 3].ToString();
-            //box1_4.Text = card[0, 4].ToString();
-            //box2_0.Text = card[1, 0].ToString();
-            //box2_1.Text = card[1, 1].ToString();
-            //box2_2.Text = card[1, 2].ToString();  
-            //box2_3.Text = card[1, 3].ToString();
-            //box2_4.Text = card[1, 4].ToString();
-            //box3_0.Text = card[2, 0].ToString();
-            //box3_1.Text = card[2, 1].ToString();
-            ////box3_2.Text = card[2, 2].ToString();  //Free Space; not needed
-            //box3_3.Text = card[2, 3].ToString();
-            //box3_4.Text = card[2, 4].ToString();
-            //box4_0.Text = card[3, 0].ToString();
-            //box4_1.Text = card[3, 1].ToString();
-            //box4_2.Text = card[3, 2].ToString();
-            //box4_3.Text = card[3, 3].ToString();
-            //box4_4.Text = card[3, 4].ToString();
-            //box5_0.Text = card[4, 0].ToString();
-            //box5_1.Text = card[4, 1].ToString();
-            //box5_2.Text = card[4, 2].ToString();
-            //box5_3.Text = card[4, 3].ToString();
-            //box5_4.Text = card[4, 4].ToString();
+            //text0_0.Text = card[0, 0].ToString();
+            //text0_1.Text = card[0, 1].ToString();
+            //text0_2.Text = card[0, 2].ToString();
+            //text0_3.Text = card[0, 3].ToString();
+            //text0_4.Text = card[0, 4].ToString();
+            //text1_0.Text = card[1, 0].ToString();
+            //text1_1.Text = card[1, 1].ToString();
+            //text1_2.Text = card[1, 2].ToString();  
+            //text1_3.Text = card[1, 3].ToString();
+            //text1_4.Text = card[1, 4].ToString();
+            //text2_0.Text = card[2, 0].ToString();
+            //text2_1.Text = card[2, 1].ToString();
+            ////text2_2.Text = card[2, 2].ToString();  //Free Space; not needed
+            //text2_3.Text = card[2, 3].ToString();
+            //text2_4.Text = card[2, 4].ToString();
+            //text2_0.Text = card[3, 0].ToString();
+            //text2_1.Text = card[3, 1].ToString();
+            //text2_2.Text = card[3, 2].ToString();
+            //text2_3.Text = card[3, 3].ToString();
+            //text2_4.Text = card[3, 4].ToString();
+            //text4_0.Text = card[4, 0].ToString();
+            //text4_1.Text = card[4, 1].ToString();
+            //text4_2.Text = card[4, 2].ToString();
+            //text4_3.Text = card[4, 3].ToString();
+            //text4_4.Text = card[4, 4].ToString();
         }
 
         private void fillCardBox()  //link cardBox to its respective textBox
         {
-            cardBox[0, 0] = box1_0;
-            cardBox[0, 1] = box1_1;
-            cardBox[0, 2] = box1_2;
-            cardBox[0, 3] = box1_3;
-            cardBox[0, 4] = box1_4;
+            cardText[0, 0] = text0_0;
+            cardText[0, 1] = text0_1;
+            cardText[0, 2] = text0_2;
+            cardText[0, 3] = text0_3;
+            cardText[0, 4] = text0_4;
 
-            cardBox[1, 0] = box2_0;
-            cardBox[1, 1] = box2_1;
-            cardBox[1, 2] = box2_2;
-            cardBox[1, 3] = box2_3;
-            cardBox[1, 4] = box2_4;
+            cardText[1, 0] = text1_0;
+            cardText[1, 1] = text1_1;
+            cardText[1, 2] = text1_2;
+            cardText[1, 3] = text1_3;
+            cardText[1, 4] = text1_4;
 
-            cardBox[2, 0] = box3_0;
-            cardBox[2, 1] = box3_1;
-            cardBox[2, 2] = box3_2;
-            cardBox[2, 3] = box3_3;
-            cardBox[2, 4] = box3_4;
+            cardText[2, 0] = text2_0;
+            cardText[2, 1] = text2_1;
+            //cardText[2, 2] = text2_2;
+            cardText[2, 3] = text2_3;
+            cardText[2, 4] = text2_4;
 
-            cardBox[3, 0] = box4_0;
-            cardBox[3, 1] = box4_1;
-            cardBox[3, 2] = box4_2;
-            cardBox[3, 3] = box4_3;
-            cardBox[3, 4] = box4_4;
+            cardText[3, 0] = text3_0;
+            cardText[3, 1] = text3_1;
+            cardText[3, 2] = text3_2;
+            cardText[3, 3] = text3_3;
+            cardText[3, 4] = text3_4;
 
-            cardBox[4, 0] = box5_0;
-            cardBox[4, 1] = box5_1;
-            cardBox[4, 2] = box5_2;
-            cardBox[4, 3] = box5_3;
-            cardBox[4, 4] = box5_4;
+            cardText[4, 0] = text4_0;
+            cardText[4, 1] = text4_1;
+            cardText[4, 2] = text4_2;
+            cardText[4, 3] = text4_3;
+            cardText[4, 4] = text4_4;
         }
 
         private void updateCard()

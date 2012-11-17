@@ -1,3 +1,4 @@
+Assets\Bingo Chip.png
 Assets\BingoB.png
 Assets\CardB.png
 Assets\Cards\AceSpades.png
@@ -26,7 +27,6 @@ Pages\AnimatePage.xaml
 Pages\BingoCustomPage.xaml
 Pages\BingoPage.xaml
 Pages\CardPage.xaml
-Pages\CoinNew.xaml
 Pages\CoinPage.xaml
 Pages\DicePage.xaml
 Pages\EasterEggPage.xaml

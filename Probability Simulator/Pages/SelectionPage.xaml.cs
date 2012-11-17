@@ -108,7 +108,7 @@ namespace Probability_Simulator.Pages
 
         private void RandomCanvas_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.CoinNew));
+            this.Frame.Navigate(typeof(Pages.RandomNumPage));
         }
     }
 }

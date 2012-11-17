@@ -131,9 +131,6 @@
     <Compile Include="Pages\CardPage.xaml.cs">
       <DependentUpon>CardPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CoinNew.xaml.cs">
-      <DependentUpon>CoinNew.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\CoinPage.xaml.cs">
       <DependentUpon>CoinPage.xaml</DependentUpon>
     </Compile>
@@ -161,6 +158,9 @@
     <None Include="Probability Simulator_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Bingo Chip.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\BingoB.png" />
     <Content Include="Assets\CardB.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -234,10 +234,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CardPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\CoinNew.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

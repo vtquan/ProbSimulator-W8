@@ -16,17 +16,21 @@
     <AppXManifest Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-11-17T04:30:23.555</Modified>
+      <Modified>2012-11-17T05:33:31.548</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe">
       <PackagePath>Probability Simulator.exe</PackagePath>
-      <Modified>2012-11-17T04:30:22.857</Modified>
+      <Modified>2012-11-17T05:37:10.298</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb">
       <PackagePath>Probability Simulator.pdb</PackagePath>
-      <Modified>2012-11-17T04:30:22.811</Modified>
+      <Modified>2012-11-17T05:37:10.257</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Bingo Chip.png">
+      <PackagePath>Assets\Bingo Chip.png</PackagePath>
+      <Modified>2012-11-17T04:57:04.165</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\BingoB.png">
       <PackagePath>Assets\BingoB.png</PackagePath>
@@ -142,15 +146,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\BingoPage.xaml">
       <PackagePath>Pages\BingoPage.xaml</PackagePath>
-      <Modified>2012-11-17T04:11:21.416</Modified>
+      <Modified>2012-11-17T05:24:05.743</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\CardPage.xaml">
       <PackagePath>Pages\CardPage.xaml</PackagePath>
       <Modified>2012-11-11T19:21:18.607</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\CoinNew.xaml">
-      <PackagePath>Pages\CoinNew.xaml</PackagePath>
-      <Modified>2012-11-17T04:00:15.448</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\CoinPage.xaml">
       <PackagePath>Pages\CoinPage.xaml</PackagePath>
@@ -178,7 +178,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-11-17T04:30:23.259</Modified>
+      <Modified>2012-11-17T05:33:31.343</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

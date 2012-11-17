@@ -123,9 +123,7 @@ C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debu
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Selection Images\RandomB.png
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\RPG\Bosses\Alondite.png
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\RPG\Bosses\Axalf.png
-C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNew.g.i.cs
-C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNew.g.cs
-C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNew.xaml
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\BingoCustomPage.g.i.cs
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\BingoCustomPage.g.cs
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\BingoCustomPage.xaml
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Bingo Chip.png
