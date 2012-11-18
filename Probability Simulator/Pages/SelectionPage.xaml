@@ -37,38 +37,44 @@
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
             <Button x:Name="EasterEggB" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Margin="0" BorderThickness="0" Width="100" Height="100" Click="EasterEggB_Click"/>
         </Grid>
-        <Grid Height="628" Width="1366" Margin="0" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Auto">
-            <Canvas x:Name="DiceCanvas" Margin="120,40,936,378" Tapped="DiceCanvas_Tapped">
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/DiceB.png"/>
-            	</Canvas.Background>
-            	<Button x:Name="DicePageB" Content="Roll Dice" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="DicePageB_Click"/>
-            </Canvas>
-            <Canvas x:Name="CardCanvas" Margin="450,40,606,378" Tapped="CardCanvas_Tapped">
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/CardB.png"/>
-            	</Canvas.Background>
-            	<Button x:Name="CardPageB" Content="Draw Cards" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="CardPageB_Click"/>
-            </Canvas>
-            <Canvas x:Name="CoinCanvas" Margin="120,260,936,158" Tapped="CoinCanvas_Tapped">
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/CoinB.png"/>
-            	</Canvas.Background>
-            	<Button x:Name="CoinPageB" Content="Flip Coins" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="CoinPageB_Click"/>
-            </Canvas>
-            <Canvas x:Name="BingoCanvas" Margin="450,260,606,158" Tapped="BingoCanvas_Tapped">
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/BingoB.png"/>
-            	</Canvas.Background>
-            	<Button x:Name="BingoPageB" Content="Call Bingo Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="BingoPageB_Click"/>
-            </Canvas>
-            <Canvas x:Name="RandomCanvas" Margin="780,40,276,378" Tapped="RandomCanvas_Tapped">
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/RandomB.png"/>
-            	</Canvas.Background>
-            	<Button x:Name="RandomPageB" Content="Generate Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="RandomPageB_Click"/>
-            </Canvas>
-        </Grid>
+        <Viewbox Margin="0" Grid.Row="1" >
+        	<ScrollViewer Height="628" Width="1366">
+        		<Grid ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="628" Width="1366">
+        			<Canvas x:Name="DiceCanvas" Margin="120,40,936,378" Tapped="DiceCanvas_Tapped">
+        				<Canvas.Background>
+        					<ImageBrush ImageSource="ms-appx:///Assets/DiceB.png"/>
+        				</Canvas.Background>
+        				<Button x:Name="DicePageB" Content="Roll Dice" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="DicePageB_Click"/>
+        			</Canvas>
+        			<Canvas x:Name="CardCanvas" Margin="450,40,606,378" Tapped="CardCanvas_Tapped">
+        				<Canvas.Background>
+        					<ImageBrush ImageSource="ms-appx:///Assets/CardB.png"/>
+        				</Canvas.Background>
+        				<Button x:Name="CardPageB" Content="Draw Cards" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="CardPageB_Click"/>
+        			</Canvas>
+        			<Canvas x:Name="CoinCanvas" Margin="120,260,936,158" Tapped="CoinCanvas_Tapped">
+        				<Canvas.Background>
+        					<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/CoinB.png"/>
+        				</Canvas.Background>
+        				<Button x:Name="CoinPageB" Content="Flip Coins" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="CoinPageB_Click"/>
+        			</Canvas>
+        			<Canvas x:Name="BingoCanvas" Margin="450,260,606,158" Tapped="BingoCanvas_Tapped">
+        				<Canvas.Background>
+        					<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/BingoB.png"/>
+        				</Canvas.Background>
+        				<Button x:Name="BingoPageB" Content="Call Bingo Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="BingoPageB_Click"/>
+        			</Canvas>
+        			<Canvas x:Name="RandomCanvas" Margin="780,40,276,378" Tapped="RandomCanvas_Tapped">
+        				<Canvas.Background>
+        					<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/RandomB.png"/>
+        				</Canvas.Background>
+        				<Button x:Name="RandomPageB" Content="Generate Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0" Click="RandomPageB_Click"/>
+        			</Canvas>
+        		</Grid>
+
+        	</ScrollViewer>
+
+        </Viewbox>
 
         <VisualStateManager.VisualStateGroups>
 

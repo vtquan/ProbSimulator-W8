@@ -5,7 +5,7 @@
     <WindowsUser>quanvt</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>CA88819F73964E85376167F7AF373BEE7791790B2B62953289080F3C2093B7CD</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>9C828220D5A4FA18FAD9FC7E425909DDD332FBE975363CC1C92BAE59600E7487</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>88c01031-c0a1-49b9-ad07-29e8e6b7f4f2_1.0.0.0_neutral__51x9vbdkyqbsa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>88c01031-c0a1-49b9-ad07-29e8e6b7f4f2_51x9vbdkyqbsa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>88c01031-c0a1-49b9-ad07-29e8e6b7f4f2</RegisteredPackageID>
@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-11-18T04:04:41.546</Modified>
+      <Modified>2012-11-18T08:13:17.011</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe">
       <PackagePath>Probability Simulator.exe</PackagePath>
-      <Modified>2012-11-18T07:49:34.961</Modified>
+      <Modified>2012-11-18T08:13:16.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb">
       <PackagePath>Probability Simulator.pdb</PackagePath>
-      <Modified>2012-11-18T07:49:34.895</Modified>
+      <Modified>2012-11-18T08:13:16.402</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Bingo Chip.png">
       <PackagePath>Assets\Bingo Chip.png</PackagePath>
@@ -170,7 +170,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\DicePage.xaml">
       <PackagePath>Pages\DicePage.xaml</PackagePath>
-      <Modified>2012-11-18T07:36:26.440</Modified>
+      <Modified>2012-11-18T07:58:30.823</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\EasterEggPage.xaml">
       <PackagePath>Pages\EasterEggPage.xaml</PackagePath>
@@ -178,7 +178,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RandomNumPage.xaml">
       <PackagePath>Pages\RandomNumPage.xaml</PackagePath>
-      <Modified>2012-11-18T07:48:44.122</Modified>
+      <Modified>2012-11-18T07:53:16.064</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\AlonditeFightPage.xaml">
       <PackagePath>Pages\RPG\AlonditeFightPage.xaml</PackagePath>
@@ -194,11 +194,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\SelectionPage.xaml">
       <PackagePath>Pages\SelectionPage.xaml</PackagePath>
-      <Modified>2012-11-18T07:39:04.680</Modified>
+      <Modified>2012-11-18T08:01:32.444</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-11-18T04:04:39.798</Modified>
+      <Modified>2012-11-18T08:12:50.766</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

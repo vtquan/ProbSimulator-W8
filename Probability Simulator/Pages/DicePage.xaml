@@ -49,7 +49,7 @@
             <RadioButton x:Name="_10Check" Content="10-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,119,0,0"/>
             <RadioButton x:Name="_12Check" Content="12-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,148,0,0"/>
             <RadioButton x:Name="_20Check" Content="20-Sided Dice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,177,0,0"/>
-            <Grid x:Name="inputGrid" Margin="120,496,886,100">
+            <Grid x:Name="inputGrid" Margin="120,0,0,100" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left">
             	<TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Number of Dice" FontSize="24" Width="196" Height="32" VerticalAlignment="Bottom"/>
             	<TextBox x:Name="numDiceBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" Margin="196,0,0,0" Width="164" TextAlignment="Center" FontSize="16" Height="32" VerticalAlignment="Bottom" InputScope="Number"/>
             </Grid>

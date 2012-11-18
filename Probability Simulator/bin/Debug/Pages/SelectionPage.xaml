@@ -37,38 +37,44 @@
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
             <Button x:ConnectionId='12' x:Name="EasterEggB" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Margin="0" BorderThickness="0" Width="100" Height="100"                         />
         </Grid>
-        <Grid Height="628" Width="1366" Margin="0" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Auto">
-            <Canvas x:ConnectionId='1' x:Name="DiceCanvas" Margin="120,40,936,378"                           >
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/DiceB.png"/>
-            	</Canvas.Background>
-            	<Button x:ConnectionId='10' x:Name="DicePageB" Content="Roll Dice" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
-            </Canvas>
-            <Canvas x:ConnectionId='2' x:Name="CardCanvas" Margin="450,40,606,378"                           >
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/CardB.png"/>
-            	</Canvas.Background>
-            	<Button x:ConnectionId='9' x:Name="CardPageB" Content="Draw Cards" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
-            </Canvas>
-            <Canvas x:ConnectionId='3' x:Name="CoinCanvas" Margin="120,260,936,158"                           >
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/CoinB.png"/>
-            	</Canvas.Background>
-            	<Button x:ConnectionId='8' x:Name="CoinPageB" Content="Flip Coins" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
-            </Canvas>
-            <Canvas x:ConnectionId='4' x:Name="BingoCanvas" Margin="450,260,606,158"                            >
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/BingoB.png"/>
-            	</Canvas.Background>
-            	<Button x:ConnectionId='7' x:Name="BingoPageB" Content="Call Bingo Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                         />
-            </Canvas>
-            <Canvas x:ConnectionId='5' x:Name="RandomCanvas" Margin="780,40,276,378"                             >
-            	<Canvas.Background>
-            		<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/RandomB.png"/>
-            	</Canvas.Background>
-            	<Button x:ConnectionId='6' x:Name="RandomPageB" Content="Generate Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                          />
-            </Canvas>
-        </Grid>
+        <Viewbox Margin="0" Grid.Row="1" >
+        	<ScrollViewer Height="628" Width="1366">
+        		<Grid ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="628" Width="1366">
+        			<Canvas x:ConnectionId='1' x:Name="DiceCanvas" Margin="120,40,936,378"                           >
+        				<Canvas.Background>
+        					<ImageBrush ImageSource="ms-appx:///Assets/DiceB.png"/>
+        				</Canvas.Background>
+        				<Button x:ConnectionId='10' x:Name="DicePageB" Content="Roll Dice" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
+        			</Canvas>
+        			<Canvas x:ConnectionId='2' x:Name="CardCanvas" Margin="450,40,606,378"                           >
+        				<Canvas.Background>
+        					<ImageBrush ImageSource="ms-appx:///Assets/CardB.png"/>
+        				</Canvas.Background>
+        				<Button x:ConnectionId='9' x:Name="CardPageB" Content="Draw Cards" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
+        			</Canvas>
+        			<Canvas x:ConnectionId='3' x:Name="CoinCanvas" Margin="120,260,936,158"                           >
+        				<Canvas.Background>
+        					<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/CoinB.png"/>
+        				</Canvas.Background>
+        				<Button x:ConnectionId='8' x:Name="CoinPageB" Content="Flip Coins" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
+        			</Canvas>
+        			<Canvas x:ConnectionId='4' x:Name="BingoCanvas" Margin="450,260,606,158"                            >
+        				<Canvas.Background>
+        					<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/BingoB.png"/>
+        				</Canvas.Background>
+        				<Button x:ConnectionId='7' x:Name="BingoPageB" Content="Call Bingo Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                         />
+        			</Canvas>
+        			<Canvas x:ConnectionId='5' x:Name="RandomCanvas" Margin="780,40,276,378"                             >
+        				<Canvas.Background>
+        					<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/RandomB.png"/>
+        				</Canvas.Background>
+        				<Button x:ConnectionId='6' x:Name="RandomPageB" Content="Generate Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                          />
+        			</Canvas>
+        		</Grid>
+
+        	</ScrollViewer>
+
+        </Viewbox>
 
         <VisualStateManager.VisualStateGroups>
 
