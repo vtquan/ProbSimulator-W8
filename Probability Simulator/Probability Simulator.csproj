@@ -175,13 +175,10 @@
     </Content>
     <Content Include="Assets\Cards\AceSpades.png" />
     <Content Include="Assets\Cards\CardBack.png" />
-    <Content Include="Assets\DarkGray.png" />
     <Content Include="Assets\DiceB.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\LightGray.png" />
     <Content Include="Assets\Logo.png" />
-    <Content Include="Assets\MediumGray.png" />
     <Content Include="Assets\Monster.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -209,6 +206,21 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Selection Images\RandomB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Simulation Images\Bingo-Small.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Simulation Images\Card-Small.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Simulation Images\Coin-Small.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Simulation Images\Dice-Small.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Simulation Images\Random-Small.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\SmallLogo.png" />

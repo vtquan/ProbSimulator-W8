@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-11-18T08:13:17.011</Modified>
+      <Modified>2012-11-18T08:25:26.815</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe">
       <PackagePath>Probability Simulator.exe</PackagePath>
-      <Modified>2012-11-18T08:13:16.455</Modified>
+      <Modified>2012-11-18T08:40:16.007</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb">
       <PackagePath>Probability Simulator.pdb</PackagePath>
-      <Modified>2012-11-18T08:13:16.402</Modified>
+      <Modified>2012-11-18T08:40:15.952</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Bingo Chip.png">
       <PackagePath>Assets\Bingo Chip.png</PackagePath>
@@ -194,7 +194,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\SelectionPage.xaml">
       <PackagePath>Pages\SelectionPage.xaml</PackagePath>
-      <Modified>2012-11-18T08:01:32.444</Modified>
+      <Modified>2012-11-18T08:40:09.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
