@@ -39,6 +39,7 @@ namespace Probability_Simulator.Pages
 
             fillCardText();  //link cardBox to proper textBox
             generateCard(); //generate the Bingo Card
+            linkChip(); //link the chip image to the proper row and column of chipArray[,]
         }
 
         /// <summary>
@@ -163,8 +164,6 @@ namespace Probability_Simulator.Pages
             cardText[4, 2] = text4_2;
             cardText[4, 3] = text4_3;
             cardText[4, 4] = text4_4;
-
-            linkChip(); //link the chip image to the proper row and column of chipArray[,]
         }
 
         private void linkChip()
@@ -441,7 +440,7 @@ namespace Probability_Simulator.Pages
             await messageDialog.ShowAsync();
         }
 
-        private void CommandInvokedHandler(IUICommand command)  //clear history list and reset number list
+        private void CommandInvokedHandler(IUICommand command)  //Clear history list and reset Bingo card
         {
             for (int i = 0; i < 75; i++)
             {
@@ -449,6 +448,31 @@ namespace Probability_Simulator.Pages
             }
             numCalled = 0;
             historyList.Children.Clear();
+
+            //Reset variables
+            called = new bool[75];
+            numCalled = 0;
+            card = new int[5, 5];
+            cardCalled = new bool[5, 5];
+            gameEnd = false;
+
+            generateCard(); //generate the Bingo Card
+
+            //Reset chip
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (j == 2)
+                    {
+                        if (i == 2)
+                        {
+                            continue;
+                        }
+                    }
+                    chipArray[i, j].Visibility = Visibility.Collapsed;
+                }
+            }
         }
     }
 }

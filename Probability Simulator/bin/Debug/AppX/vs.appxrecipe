@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe">
       <PackagePath>Probability Simulator.exe</PackagePath>
-      <Modified>2012-11-18T06:23:01.029</Modified>
+      <Modified>2012-11-18T06:55:26.614</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb">
       <PackagePath>Probability Simulator.pdb</PackagePath>
-      <Modified>2012-11-18T06:23:00.989</Modified>
+      <Modified>2012-11-18T06:55:26.568</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Bingo Chip.png">
       <PackagePath>Assets\Bingo Chip.png</PackagePath>
