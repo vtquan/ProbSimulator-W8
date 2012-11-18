@@ -37,7 +37,7 @@
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
             <Button x:ConnectionId='12' x:Name="EasterEggB" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Margin="0" BorderThickness="0" Width="100" Height="100"                         />
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="628" VerticalAlignment="Top" Width="1366" Margin="10,113,-10,0" Grid.RowSpan="2">
+        <Grid Height="628" Width="1366" Margin="0" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Auto">
             <Canvas x:ConnectionId='1' x:Name="DiceCanvas" Margin="120,40,936,378"                           >
             	<Canvas.Background>
             		<ImageBrush ImageSource="ms-appx:///Assets/DiceB.png"/>
