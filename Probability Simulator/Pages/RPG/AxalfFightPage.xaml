@@ -110,7 +110,7 @@
                 <Button x:Name="SpellB" Content="Spell" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,135" Height="40" Width="346" Click="SpellB_Click"/>
                 <Button x:Name="DefendB" Content="Defend" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,90" Height="40" Width="346" Click="DefendB_Click"/>
                 <Button x:Name="ItemB" Content="Item" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,45" Height="40" Width="346" Click="ItemB_Click"/>
-                <Button x:Name="FleeB" Content="Flee" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="350" Margin="0,0,-4,0" Click="FleeB_Click"/>
+                <Button x:Name="FleeB" Content="Flee" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="40" Width="346" Margin="0" Click="FleeB_Click"/>
                 <TextBlock x:Name="ItemListLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Item List" VerticalAlignment="Top" Visibility="Collapsed"/>
                 <ScrollViewer x:Name="ItemListScroll" Margin="0,17,346,0" BorderThickness="1" BorderBrush="White" HorizontalScrollBarVisibility="Auto" Visibility="Collapsed">
                 	<StackPanel x:Name="ItemList" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>

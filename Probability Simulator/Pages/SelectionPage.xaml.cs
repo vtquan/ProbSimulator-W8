@@ -110,5 +110,55 @@ namespace Probability_Simulator.Pages
         {
             this.Frame.Navigate(typeof(Pages.RandomNumPage));
         }
+
+        private void DiceBSnap_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.DicePage));
+        }
+
+        private void CoinBSnap_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.CoinPage));
+        }
+
+        private void CardBSnap_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.CardPage));
+        }
+
+        private void BingoBSnap_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.BingoPage));
+        }
+
+        private void RandomBSnap_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.RandomNumPage));
+        }
+
+        private void DiceImg_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.DicePage));
+        }
+
+        private void CoinImg_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.CoinPage));
+        }
+
+        private void CardImg_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.CardPage));
+        }
+
+        private void BingoImg_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.BingoPage));
+        }
+
+        private void RandomImg_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pages.RandomNumPage));
+        }
     }
 }

@@ -523,10 +523,12 @@ namespace Probability_Simulator.Pages.RPG
         {
             viewbox.Opacity = 100;
             Enemy.setHP(Enemy.getHPStart());
-            monsterHPBar.Width = 177;
+            monsterHPBar.Width = monsterFullHPBar.ActualWidth;
+            monsterMPBar.Width = monsterFullMPBar.ActualWidth;
             monsterHPText.Text = Enemy.getHPStart().ToString();
             You.setHP(You.getHPStart());
-            yourHPBar.Width = 177;
+            yourHPBar.Width = yourFullHPBar.ActualWidth;
+            yourMPBar.Width = yourFullMPBar.ActualWidth;
             yourHPText.Text = You.getHPStart().ToString();
             ActionLogList.Children.Clear();
             BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Musics/Chrono Trigger Music - Battle Theme.mp3");

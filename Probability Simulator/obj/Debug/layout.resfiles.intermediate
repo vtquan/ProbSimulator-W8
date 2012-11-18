@@ -3,11 +3,8 @@ Assets\BingoB.png
 Assets\CardB.png
 Assets\Cards\AceSpades.png
 Assets\Cards\CardBack.png
-Assets\DarkGray.png
 Assets\DiceB.png
-Assets\LightGray.png
 Assets\Logo.png
-Assets\MediumGray.png
 Assets\Monster.png
 Assets\Musics\Chrono Trigger Music - Battle Theme.mp3
 Assets\Musics\Chrono Trigger Music - Game Over.mp3
@@ -19,6 +16,11 @@ Assets\RPG\Bosses\Axalf.png
 Assets\Selection Images\BingoB.png
 Assets\Selection Images\CoinB.png
 Assets\Selection Images\RandomB.png
+Assets\Simulation Images\Bingo-Small.png
+Assets\Simulation Images\Card-Small.png
+Assets\Simulation Images\Coin-Small.png
+Assets\Simulation Images\Dice-Small.png
+Assets\Simulation Images\Random-Small.png
 Assets\SmallLogo.png
 Assets\Sound Effect\coin_flip.wav
 Assets\SplashScreen.png

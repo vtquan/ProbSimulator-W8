@@ -33,45 +33,78 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='11' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='21' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
-            <Button x:ConnectionId='12' x:Name="EasterEggB" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Margin="0" BorderThickness="0" Width="100" Height="100"                         />
+            <Button x:ConnectionId='22' x:Name="EasterEggB" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Margin="0" BorderThickness="0" Width="100" Height="100"                         />
         </Grid>
-        <ScrollViewer Margin="0" Grid.Row="1" VerticalScrollMode="Auto" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" >
-        	<Grid ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left">
-        		<Canvas x:ConnectionId='1' x:Name="DiceCanvas" Margin="120,40,0,0"                            Width="310" Height="210" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <ScrollViewer x:Name="scrollViewer" Margin="0" Grid.Row="1" VerticalScrollMode="Auto" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" >
+        	<Grid x:Name="grid" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left">
+        		<Canvas x:ConnectionId='11' x:Name="DiceCanvas" Margin="120,40,0,0"                            Width="310" Height="210" HorizontalAlignment="Left" VerticalAlignment="Top">
         			<Canvas.Background>
         				<ImageBrush ImageSource="ms-appx:///Assets/DiceB.png"/>
         			</Canvas.Background>
-        			<Button x:ConnectionId='10' x:Name="DicePageB" Content="Roll Dice" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
+        			<Button x:ConnectionId='20' x:Name="DicePageB" Content="Roll Dice" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                         Padding="0"/>
         		</Canvas>
-        		<Canvas x:ConnectionId='2' x:Name="CardCanvas" Margin="450,40,0,0"                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" Height="210">
+        		<Canvas x:ConnectionId='12' x:Name="CardCanvas" Margin="450,40,0,0"                            HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" Height="210">
         			<Canvas.Background>
         				<ImageBrush ImageSource="ms-appx:///Assets/CardB.png"/>
         			</Canvas.Background>
-        			<Button x:ConnectionId='9' x:Name="CardPageB" Content="Draw Cards" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
+        			<Button x:ConnectionId='19' x:Name="CardPageB" Content="Draw Cards" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
         		</Canvas>
-        		<Canvas x:ConnectionId='3' x:Name="CoinCanvas" Margin="120,260,0,0"                            Width="310" Height="210" HorizontalAlignment="Left" VerticalAlignment="Top">
+        		<Canvas x:ConnectionId='13' x:Name="CoinCanvas" Margin="120,260,0,0"                            Width="310" Height="210" HorizontalAlignment="Left" VerticalAlignment="Top">
         			<Canvas.Background>
         				<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/CoinB.png"/>
         			</Canvas.Background>
-        			<Button x:ConnectionId='8' x:Name="CoinPageB" Content="Flip Coins" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
+        			<Button x:ConnectionId='18' x:Name="CoinPageB" Content="Flip Coins" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                        />
         		</Canvas>
-        		<Canvas x:ConnectionId='4' x:Name="BingoCanvas" Margin="450,260,0,0"                             Width="310" Height="210" HorizontalAlignment="Left" VerticalAlignment="Top">
+        		<Canvas x:ConnectionId='14' x:Name="BingoCanvas" Margin="450,260,0,0"                             Width="310" Height="210" HorizontalAlignment="Left" VerticalAlignment="Top">
         			<Canvas.Background>
         				<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/BingoB.png"/>
         			</Canvas.Background>
-        			<Button x:ConnectionId='7' x:Name="BingoPageB" Content="Call Bingo Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                         />
+        			<Button x:ConnectionId='17' x:Name="BingoPageB" Content="Call Bingo Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                         />
         		</Canvas>
-        		<Canvas x:ConnectionId='5' x:Name="RandomCanvas" Margin="780,40,0,0"                              Width="310" Height="210" HorizontalAlignment="Left" VerticalAlignment="Top">
+        		<Canvas x:ConnectionId='15' x:Name="RandomCanvas" Margin="780,40,0,0"                              Width="310" Height="210" HorizontalAlignment="Left" VerticalAlignment="Top">
         			<Canvas.Background>
         				<ImageBrush ImageSource="ms-appx:///Assets/Selection Images/RandomB.png"/>
         			</Canvas.Background>
-        			<Button x:ConnectionId='6' x:Name="RandomPageB" Content="Generate Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                          />
+        			<Button x:ConnectionId='16' x:Name="RandomPageB" Content="Generate Numbers" Height="60" Width="310" Canvas.Top="150" VerticalAlignment="Bottom" BorderThickness="0"                          />
         		</Canvas>
         	</Grid>
 
         </ScrollViewer>
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Height="628" VerticalAlignment="Top" Width="320" Grid.Row="1" Visibility="Collapsed">
+        	<Border Background="#FF404040" Margin="20,20,20,0" VerticalAlignment="Top">
+        		<Grid>
+        			<Image x:ConnectionId='9' x:Name="DiceImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Dice-Small.png"                        />
+        			<Button x:ConnectionId='10' x:Name="DiceBSnap" Content="Roll Dice" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}"                        />
+        		</Grid>
+        	</Border>
+        	<Grid Margin="20,20,20,0" VerticalAlignment="Top"/>
+        	<Border Background="#FF404040" Margin="20,140,20,0" VerticalAlignment="Top">
+        		<Grid>
+        			<Image x:ConnectionId='7' x:Name="CoinImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Coin-Small.png"                        />
+        			<Button x:ConnectionId='8' x:Name="CoinBSnap" Content="Flip Coins" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}"                        />
+        		</Grid>
+        	</Border>
+        	<Border Background="#FF404040" Margin="20,260,20,0" VerticalAlignment="Top">
+        		<Grid>
+        			<Image x:ConnectionId='5' x:Name="CardImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Card-Small.png"                        />
+        			<Button x:ConnectionId='6' x:Name="CardBSnap" Content="Draw Cards" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}"                        />
+        		</Grid>
+        	</Border>
+        	<Border Background="#FF404040" Margin="20,380,20,0" VerticalAlignment="Top">
+        		<Grid>
+        			<Image x:ConnectionId='3' x:Name="BingoImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Bingo-Small.png"                         />
+        			<Button x:ConnectionId='4' x:Name="BingoBSnap" Content="Roll Bingo Numbers" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}"                         />
+        		</Grid>
+        	</Border>
+        	<Border Background="#FF404040" Margin="20,500,20,0" VerticalAlignment="Top">
+        		<Grid>
+        			<Image x:ConnectionId='1' x:Name="RandomImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Random-Small.png"                          />
+        			<Button x:ConnectionId='2' x:Name="RandomBSnap" Content="Generate Numbers" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}"                          />
+        		</Grid>
+        	</Border>
+        </Grid>
 
         <VisualStateManager.VisualStateGroups>
 
@@ -86,6 +119,69 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PortraitBackButtonStyle}"/>
                         </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="DiceCanvas">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>20,40,0,0</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="CoinCanvas">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>20,260,0,0</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="CardCanvas">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>20,480,0,0</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="BingoCanvas">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<HorizontalAlignment>Right</HorizontalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="BingoCanvas">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>0,40,20,0</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="grid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<HorizontalAlignment>Stretch</HorizontalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="grid">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<x:Double>768</x:Double>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="RandomCanvas">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>0,260,20,0</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="RandomCanvas">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<HorizontalAlignment>Right</HorizontalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
 
@@ -97,6 +193,20 @@
                         </ObjectAnimationUsingKeyFrames>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="scrollViewer">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Visibility>Collapsed</Visibility>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid1">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Visibility>Visible</Visibility>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>

@@ -133,3 +133,8 @@ C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debu
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\FightSelectionPage.g.cs
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\AlonditeFightPage.xaml
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\FightSelectionPage.xaml
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Simulation Images\Bingo-Small.png
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Simulation Images\Card-Small.png
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Simulation Images\Coin-Small.png
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Simulation Images\Dice-Small.png
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Simulation Images\Random-Small.png

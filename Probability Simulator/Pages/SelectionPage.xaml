@@ -75,33 +75,33 @@
         <Grid x:Name="grid1" HorizontalAlignment="Left" Height="628" VerticalAlignment="Top" Width="320" Grid.Row="1" Visibility="Collapsed">
         	<Border Background="#FF404040" Margin="20,20,20,0" VerticalAlignment="Top">
         		<Grid>
-        			<Image x:Name="DiceImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Dice-Small.png"/>
-        			<Button x:Name="DiceBSnap" Content="Roll Dice" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}"/>
+        			<Image x:Name="DiceImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Dice-Small.png" Tapped="DiceImg_Tapped"/>
+        			<Button x:Name="DiceBSnap" Content="Roll Dice" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}" Click="DiceBSnap_Click"/>
         		</Grid>
         	</Border>
         	<Grid Margin="20,20,20,0" VerticalAlignment="Top"/>
         	<Border Background="#FF404040" Margin="20,140,20,0" VerticalAlignment="Top">
         		<Grid>
-        			<Image x:Name="CoinImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Coin-Small.png"/>
-        			<Button x:Name="CoinBSnap" Content="Flip Coins" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}"/>
+        			<Image x:Name="CoinImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Coin-Small.png" Tapped="CoinImg_Tapped"/>
+        			<Button x:Name="CoinBSnap" Content="Flip Coins" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}" Click="CoinBSnap_Click"/>
         		</Grid>
         	</Border>
         	<Border Background="#FF404040" Margin="20,260,20,0" VerticalAlignment="Top">
         		<Grid>
-        			<Image x:Name="CardImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Card-Small.png"/>
-        			<Button x:Name="CardBSnap" Content="Draw Cards" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}"/>
+        			<Image x:Name="CardImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Card-Small.png" Tapped="CardImg_Tapped"/>
+        			<Button x:Name="CardBSnap" Content="Draw Cards" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}" Click="CardBSnap_Click"/>
         		</Grid>
         	</Border>
         	<Border Background="#FF404040" Margin="20,380,20,0" VerticalAlignment="Top">
         		<Grid>
-        			<Image x:Name="BingoImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Bingo-Small.png"/>
-        			<Button x:Name="BingoBSnap" Content="Roll Bingo Numbers" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}"/>
+        			<Image x:Name="BingoImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Bingo-Small.png" Tapped="BingoImg_Tapped"/>
+        			<Button x:Name="BingoBSnap" Content="Roll Bingo Numbers" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}" Click="BingoBSnap_Click"/>
         		</Grid>
         	</Border>
         	<Border Background="#FF404040" Margin="20,500,20,0" VerticalAlignment="Top">
         		<Grid>
-        			<Image x:Name="RandomImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Random-Small.png"/>
-        			<Button x:Name="RandomBSnap" Content="Generate Numbers" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}"/>
+        			<Image x:Name="RandomImg" Margin="0,0,180,0" Source="ms-appx:///Assets/Simulation Images/Random-Small.png" Tapped="RandomImg_Tapped"/>
+        			<Button x:Name="RandomBSnap" Content="Generate Numbers" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="180" BorderBrush="{x:Null}" Click="RandomBSnap_Click"/>
         		</Grid>
         	</Border>
         </Grid>
