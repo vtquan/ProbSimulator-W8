@@ -3,8 +3,11 @@ Assets\BingoB.png
 Assets\CardB.png
 Assets\Cards\AceSpades.png
 Assets\Cards\CardBack.png
+Assets\DarkGray.png
 Assets\DiceB.png
+Assets\LightGray.png
 Assets\Logo.png
+Assets\MediumGray.png
 Assets\Monster.png
 Assets\Musics\Chrono Trigger Music - Battle Theme.mp3
 Assets\Musics\Chrono Trigger Music - Game Over.mp3
@@ -31,6 +34,8 @@ Pages\CoinPage.xaml
 Pages\DicePage.xaml
 Pages\EasterEggPage.xaml
 Pages\RandomNumPage.xaml
+Pages\RPG\AlonditeFightPage.xaml
 Pages\RPG\AxalfFightPage.xaml
+Pages\RPG\FightSelectionPage.xaml
 Pages\SelectionPage.xaml
 Common\ReadMe.txt

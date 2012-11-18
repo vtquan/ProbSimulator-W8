@@ -1,7 +1,4 @@
-﻿using Probability_Simulator.DataModel;    //get access to data class
-using Probability_Simulator.Data;    //get access to data class
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,14 +14,14 @@ using Windows.UI.Xaml.Navigation;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
-namespace Probability_Simulator
+namespace Probability_Simulator.Pages.RPG
 {
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class MainPage : Probability_Simulator.Common.LayoutAwarePage
+    public sealed partial class FightSelectionPage : Probability_Simulator.Common.LayoutAwarePage
     {
-        public MainPage()
+        public FightSelectionPage()
         {
             this.InitializeComponent();
         }
@@ -40,8 +37,6 @@ namespace Probability_Simulator
         /// session.  This will be null the first time a page is visited.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
-            var sampleDataGroups = SampleDataSource.GetGroups((String)navigationParameter);
-            this.DefaultViewModel["Groups"] = sampleDataGroups;
         }
 
         /// <summary>
@@ -54,14 +49,14 @@ namespace Probability_Simulator
         {
         }
 
-        private void ItemView_ItemClick(object sender, ItemClickEventArgs e)
+        private void AxalfFightB_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Pages.RPG.AxalfFightPage));
         }
 
-        private void Header_Click(object sender, RoutedEventArgs e)
+        private void AlonditeFightB_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Pages.RPG.AlonditeFightPage));
         }
     }
 }

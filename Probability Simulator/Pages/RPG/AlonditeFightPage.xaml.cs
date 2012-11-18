@@ -27,7 +27,7 @@ namespace Probability_Simulator.Pages.RPG
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class AxalfFightPage : Probability_Simulator.Common.LayoutAwarePage
+    public sealed partial class AlonditeFightPage : Probability_Simulator.Common.LayoutAwarePage
     {
         Monster Enemy;
         Player You;
@@ -44,7 +44,7 @@ namespace Probability_Simulator.Pages.RPG
         double monsterMPBarWidth;
         double playerMPBarWidth;
 
-        public AxalfFightPage()
+        public AlonditeFightPage()
         {
             this.InitializeComponent();
 
@@ -80,29 +80,47 @@ namespace Probability_Simulator.Pages.RPG
             IdleAnimation.Begin();
 
             //Create Monster and Player value
-            Enemy = new Monster("Axalf", "Dire Dimunitive Drawf", 50, 20);
-            You = new Player("You", 100, 50);
+            Enemy = new Monster("Alondite", "Elder Lord", 200, 20);
+            You = new Player("You", 100, 100);
 
             //Creating and adding attacks to monster
-            Attack Bite = new Attack("Bite", 1, 10, 18);
-            Attack Stomp = new Attack("Stomp", 5, 10, 15);
+            Attack Smash = new Attack("Smash", 1, 10, 15);
+            Attack Crush = new Attack("Crush", 2, 10, 20);
+            Attack Obliterate = new Attack("Obliterate", 1, 20, 20);
+            Attack Claw = new Attack("Claw", 3, 10, 15);
             
-            Enemy.addAttack(Bite);
-            Enemy.addAttack(Stomp);
+            Enemy.addAttack(Smash);
+            Enemy.addAttack(Crush);
+            Enemy.addAttack(Obliterate);
+            Enemy.addAttack(Claw);
 
-            //Creating and adding items  to player
+            //Creating and adding items to player
             Item Potion = new Item("Potion", 20);
             Item MegaPotion = new Item("Mega Potion", 50);
+            Item UltraPotion = new Item("Ultra Potion", 100);
 
             You.addItem(Potion);
+            You.addItem(Potion);
+            You.addItem(Potion);
             You.addItem(MegaPotion);
+            You.addItem(MegaPotion);
+            You.addItem(UltraPotion);
+            You.addItem(UltraPotion);
 
             //Creating and adding spells  to player
-            Spell Fire = new Spell("Fire", 2, 7, 20, 10);
-            Spell Thunder = new Spell("Thunder", 3, 10, 18, 15);
+            Spell Fire = new Spell("Fire", 2, 15, 25, 15);
+            Spell Water = new Spell("Water", 3, 20, 30, 20);
+            Spell Earth = new Spell("Earth", 3, 25, 35, 25);
+            Spell Air = new Spell("Air", 3, 30, 40, 30);
 
             You.addSpell(Fire);
-            You.addSpell(Thunder);
+            You.addSpell(Water);
+            You.addSpell(Earth);
+            You.addSpell(Air);
+
+            //Change player default attack
+            Attack defaultAttack = new Attack("Attack", 3, 10, 20);
+            You.setDefaultAttack(defaultAttack);
 
             //Display Monster and Player value
             pageTitle.Text = Enemy.getSubtitle() + ": " + Enemy.getName();
@@ -435,6 +453,7 @@ namespace Probability_Simulator.Pages.RPG
             ActionLogScroll.UpdateLayout();   //make sure historyScroll is update to include the added element
             ActionLogScroll.ScrollToVerticalOffset(ActionLogList.ActualHeight);     //scroll to bottom
             BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Musics/Chrono Trigger Music - Game Over.mp3");
+            fled = true;
 
             battleEndMessage();
         }

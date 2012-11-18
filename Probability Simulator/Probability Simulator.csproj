@@ -116,6 +116,8 @@
     <Compile Include="Common\RPG\Player.cs" />
     <Compile Include="Common\RPG\Spell.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="DataModel\DataSource.cs" />
+    <Compile Include="DataModel\SampleDataSource.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -143,8 +145,14 @@
     <Compile Include="Pages\RandomNumPage.xaml.cs">
       <DependentUpon>RandomNumPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\RPG\AlonditeFightPage.xaml.cs">
+      <DependentUpon>AlonditeFightPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RPG\AxalfFightPage.xaml.cs">
       <DependentUpon>AxalfFightPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RPG\FightSelectionPage.xaml.cs">
+      <DependentUpon>FightSelectionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SelectionPage.xaml.cs">
       <DependentUpon>SelectionPage.xaml</DependentUpon>
@@ -167,10 +175,13 @@
     </Content>
     <Content Include="Assets\Cards\AceSpades.png" />
     <Content Include="Assets\Cards\CardBack.png" />
+    <Content Include="Assets\DarkGray.png" />
     <Content Include="Assets\DiceB.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\LightGray.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\MediumGray.png" />
     <Content Include="Assets\Monster.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -218,8 +229,8 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\AnimatePage.xaml">
       <SubType>Designer</SubType>
@@ -253,7 +264,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\RPG\AlonditeFightPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RPG\AxalfFightPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RPG\FightSelectionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

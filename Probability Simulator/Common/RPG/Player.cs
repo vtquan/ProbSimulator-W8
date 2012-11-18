@@ -31,6 +31,12 @@ namespace Probability_Simulator.Common.RPG
 
         //Get Methods
 
+        //Set Methods
+        public void setDefaultAttack(Attack DefaultAttack)
+        {
+            defaultAttack = DefaultAttack;
+        }
+
         //Action Methods
         public double attack(ref Monster Target)
         {

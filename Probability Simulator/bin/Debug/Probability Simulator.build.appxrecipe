@@ -34,12 +34,21 @@
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Cards\CardBack.png">
       <PackagePath>Assets\Cards\CardBack.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\DiceB.png">
       <PackagePath>Assets\DiceB.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Monster.png">
       <PackagePath>Assets\Monster.png</PackagePath>
@@ -125,8 +134,14 @@
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RandomNumPage.xaml">
       <PackagePath>Pages\RandomNumPage.xaml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\AlonditeFightPage.xaml">
+      <PackagePath>Pages\RPG\AlonditeFightPage.xaml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\AxalfFightPage.xaml">
       <PackagePath>Pages\RPG\AxalfFightPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\FightSelectionPage.xaml">
+      <PackagePath>Pages\RPG\FightSelectionPage.xaml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\SelectionPage.xaml">
       <PackagePath>Pages\SelectionPage.xaml</PackagePath>

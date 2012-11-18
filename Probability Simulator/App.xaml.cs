@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Probability_Simulator.Common;    //get access to data class
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

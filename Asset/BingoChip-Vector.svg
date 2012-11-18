@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="BingoChip-Vector.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -60,6 +60,9 @@
        sodipodi:rx="122.85714"
        sodipodi:ry="122.85714"
        d="m 377.14286,378.07648 a 122.85714,122.85714 0 1 1 -245.71428,0 122.85714,122.85714 0 1 1 245.71428,0 z"
-       transform="matrix(0.84011627,0,0,0.84011627,128.15615,-14.194582)" />
+       transform="matrix(0.84011627,0,0,0.84011627,128.15615,-14.194582)"
+       inkscape:export-filename="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Asset\Bingo Chip.png"
+       inkscape:export-xdpi="207.9399"
+       inkscape:export-ydpi="207.9399" />
   </g>
 </svg>

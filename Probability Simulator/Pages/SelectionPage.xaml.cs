@@ -83,7 +83,7 @@ namespace Probability_Simulator.Pages
 
         private void EasterEggB_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.RPG.AxalfFightPage));
+            this.Frame.Navigate(typeof(Pages.RPG.FightSelectionPage));
         }
 
         private void DiceCanvas_Tapped(object sender, TappedRoutedEventArgs e)

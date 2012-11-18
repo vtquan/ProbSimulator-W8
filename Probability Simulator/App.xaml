@@ -15,6 +15,9 @@
                 <ResourceDictionary Source="Common/StandardStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
+            <!-- Application-specific resources -->
+
+            <x:String x:Key="AppName">Probability Simulator</x:String>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

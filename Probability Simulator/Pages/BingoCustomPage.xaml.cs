@@ -154,7 +154,6 @@ namespace Probability_Simulator.Pages
         private void generateCard()
         {
             bool[] used = new bool[75]; //store whether each of the 75 possible number for the bingo card is used
-            int repeated = 0;
             int generated = 0;
             for (int i = 0; i < 5; i++)
             {
