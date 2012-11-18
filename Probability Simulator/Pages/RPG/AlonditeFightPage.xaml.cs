@@ -551,6 +551,7 @@ namespace Probability_Simulator.Pages.RPG
             yourHPText.Text = You.getHPStart().ToString();
             ActionLogList.Children.Clear();
             BackgroundMusic.Source = new Uri(this.BaseUri, "ms-appx:///Assets/Musics/Chrono Trigger Music - Battle Theme.mp3");
+            fled = false;
 
             enableButton();
         }
