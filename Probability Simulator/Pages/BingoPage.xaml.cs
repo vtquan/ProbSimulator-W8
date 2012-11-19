@@ -417,8 +417,7 @@ namespace Probability_Simulator.Pages
 
         private async void youWin()
         {
-            var messageDialog = new MessageDialog("You Win!");
-            messageDialog.Title = "Winner";
+            var messageDialog = new MessageDialog("Bingo!");
 
             messageDialog.Commands.Add(new UICommand(
             "Continue Calling"));
