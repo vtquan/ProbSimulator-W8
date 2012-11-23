@@ -240,20 +240,33 @@ namespace Probability_Simulator.Pages
                 {
                     var messageDialog = new MessageDialog("All numbers have been drawned");
                     messageDialog.Title = "Out of Numbers";
+                    if (gameEnd)    //if do not check, when rolling a high amount at once, it will display the "out of number with reset button" that don't work
+                    {
+                        messageDialog.Commands.Add(new UICommand(
+                        "Reset List",
+                        new UICommandInvokedHandler(this.CommandInvokedHandler)));
 
-                    messageDialog.Commands.Add(new UICommand(
-                    "Reset List",
-                    new UICommandInvokedHandler(this.CommandInvokedHandler)));
+                        messageDialog.Commands.Add(new UICommand(
+                        "Close"));
 
-                    messageDialog.Commands.Add(new UICommand(
-                    "Close"));
+                        // Set the command that will be invoked by default
+                        messageDialog.DefaultCommandIndex = 1;
 
-                    // Set the command that will be invoked by default
-                    messageDialog.DefaultCommandIndex = 1;
+                        // Set the command to be invoked when escape is pressed
+                        messageDialog.CancelCommandIndex = 1;
+                    }
 
-                    // Set the command to be invoked when escape is pressed
-                    messageDialog.CancelCommandIndex = 1;
+                    else
+                    {
+                        messageDialog.Commands.Add(new UICommand(
+                        "Close"));
 
+                        // Set the command that will be invoked by default
+                        messageDialog.DefaultCommandIndex = 0;
+
+                        // Set the command to be invoked when escape is pressed
+                        messageDialog.CancelCommandIndex = 0;
+                    }
                     // Show the message dialog and wait
                     await messageDialog.ShowAsync();
                     break;
