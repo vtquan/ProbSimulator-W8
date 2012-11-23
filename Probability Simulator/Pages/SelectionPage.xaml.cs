@@ -63,7 +63,7 @@ namespace Probability_Simulator.Pages
 
         private void CoinPageB_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.CoinPage));
+            this.Frame.Navigate(typeof(Pages.CoinNoSoundPage));
         }
 
         private void BingoPageB_Click(object sender, RoutedEventArgs e)
@@ -98,7 +98,7 @@ namespace Probability_Simulator.Pages
 
         private void CoinCanvas_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.CoinPage));
+            this.Frame.Navigate(typeof(Pages.CoinNoSoundPage));
         }
 
         private void BingoCanvas_Tapped(object sender, TappedRoutedEventArgs e)
@@ -118,7 +118,7 @@ namespace Probability_Simulator.Pages
 
         private void CoinBSnap_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.CoinPage));
+            this.Frame.Navigate(typeof(Pages.CoinNoSoundPage));
         }
 
         private void CardBSnap_Click(object sender, RoutedEventArgs e)
@@ -143,7 +143,7 @@ namespace Probability_Simulator.Pages
 
         private void CoinImg_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Pages.CoinPage));
+            this.Frame.Navigate(typeof(Pages.CoinNoSoundPage));
         }
 
         private void CardImg_Tapped(object sender, TappedRoutedEventArgs e)

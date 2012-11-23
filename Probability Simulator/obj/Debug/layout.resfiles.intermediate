@@ -32,6 +32,7 @@ Pages\AnimatePage.xaml
 Pages\BingoCustomPage.xaml
 Pages\BingoPage.xaml
 Pages\CardPage.xaml
+Pages\CoinNoSoundPage.xaml
 Pages\CoinPage.xaml
 Pages\DicePage.xaml
 Pages\EasterEggPage.xaml

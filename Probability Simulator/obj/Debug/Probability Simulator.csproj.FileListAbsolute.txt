@@ -79,3 +79,6 @@ C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debu
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\pri.resfiles
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\LanguageQualifiers.txt
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\ProjectArchitectures.txt
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNoSoundPage.g.i.cs
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNoSoundPage.g.cs
+C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNoSoundPage.xaml

@@ -124,21 +124,23 @@ namespace Probability_Simulator.Probability_Simulator_XamlTypeInfo
 
         private object Activate_5_CardPage() { return new global::Probability_Simulator.Pages.CardPage(); }
 
-        private object Activate_6_CoinPage() { return new global::Probability_Simulator.Pages.CoinPage(); }
+        private object Activate_6_CoinNoSoundPage() { return new global::Probability_Simulator.Pages.CoinNoSoundPage(); }
 
-        private object Activate_7_DicePage() { return new global::Probability_Simulator.Pages.DicePage(); }
+        private object Activate_7_CoinPage() { return new global::Probability_Simulator.Pages.CoinPage(); }
 
-        private object Activate_8_EasterEggPage() { return new global::Probability_Simulator.Pages.EasterEggPage(); }
+        private object Activate_8_DicePage() { return new global::Probability_Simulator.Pages.DicePage(); }
 
-        private object Activate_9_RandomNumPage() { return new global::Probability_Simulator.Pages.RandomNumPage(); }
+        private object Activate_9_EasterEggPage() { return new global::Probability_Simulator.Pages.EasterEggPage(); }
 
-        private object Activate_10_AlonditeFightPage() { return new global::Probability_Simulator.Pages.RPG.AlonditeFightPage(); }
+        private object Activate_10_RandomNumPage() { return new global::Probability_Simulator.Pages.RandomNumPage(); }
 
-        private object Activate_11_AxalfFightPage() { return new global::Probability_Simulator.Pages.RPG.AxalfFightPage(); }
+        private object Activate_11_AlonditeFightPage() { return new global::Probability_Simulator.Pages.RPG.AlonditeFightPage(); }
 
-        private object Activate_12_FightSelectionPage() { return new global::Probability_Simulator.Pages.RPG.FightSelectionPage(); }
+        private object Activate_12_AxalfFightPage() { return new global::Probability_Simulator.Pages.RPG.AxalfFightPage(); }
 
-        private object Activate_13_SelectionPage() { return new global::Probability_Simulator.Pages.SelectionPage(); }
+        private object Activate_13_FightSelectionPage() { return new global::Probability_Simulator.Pages.RPG.FightSelectionPage(); }
+
+        private object Activate_14_SelectionPage() { return new global::Probability_Simulator.Pages.SelectionPage(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -192,51 +194,57 @@ namespace Probability_Simulator.Probability_Simulator_XamlTypeInfo
                 xamlType = userType;
                 break;
 
+            case "Probability_Simulator.Pages.CoinNoSoundPage":
+                userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.CoinNoSoundPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
+                userType.Activator = Activate_6_CoinNoSoundPage;
+                xamlType = userType;
+                break;
+
             case "Probability_Simulator.Pages.CoinPage":
                 userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.CoinPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
-                userType.Activator = Activate_6_CoinPage;
+                userType.Activator = Activate_7_CoinPage;
                 xamlType = userType;
                 break;
 
             case "Probability_Simulator.Pages.DicePage":
                 userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.DicePage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
-                userType.Activator = Activate_7_DicePage;
+                userType.Activator = Activate_8_DicePage;
                 xamlType = userType;
                 break;
 
             case "Probability_Simulator.Pages.EasterEggPage":
                 userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.EasterEggPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
-                userType.Activator = Activate_8_EasterEggPage;
+                userType.Activator = Activate_9_EasterEggPage;
                 xamlType = userType;
                 break;
 
             case "Probability_Simulator.Pages.RandomNumPage":
                 userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.RandomNumPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
-                userType.Activator = Activate_9_RandomNumPage;
+                userType.Activator = Activate_10_RandomNumPage;
                 xamlType = userType;
                 break;
 
             case "Probability_Simulator.Pages.RPG.AlonditeFightPage":
                 userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.RPG.AlonditeFightPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
-                userType.Activator = Activate_10_AlonditeFightPage;
+                userType.Activator = Activate_11_AlonditeFightPage;
                 xamlType = userType;
                 break;
 
             case "Probability_Simulator.Pages.RPG.AxalfFightPage":
                 userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.RPG.AxalfFightPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
-                userType.Activator = Activate_11_AxalfFightPage;
+                userType.Activator = Activate_12_AxalfFightPage;
                 xamlType = userType;
                 break;
 
             case "Probability_Simulator.Pages.RPG.FightSelectionPage":
                 userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.RPG.FightSelectionPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
-                userType.Activator = Activate_12_FightSelectionPage;
+                userType.Activator = Activate_13_FightSelectionPage;
                 xamlType = userType;
                 break;
 
             case "Probability_Simulator.Pages.SelectionPage":
                 userType = new global::Probability_Simulator.Probability_Simulator_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Probability_Simulator.Pages.SelectionPage), GetXamlTypeByName("Probability_Simulator.Common.LayoutAwarePage"));
-                userType.Activator = Activate_13_SelectionPage;
+                userType.Activator = Activate_14_SelectionPage;
                 xamlType = userType;
                 break;
 
