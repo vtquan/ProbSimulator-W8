@@ -21,6 +21,19 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
+    
+    <Page.BottomAppBar>
+        <AppBar x:Name="SelectionAppBar" Padding="10,0,10,0">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button x:Name="InfoAppBarB" Style="{StaticResource InfoAppBarButtonStyle}" Click="InfoAppBarB_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+    
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>

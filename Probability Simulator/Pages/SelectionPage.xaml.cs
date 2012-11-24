@@ -160,5 +160,14 @@ namespace Probability_Simulator.Pages
         {
             this.Frame.Navigate(typeof(Pages.RandomNumPage));
         }
+
+        private async void InfoAppBarB_Click(object sender, RoutedEventArgs e)
+        {
+            var messageDialog = new MessageDialog("Dice image by wirelizard\nCard image by nicubunu");
+            messageDialog.Title = "About";
+
+            // Show the message dialog and wait
+            await messageDialog.ShowAsync();
+        }
     }
 }
