@@ -179,7 +179,7 @@ namespace Probability_Simulator.Common.RPG
             }
         }
 
-        public KeyValuePair<bool, int[]> useSpell(string spellName, ref Monster Target)  //return whether item was used successfully; int[0] = damage, int[1] = spellIndex; int[i] = -1 if !used
+        public KeyValuePair<bool, int[]> useSpell(string spellName, ref Monster Target)  //Key: whether item was used successfully; Value: int[0] = damage, int[1] = spellIndex; int[i] = -1 if !used
         {
             bool used = false;  //whether item was used
             int[] spellResult = new int[2];
@@ -230,7 +230,7 @@ namespace Probability_Simulator.Common.RPG
             return totalResult;
         }
 
-        public int findSpell(string spellName)  //return whether item was used successfully
+        public int findSpell(string spellName)  //return index of spell or -1 if fail
         {
             int spellIndex = -1; //store index of the searched item
             for (int i = 0; i < spellList.Length; i++)
@@ -297,7 +297,7 @@ namespace Probability_Simulator.Common.RPG
             return used;
         }
 
-        public int findItem(string itemName)  //return whether item was used successfully
+        public int findItem(string itemName)  //return index of item or -1 if fail
         {
             int itemIndex = -1; //store index of the searched item
             for (int i = 0; i < itemList.Length; i++)
