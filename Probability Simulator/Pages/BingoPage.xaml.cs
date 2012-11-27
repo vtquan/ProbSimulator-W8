@@ -486,5 +486,10 @@ namespace Probability_Simulator.Pages
                 }
             }
         }
+
+        private void RestartAppBarB_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

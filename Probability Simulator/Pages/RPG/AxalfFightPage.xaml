@@ -61,6 +61,7 @@
             </Grid>
         </AppBar>
     </Page.BottomAppBar>
+    
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
