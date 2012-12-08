@@ -25,15 +25,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="308.5405"
-     inkscape:cy="542.30275"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="411.52415"
+     inkscape:cy="528.46746"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="1358"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1">
     <inkscape:grid
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -275,7 +275,7 @@
        inkscape:export-xdpi="449.06445"
        inkscape:export-ydpi="449.06445" />
     <path
-       transform="matrix(0.87367752,0,0,0.91735537,104.76955,33.896517)"
+       transform="matrix(0.87367752,0,0,0.91735537,104.76955,39.896517)"
        sodipodi:type="arc"
        style="fill:#ffffff;stroke:#ffffff;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3832-48-8-51"
@@ -288,20 +288,7 @@
        inkscape:export-xdpi="449.06445"
        inkscape:export-ydpi="449.06445" />
     <path
-       transform="matrix(0.81367758,0,0,0.91735537,124.34096,48.896517)"
-       sodipodi:type="arc"
-       style="fill:#ffffff;stroke:#ffffff;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none"
-       id="path3832-48-8-1"
-       sodipodi:cx="389.28571"
-       sodipodi:cy="505.21933"
-       sodipodi:rx="3.5714285"
-       sodipodi:ry="3.5714285"
-       d="m 392.85713,505.21933 a 3.5714285,3.5714285 0 1 1 -7.14285,0 3.5714285,3.5714285 0 1 1 7.14285,0 z"
-       inkscape:export-filename="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Asset\Logo.png"
-       inkscape:export-xdpi="449.06445"
-       inkscape:export-ydpi="449.06445" />
-    <path
-       transform="matrix(0.82867774,0,0,0.91735537,114.44804,63.896517)"
+       transform="matrix(0.90867185,0,0,0.91735537,83.593173,61.896517)"
        sodipodi:type="arc"
        style="fill:#ffffff;stroke:#ffffff;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3832-48-8-27"
@@ -380,7 +367,7 @@
        inkscape:export-xdpi="449.06445"
        inkscape:export-ydpi="449.06445">
       <path
-         d="m 468.71078,675.07019 a 132.83505,132.83505 0 1 1 -265.6701,0 132.83505,132.83505 0 1 1 265.6701,0 z"
+         d="m 468.71078,675.07019 c 0,73.36277 -59.47227,132.83505 -132.83505,132.83505 -73.36277,0 -132.83505,-59.47228 -132.83505,-132.83505 0,-73.36277 59.47228,-132.83505 132.83505,-132.83505 73.36278,0 132.83505,59.47228 132.83505,132.83505 z"
          sodipodi:ry="132.83505"
          sodipodi:rx="132.83505"
          sodipodi:cy="675.07019"
@@ -390,7 +377,7 @@
          sodipodi:type="arc"
          transform="matrix(0.16958783,0,0,0.16958783,317.86099,355.37849)" />
       <path
-         d="m 468.71078,675.07019 a 132.83505,132.83505 0 1 1 -265.6701,0 132.83505,132.83505 0 1 1 265.6701,0 z"
+         d="m 468.71078,675.07019 c 0,73.36277 -59.47227,132.83505 -132.83505,132.83505 -73.36277,0 -132.83505,-59.47228 -132.83505,-132.83505 0,-73.36277 59.47228,-132.83505 132.83505,-132.83505 73.36278,0 132.83505,59.47228 132.83505,132.83505 z"
          sodipodi:ry="132.83505"
          sodipodi:rx="132.83505"
          sodipodi:cy="675.07019"
