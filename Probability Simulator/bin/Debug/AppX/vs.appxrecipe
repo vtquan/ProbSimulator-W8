@@ -16,7 +16,7 @@
     <AppXManifest Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-12-16T02:23:29.892</Modified>
+      <Modified>2013-01-08T21:04:41.299</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -210,7 +210,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-11-24T10:13:04.824</Modified>
+      <Modified>2013-01-08T21:04:39.679</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
