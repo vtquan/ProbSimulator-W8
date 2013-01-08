@@ -178,6 +178,8 @@
     </Content>
     <Content Include="Assets\Cards\AceSpades.png" />
     <Content Include="Assets\Cards\CardBack.png" />
+    <Content Include="Assets\penny-head-trans.png" />
+    <Content Include="Assets\penny-tail-trans.png" />
     <Content Include="Assets\DiceB.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -194,8 +196,6 @@
     <Content Include="Assets\Musics\Chrono Trigger Music - Lucca%27s Theme.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\penny-head-trans.png" />
-    <Content Include="Assets\penny-tail-trans.png" />
     <Content Include="Assets\RPG\Bosses\Alondite.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

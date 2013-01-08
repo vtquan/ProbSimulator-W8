@@ -5,7 +5,7 @@
     <WindowsUser>quanvt</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>D2512EB6C3DBBAD174A58BCA606E64510728ADDC587B898FFDF27B5AAC09F590</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>60041E992DDD2788E2567F06F7F938328A0E6C8ED5CD21793EAC9EBCD00AD31A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>88c01031-c0a1-49b9-ad07-29e8e6b7f4f2_1.0.0.0_neutral__51x9vbdkyqbsa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>88c01031-c0a1-49b9-ad07-29e8e6b7f4f2_51x9vbdkyqbsa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>88c01031-c0a1-49b9-ad07-29e8e6b7f4f2</RegisteredPackageID>
@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-11-27T23:51:03.349</Modified>
+      <Modified>2012-12-16T02:23:29.892</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe">
       <PackagePath>Probability Simulator.exe</PackagePath>
-      <Modified>2012-11-27T23:51:02.271</Modified>
+      <Modified>2012-12-16T02:23:29.654</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb">
       <PackagePath>Probability Simulator.pdb</PackagePath>
-      <Modified>2012-11-27T23:51:02.225</Modified>
+      <Modified>2012-12-16T02:23:29.612</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Bingo Chip.png">
       <PackagePath>Assets\Bingo Chip.png</PackagePath>
@@ -48,6 +48,14 @@
       <PackagePath>Assets\Cards\CardBack.png</PackagePath>
       <Modified>2012-11-19T08:17:30.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-head-trans.png">
+      <PackagePath>Assets\penny-head-trans.png</PackagePath>
+      <Modified>2012-12-16T02:21:36.243</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-tail-trans.png">
+      <PackagePath>Assets\penny-tail-trans.png</PackagePath>
+      <Modified>2012-12-16T02:21:49.292</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\DiceB.png">
       <PackagePath>Assets\DiceB.png</PackagePath>
       <Modified>2012-11-19T08:17:30.000</Modified>
@@ -59,14 +67,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Monster.png">
       <PackagePath>Assets\Monster.png</PackagePath>
-      <Modified>2012-11-19T08:17:30.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-head-trans.png">
-      <PackagePath>Assets\penny-head-trans.png</PackagePath>
-      <Modified>2012-11-19T08:17:30.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-tail-trans.png">
-      <PackagePath>Assets\penny-tail-trans.png</PackagePath>
       <Modified>2012-11-19T08:17:30.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\RPG\Bosses\Alondite.png">
