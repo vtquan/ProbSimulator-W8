@@ -25,9 +25,14 @@ namespace Probability_Simulator.Pages
         bool[,] drawned = new bool[4, 13];
         int numDrawned = 0;
 
+        Dictionary<int, string> cardSuit = new Dictionary<int, string>();
+        Dictionary<int, string> cardValue = new Dictionary<int, string>();
+
         public CardPage()
         {
             this.InitializeComponent();
+
+            setupDict();    
         }
 
         /// <summary>
@@ -97,74 +102,19 @@ namespace Probability_Simulator.Pages
         {
             Random random = new Random();
 
-            int result = 0;
-            String suit = "";
-            String value = "";
+            int suit;
+            int value;
             String cardString = "";
             for (int i = 0; i < numCard; i++)
             {
-                result = random.Next(0, 4);
-                result++;
-                switch (result)
-                {
-                    case 1:
-                        suit = "Hearts";
-                        break;
-                    case 2:
-                        suit = "Clubs";
-                        break;
-                    case 3:
-                        suit = "Diamonds";
-                        break;
-                    default:
-                        suit = "Spades";
-                        break;
-                }
-                result = random.Next(0, 13);
-                result++;
-                switch (result)
-                {
-                    case 1:
-                        value = "Ace";
-                        break;
-                    case 2:
-                        value = "2";
-                        break;
-                    case 3:
-                        value = "3";
-                        break;
-                    case 4:
-                        value = "4";
-                        break;
-                    case 5:
-                        value = "5";
-                        break;
-                    case 6:
-                        value = "6";
-                        break;
-                    case 7:
-                        value = "7";
-                        break;
-                    case 8:
-                        value = "8";
-                        break;
-                    case 9:
-                        value = "9";
-                        break;
-                    case 10:
-                        value = "10";
-                        break;
-                    case 11:
-                        value = "Jack";
-                        break;
-                    case 12:
-                        value = "Queen";
-                        break;
-                    default:
-                        value = "King";
-                        break;
-                }
-                cardString = value + " of " + suit;
+                //get suit
+                suit = random.Next(0, 4);
+                suit++;
+                //get value
+                value = random.Next(0, 13);
+                value++;
+
+                cardString = cardValue[value] + " of " + cardSuit[suit];
                 historyList.Children.Add(new TextBlock() { Text = cardString });
             }
             historyList.Children.Add(new TextBlock() { Text = "  " });
@@ -179,8 +129,8 @@ namespace Probability_Simulator.Pages
 
             int result1 = 0;
             int result2 = 0;
-            String suit = "";
-            String value = "";
+            int suit;
+            int value;
             String cardString = "";
             for (int i = 0; i < numCard; i++)
             {
@@ -211,84 +161,15 @@ namespace Probability_Simulator.Pages
                 {
                     do
                     {
-                        result1 = random.Next(0, 4);
-                        result2 = random.Next(0, 13);
+                        //get suit
+                        suit = random.Next(0, 4);
+                        suit++;
+                        //get value
+                        value = random.Next(0, 13);
+                        value++;
                     } while (drawned[result1, result2] == true);
 
-                    drawned[result1, result2] = true;
-
-                    result1++;
-                    result2++;
-
-                    switch (result1)
-                    {
-                        case 1:
-                            suit = "Hearts";
-                            break;
-                        case 2:
-                            suit = "Clubs";
-                            break;
-                        case 3:
-                            suit = "Diamonds";
-                            break;
-                        default:
-                            suit = "Spades";
-                            break;
-                    }
-
-                    switch (result2)
-                    {
-                        case 1:
-                            value = "Ace";
-                            break;
-                        case 2:
-                            value = "2";
-                            break;
-                        case 3:
-                            value = "3";
-                            break;
-                        case 4:
-                            value = "4";
-                            break;
-                        case 5:
-                            value = "5";
-                            break;
-                        case 6:
-                            value = "6";
-                            break;
-                        case 7:
-                            value = "7";
-                            break;
-                        case 8:
-                            value = "8";
-                            break;
-                        case 9:
-                            value = "9";
-                            break;
-                        case 10:
-                            value = "10";
-                            break;
-                        case 11:
-                            value = "Jack";
-                            break;
-                        case 12:
-                            value = "Queen";
-                            break;
-                        default:
-                            value = "King";
-                            break;
-                    }
-                    //if (value.Equals("Ace") || value.Equals("8"))
-                    //{
-                    //    cardString = "An " + value + " of " + suit;
-                    //    //lastDrawBox.Text = cardString;
-                    //}
-                    //else
-                    //{
-                    //    cardString = "A " + value + " of " + suit;
-                    //    //lastDrawBox.Text = cardString;
-                    //}
-                    cardString = value + " of " + suit;
+                    cardString = cardValue[value] + " of " + cardSuit[suit];
                     historyList.Children.Add(new TextBlock() { Text = cardString });
 
                     if (i == numCard - 1)   //add spacing at the end only when there are no problem
@@ -311,5 +192,29 @@ namespace Probability_Simulator.Pages
             numDrawned = 0;
             historyList.Children.Clear();
         }
+    
+        private void setupDict()
+        {
+            cardSuit.Add(1, "Spades");
+            cardSuit.Add(2, "Hearts");
+            cardSuit.Add(3, "Diamonds");
+            cardSuit.Add(4, "Clubs");
+
+            cardValue.Add(1, "Ace");
+            cardValue.Add(2, "2");
+            cardValue.Add(3, "3");
+            cardValue.Add(4, "4");
+            cardValue.Add(5, "5");
+            cardValue.Add(6, "6");
+            cardValue.Add(7, "7");
+            cardValue.Add(8, "8");
+            cardValue.Add(9, "9");
+            cardValue.Add(10, "10");
+            cardValue.Add(11, "Jack");
+            cardValue.Add(12, "Queen");
+            cardValue.Add(13, "King");
+        }
     }
+
+    
 }

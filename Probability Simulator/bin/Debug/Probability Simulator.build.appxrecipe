@@ -1,161 +1,161 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>QUAN-LAPTOP</Machine>
-    <WindowsUser>quanvt</WindowsUser>
+    <Machine>QUAN-DESKTOP</Machine>
+    <WindowsUser>vtquan</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe">
       <PackagePath>Probability Simulator.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb">
       <PackagePath>Probability Simulator.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Bingo Chip.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Bingo Chip.png">
       <PackagePath>Assets\Bingo Chip.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\BingoB.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\BingoB.png">
       <PackagePath>Assets\BingoB.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\CardB.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\CardB.png">
       <PackagePath>Assets\CardB.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Cards\AceSpades.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Cards\AceSpades.png">
       <PackagePath>Assets\Cards\AceSpades.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Cards\CardBack.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Cards\CardBack.png">
       <PackagePath>Assets\Cards\CardBack.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-head-trans.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-head-trans.png">
       <PackagePath>Assets\penny-head-trans.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-tail-trans.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\penny-tail-trans.png">
       <PackagePath>Assets\penny-tail-trans.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\DiceB.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\DiceB.png">
       <PackagePath>Assets\DiceB.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Monster.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Monster.png">
       <PackagePath>Assets\Monster.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\RPG\Bosses\Alondite.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\RPG\Bosses\Alondite.png">
       <PackagePath>Assets\RPG\Bosses\Alondite.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\RPG\Bosses\Axalf.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\RPG\Bosses\Axalf.png">
       <PackagePath>Assets\RPG\Bosses\Axalf.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Selection Images\BingoB.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Selection Images\BingoB.png">
       <PackagePath>Assets\Selection Images\BingoB.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Selection Images\CoinB.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Selection Images\CoinB.png">
       <PackagePath>Assets\Selection Images\CoinB.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Selection Images\RandomB.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Selection Images\RandomB.png">
       <PackagePath>Assets\Selection Images\RandomB.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Simulation Images\Bingo-Small.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Simulation Images\Bingo-Small.png">
       <PackagePath>Assets\Simulation Images\Bingo-Small.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Simulation Images\Card-Small.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Simulation Images\Card-Small.png">
       <PackagePath>Assets\Simulation Images\Card-Small.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Simulation Images\Coin-Small.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Simulation Images\Coin-Small.png">
       <PackagePath>Assets\Simulation Images\Coin-Small.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Simulation Images\Dice-Small.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Simulation Images\Dice-Small.png">
       <PackagePath>Assets\Simulation Images\Dice-Small.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Simulation Images\Random-Small.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Simulation Images\Random-Small.png">
       <PackagePath>Assets\Simulation Images\Random-Small.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Musics\Chrono Trigger Music - Battle Theme.mp3">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Musics\Chrono Trigger Music - Battle Theme.mp3">
       <PackagePath>Assets\Musics\Chrono Trigger Music - Battle Theme.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Musics\Chrono Trigger Music - Game Over.mp3">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Musics\Chrono Trigger Music - Game Over.mp3">
       <PackagePath>Assets\Musics\Chrono Trigger Music - Game Over.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Musics\Chrono Trigger Music - Lucca%27s Theme.mp3">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Musics\Chrono Trigger Music - Lucca%27s Theme.mp3">
       <PackagePath>Assets\Musics\Chrono Trigger Music - Lucca%27s Theme.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Sound Effect\coin_flip.wav">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Assets\Sound Effect\coin_flip.wav">
       <PackagePath>Assets\Sound Effect\coin_flip.wav</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Common\ReadMe.txt">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\App.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\MainPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\AnimatePage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\AnimatePage.xaml">
       <PackagePath>Pages\AnimatePage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\BingoCustomPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\BingoCustomPage.xaml">
       <PackagePath>Pages\BingoCustomPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\BingoPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\BingoPage.xaml">
       <PackagePath>Pages\BingoPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\CardPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\CardPage.xaml">
       <PackagePath>Pages\CardPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\CoinNoSoundPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\CoinNoSoundPage.xaml">
       <PackagePath>Pages\CoinNoSoundPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\CoinPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\CoinPage.xaml">
       <PackagePath>Pages\CoinPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\DicePage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\DicePage.xaml">
       <PackagePath>Pages\DicePage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\EasterEggPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\EasterEggPage.xaml">
       <PackagePath>Pages\EasterEggPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RandomNumPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RandomNumPage.xaml">
       <PackagePath>Pages\RandomNumPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\AlonditeFightPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\AlonditeFightPage.xaml">
       <PackagePath>Pages\RPG\AlonditeFightPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\AxalfFightPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\AxalfFightPage.xaml">
       <PackagePath>Pages\RPG\AxalfFightPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\FightSelectionPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\RPG\FightSelectionPage.xaml">
       <PackagePath>Pages\RPG\FightSelectionPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\SelectionPage.xaml">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Pages\SelectionPage.xaml">
       <PackagePath>Pages\SelectionPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

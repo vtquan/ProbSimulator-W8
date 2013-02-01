@@ -82,3 +82,83 @@ C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debu
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNoSoundPage.g.i.cs
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNoSoundPage.g.cs
 C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNoSoundPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\CardB.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\DiceB.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Monster.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Sound Effect\coin_flip.wav
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Bingo Chip.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Musics\Chrono Trigger Music - Battle Theme.mp3
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Musics\Chrono Trigger Music - Game Over.mp3
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Musics\Chrono Trigger Music - Lucca's Theme.mp3
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\RPG\Bosses\Alondite.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\RPG\Bosses\Axalf.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Selection Images\BingoB.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Selection Images\CoinB.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Selection Images\RandomB.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Simulation Images\Bingo-Small.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Simulation Images\Card-Small.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Simulation Images\Coin-Small.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Simulation Images\Dice-Small.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Assets\Simulation Images\Random-Small.png
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.exe
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.pdb
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\resources.pri
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\AppxManifest.xml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\bin\Debug\Probability Simulator.build.appxrecipe
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\App.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\App.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Common\StandardStyles.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\MainPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\MainPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\AnimatePage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\AnimatePage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\BingoCustomPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\BingoCustomPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\BingoPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\BingoPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CardPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CardPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNoSoundPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNoSoundPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\DicePage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\DicePage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\EasterEggPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\EasterEggPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RandomNumPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RandomNumPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\AlonditeFightPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\AlonditeFightPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\AxalfFightPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\AxalfFightPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\FightSelectionPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\FightSelectionPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\SelectionPage.g.i.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\SelectionPage.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\App.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Common\StandardStyles.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\MainPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\AnimatePage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\BingoCustomPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\BingoPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CardPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinNoSoundPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\CoinPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\DicePage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\EasterEggPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RandomNumPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\AlonditeFightPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\AxalfFightPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\RPG\FightSelectionPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Pages\SelectionPage.xaml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Probability Simulator.exe
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\Probability Simulator.pdb
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\priconfig.xml
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\layout.resfiles
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\resources.resfiles
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\pri.resfiles
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\LanguageQualifiers.txt
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\obj\Debug\ProjectArchitectures.txt

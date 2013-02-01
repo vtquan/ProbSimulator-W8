@@ -1,1 +1,1 @@
-C:\Users\quanvt\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Probability Simulator.csproj;neutral
+C:\Users\vtquan\Documents\GitHub\ProbSimulator-W8\Probability Simulator\Probability Simulator.csproj;neutral
