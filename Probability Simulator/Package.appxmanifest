@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="88c01031-c0a1-49b9-ad07-29e8e6b7f4f2" Publisher="CN=Viquoc Quan" Version="1.0.0.0" />
+  <Identity Name="19840ViquocQuan.ProbabilitiesSimulator" Publisher="CN=BB2EBC43-7F5D-40B9-AAA2-936D0FDD3638" Version="1.0.0.0" />
   <Properties>
-    <DisplayName>Probability Simulator</DisplayName>
+    <DisplayName>Probabilities Simulator</DisplayName>
     <PublisherDisplayName>Viquoc Quan</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Probability_Simulator.App">
-      <VisualElements DisplayName="Probability Simulator" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Probability Simulator" ForegroundText="light" BackgroundColor="#0B6179">
+      <VisualElements DisplayName="Probabilities Simulator" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Probability Simulator" ForegroundText="light" BackgroundColor="#0B6179">
         <DefaultTile ShowName="allLogos" />
         <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#0B6179" />
         <InitialRotationPreference>
